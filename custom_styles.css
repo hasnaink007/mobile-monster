@@ -1,0 +1,218 @@
+.search_suggestions::-webkit-scrollbar {
+    display: none !important;
+}
+
+input[type=checkbox], input[type=radio] {
+   accent-color: green !important;
+}
+
+.search-bar-wrap {
+
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30px;
+
+}
+#mm_input_search{
+    background-image: url('https://uploads-ssl.webflow.com/6295ec8d6adf7dabeda41909/62974528bb1d147cfd9814af_phone.png');
+    background-size: 26px;
+    background-position: left;
+    background-repeat: no-repeat;
+    text-indent: 30px;
+    padding: 12px 12px;
+    transition: 0.3s;
+}
+#mm_input_search:focus {
+    background-image:none;
+    text-indent:0px
+}
+
+.search_box_wrap {
+    width: 100%;
+    padding-right: 20px;
+    position: relative;
+}
+
+
+.search_box_wrap input {
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px;
+    height: 45px;
+    width: 100%;
+}
+
+.search_suggestions {
+    display: none;
+    height: auto;
+    margin-top: 5px;
+}
+
+.search_button_wrap {
+    align-items: center;
+    display: flex;
+}
+
+.search_button_wrap button {
+    background: #61bb47;
+    color: #FFF;
+    padding: 7px 18px;
+    border-radius: 8px;
+    height: 45px;
+}
+
+
+.search_suggestions {
+    position: absolute;
+    background: #FFF;
+    left: 0px;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 99;
+    padding: 15px 12px;
+    box-shadow: 1px 1px 10px -5px #222;
+    top: 43px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.search_suggestions .search_option {
+    padding: 8px 5px;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.search_suggestions .search_option a {
+    text-decoration: none;
+    color: #222;
+}
+  
+
+.search-option.active {
+    background: #f2f2f0;
+}
+  
+.search-option:hover {
+    background: #f2f2f0;
+}
+
+
+@media only screen and (max-width: 864px) {
+
+
+    .search_box_wrap {
+        padding-right: 0px;
+    }
+    .search-bar-wrap.order_search .search_box_wrap {
+        margin-right: 15px;
+    }
+
+    .home_page_search {
+        margin-bottom: 15px;
+
+    }
+    .search-bar-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+     .search-btn-home{
+        width:100%;
+    }
+    .search_button_wrap.home_page{
+        width:50%;
+    }
+     .search_suggestions{
+        width:100%;
+        margin-top: 5px;
+    }
+
+
+
+    /*----------------------inner---------------------*/
+
+    .search-bar-wrap.order_search {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        padding: 20px 0px;
+        align-content: stretch;
+        flex-wrap: nowrap;
+    }
+    .input.input-inner-search{
+        margin-bottom:0px !important;
+    }
+
+
+}
+@media only screen and (max-width: 479px) {
+
+
+    .search-btn-home{
+        width:100%;
+    }
+    .search_button_wrap.home_page{
+        width:100%;
+    }
+    .search_suggestions{
+        width:100%;
+        height: auto;
+        margin-top: 5px;
+    }
+    .search-bar-wrap{
+        padding:0px;
+    }
+    /*-----------------------------inner-search-----------------*/
+    .search-bar-wrap.order_search {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        padding: 20px 0px;
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    input.input-inner-search {
+        margin-bottom: 19px;
+        width: 100%;
+    }
+    .search_button_wrap.inner_btn_search{
+
+        width:100%;
+
+    }
+    .search-bar-wrap.order_search .search_box_wrap {
+        margin-right: 0px;
+    }
+    .inner_btn_search button{
+
+        width:100%;
+
+    }
+
+
+}
+
+
+.mobile_order_table_wrap.orders_table .order_data_wrap.active {
+    display: block;
+}
+
+
+
+.mobile_order_table_wrap.orders_table .order_data_wrap {
+    display: none;
+}
+
+.menu_section.wf-section {
+    position: relative;
+}
+
+.menu_section.wf-section .desktop_menu nav{
+    top: calc(100% - 5px);
+}
+
+.menu_section.wf-section .desktop_menu .sub_models_menu {
+    max-width: 100%;
+}
