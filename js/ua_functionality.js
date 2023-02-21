@@ -173,7 +173,7 @@ function init_login_page() {
 
         .then(function (data) {
             showLoader(false);
-            console.log(data);
+            // console.log(data);
 
             if(data.response.success == "true") {
 
@@ -186,7 +186,7 @@ function init_login_page() {
                 
                 
             } else {
-                displayProcessError("Wrong email or password");
+                displayProcessError( (res.response.error || "Wrong email or password") );
             }
             
 
