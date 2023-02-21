@@ -186,7 +186,7 @@ function init_login_page() {
                 
                 
             } else {
-                displayProcessError( (res.response.error || "Wrong email or password") );
+                displayProcessError( (data.response.error || "Wrong email or password") );
             }
             
 
