@@ -2043,6 +2043,10 @@ function submitPurchaseOrder (e) {
         var state = response.response.state;
 
         var paymentMethod = getPaymentMethod();
+
+
+        var optInForCrm = $('.input-opt-for-exclusive input:checked').val() == "on" ? true : false;
+
         switch(paymentMethod){
             case 'cheque': paymentMethod = 'Cheque'; break;
             case 'bank': paymentMethod = 'Bank'; break;
@@ -2060,6 +2064,7 @@ function submitPurchaseOrder (e) {
             'Address': address,
             'UID': response.response.uid,
             'Payment_Method': paymentMethod,
+            "optForCrm" : optInForCrm
         }
 
 
