@@ -185,7 +185,7 @@ Webflow.push(function() {
             method:"POST",
             body: JSON.stringify(submissionData),
             headers:{
-                "Content-type":"multipart/form-data"
+                "Content-type":"application/json"
 
             },
             mode:"no-cors"
