@@ -205,7 +205,7 @@ function handleJoinClubNewsletterForm() {
 
     })
 
-    .then(res => res.json)
+    .then(res => res.json())
     .then(response => {
 
         console.log(response);
