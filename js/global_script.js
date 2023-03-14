@@ -183,7 +183,7 @@ Webflow.push(function() {
     
         fetch(integromatHookUrl,{
             method:"POST",
-            body: JSON.stringify(submissionData),
+            body: submissionData,
             headers:{
                 "Content-type":"application/json"
 
