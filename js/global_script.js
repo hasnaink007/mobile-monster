@@ -212,29 +212,41 @@ Webflow.push(function() {
     
 
 
+    
+
+
     function showMessagePopup(message,type = "notification", duration = 2000) {
 
 
         hideMessagePopup();
+
+        $('body').prepend($(`<div class="popup-overlay"></div>`));
+        
+        $('.popup-overlay').click(function(){
+
+            hideMessagePopup();
+
+        })
+
+
         var activeClasses = $('#message-popup').attr('class');
-    
+
         $('#message-popup').attr('default-classes',activeClasses).addClass(type).addClass('active').css('display', 'block').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
-    
-    
+
+
         setTimeout(function() {
             hideMessagePopup()
         }, duration);
-    
+
     }
 
-    
-    
     function hideMessagePopup() {
-    
+
+        $('.popup-overlay').remove();
         var defaultClass = $('#message-popup').attr('default-classes');
-    
+
         $('#message-popup').attr('class',defaultClass).attr('default-classes','').css('display', 'none').html('');
-    
+
     }
 
 
