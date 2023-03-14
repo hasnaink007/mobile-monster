@@ -195,6 +195,8 @@ Webflow.push(function() {
             
             if(response.success) {
 
+
+
                 showMessagePopup("Thanks for the subscription, you are subscribed successfully to the club!","success");
 
 
@@ -207,12 +209,6 @@ Webflow.push(function() {
     }
 
 
-
-
-    
-
-
-    
 
 
     function showMessagePopup(message,type = "notification", duration = 2000) {
@@ -231,11 +227,15 @@ Webflow.push(function() {
 
         var activeClasses = $('#message-popup').attr('class');
 
-        $('#message-popup').attr('default-classes',activeClasses).addClass(type).addClass('active').css('display', 'block').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
+        console.log(activeClasses);
+
+        $('#message-popup').attr('default-classes', activeClasses).addClass(type).addClass('active').css('display', 'block').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
 
 
         setTimeout(function() {
+
             hideMessagePopup()
+
         }, duration);
 
     }

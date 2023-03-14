@@ -229,5 +229,31 @@ input[type=checkbox], input[type=radio] {
 
 }
 
+#message-popup.error {
+    color: red;
+    border-color: red;
+}
+
+
+#message-popup {
+    border: 2px solid black;
+    font-size: 19px;
+}
+
+
+#message-popup.error {
+    color: red;
+    border-color: red;
+}
+
+
+
+#message-popup.success {
+    color: #21d91d;
+    border-color: #148800;
+}
+
+
+
 
 
