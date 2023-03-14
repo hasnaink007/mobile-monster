@@ -132,7 +132,7 @@ Webflow.push(function() {
     });
 
 
-    
+
     if($('#join-club-form').length > 0){
 
         $('#join-club-form').submit(function(e) {
@@ -187,37 +187,32 @@ function handleJoinClubNewsletterForm() {
     // };
 
 
-    var submissionData = new FormData();
+        
+    var submissionData = {
+        
+        name: inputName.val(),
+        email: inputEmail.val(),
+    }
 
-    submissionData.append('name', inputName.val());
-    submissionData.append('email', inputEmail.val());
+    fetch(integromatHookUrl, {
 
-
-    // console.log("Submitting form data", submissionData);
-
-    fetch(integromatHookUrl,{
         method:"POST",
-        body: submissionData,
+        body: JSON.stringify(submissionData),
         headers:{
-            "Content-type":"multipart/form-data"
+            "Content-Type": "application/json",
 
         }
 
     })
+
     .then(res => res.json)
     .then(response => {
-        
+
+        console.log(response);
+
         if(response.success) {
-
-
-
             showMessagePopup("Thanks for the subscription, you are subscribed successfully to the club!","success");
-
-
         }
-        // alert("Successfully subscribed");
-        // console.log(response);
-
     })
 
 }
