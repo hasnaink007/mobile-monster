@@ -222,7 +222,7 @@ Webflow.push(function() {
 
             hideMessagePopup();
 
-        })
+        });
 
 
         var activeClasses = $('#message-popup').attr('class');
@@ -245,7 +245,7 @@ Webflow.push(function() {
         $('.popup-overlay').remove();
         var defaultClass = $('#message-popup').attr('default-classes');
 
-        $('#message-popup').attr('class',defaultClass).attr('default-classes','').css('display', 'none').html('');
+        $('#message-popup').attr('class',defaultClass).css('display', 'none').html('');
 
     }
 
