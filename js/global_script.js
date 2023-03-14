@@ -129,7 +129,62 @@ Webflow.push(function() {
         if($('#mm_input_search').val()?.trim()){
             $('div[role="listitem"].active a')[0]?.click()
         }
-    })
+    });
+
+    $('#join-club-form #join-club-submit').click(function(e){
+
+        handleJoinClubNewsletterForm();
+
+
+    });
+
+
+
+    function handleJoinClubNewsletterForm() {
+
+        var formContainer = $('#join-club-form');
+    
+        var inputName = $('#join-club-form input#name');
+    
+        var inputEmail = $('#join-club-form input#email');
+    
+    
+        if(inputName.val() == '' || inputEmail.val() == '') {
+    
+            // Aler the user that the information should be filled
+    
+            alert("Name or email cant be empty.")
+            return false;
+        }
+    
+    
+        var integromatHookUrl = "https://hook.integromat.com/put63vxuxeo32wvtptagav81ol3et6aj";
+    
+        var submissionData = {
+            name: inputName.val(),
+            email:inputEmail.val()
+        };
+    
+        console.log("Submitting form data", submissionData);
+    
+        fetch(integromatHookUrl,{
+            method:"POST",
+            body: JSON.stringify(submissionData)
+    
+        })
+        .then(res => res.json)
+        .then(response => {
+    
+            alert("Successfully subscribed");
+            console.log(response);
+    
+        })
+    
+    }
+
+
+
+
 
 });
         
