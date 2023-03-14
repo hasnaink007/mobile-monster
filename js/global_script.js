@@ -163,8 +163,8 @@ Webflow.push(function() {
         if(inputName.val() == '' || inputEmail.val() == '') {
     
             // Aler the user that the information should be filled
-    
-            alert("Name or email cant be empty.")
+            showMessagePopup("Name or email cannot be empty","error");
+            // alert("Name or email cant be empty.")
             return false;
         }
     
@@ -192,9 +192,15 @@ Webflow.push(function() {
         })
         .then(res => res.json)
         .then(response => {
-    
-            alert("Successfully subscribed");
-            console.log(response);
+            
+            if(response.success) {
+
+                showMessagePopup("Thanks for the subscription, you are subscribed successfully to the club!","success");
+
+
+            }
+            // alert("Successfully subscribed");
+            // console.log(response);
     
         })
     
@@ -202,6 +208,32 @@ Webflow.push(function() {
 
 
 
+
+    
+
+
+    function showMessagePopup(message,type = "notification", duration = 2000) {
+
+
+        hideMessagePopup();
+        var activeClasses = $('#message-popup').attr('class');
+    
+        $('#message-popup').attr('default-classes',activeClasses).addClass(type).addClass('active').css('display', 'block').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
+    
+    
+        setTimeout(function() {
+            hideMessagePopup()
+        }, duration);
+    
+    }
+    
+    function hideMessagePopup() {
+    
+        var defaultClass = $('#message-popup').attr('default-classes');
+    
+        $('#message-popup').attr('class',defaultClass).attr('default-classes','').css('display', 'none').html('');
+    
+    }
 
 
 });
