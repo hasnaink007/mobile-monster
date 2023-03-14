@@ -171,12 +171,16 @@ Webflow.push(function() {
     
         var integromatHookUrl = "https://hook.integromat.com/put63vxuxeo32wvtptagav81ol3et6aj";
     
-        var submissionData = {
-            name: inputName.val(),
-            email:inputEmail.val()
-        };
+        // var submissionData = {
+        //     name: inputName.val(),
+        //     email:inputEmail.val()
+        // };
     
 
+        var submissionData = new FormData();
+
+        submissionData.append('name', inputName.val());
+        submissionData.append('email', inputEmail.val());
 
 
         console.log("Submitting form data", submissionData);
@@ -185,7 +189,7 @@ Webflow.push(function() {
             method:"POST",
             body: submissionData,
             headers:{
-                "Content-type":"application/json"
+                "Content-type":"multipart/form-data"
 
             },
             mode:"no-cors"
