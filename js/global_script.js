@@ -131,6 +131,8 @@ Webflow.push(function() {
         }
     });
 
+
+    
     if($('#join-club-form').length > 0){
 
         $('#join-club-form').submit(function(e) {
@@ -151,110 +153,112 @@ Webflow.push(function() {
 
 
 
-    function handleJoinClubNewsletterForm() {
-
-        var formContainer = $('#join-club-form');
-    
-        var inputName = $('#join-club-form input#name');
-    
-        var inputEmail = $('#join-club-form input#email');
-    
-    
-        if(inputName.val() == '' || inputEmail.val() == '') {
-    
-            // Aler the user that the information should be filled
-            showMessagePopup("Name or email cannot be empty","error");
-            // alert("Name or email cant be empty.")
-            return false;
-        }
-    
-    
-        var integromatHookUrl = "https://hook.integromat.com/put63vxuxeo32wvtptagav81ol3et6aj";
-    
-        // var submissionData = {
-        //     name: inputName.val(),
-        //     email:inputEmail.val()
-        // };
-    
-
-        var submissionData = new FormData();
-
-        submissionData.append('name', inputName.val());
-        submissionData.append('email', inputEmail.val());
-
-
-        // console.log("Submitting form data", submissionData);
-    
-        fetch(integromatHookUrl,{
-            method:"POST",
-            body: submissionData,
-            headers:{
-                "Content-type":"multipart/form-data"
-
-            }
-    
-        })
-        .then(res => res.json)
-        .then(response => {
-            
-            if(response.success) {
-
-
-
-                showMessagePopup("Thanks for the subscription, you are subscribed successfully to the club!","success");
-
-
-            }
-            // alert("Successfully subscribed");
-            // console.log(response);
-    
-        })
-    
-    }
-
-
-
-
-    function showMessagePopup(message,type = "notification", duration = 2000) {
-
-
-        hideMessagePopup();
-
-        $('body').prepend($(`<div class="popup-overlay"></div>`));
-        
-        $('.popup-overlay').click(function(){
-
-            hideMessagePopup();
-
-        });
-
-
-        var activeClasses = $('#message-popup').attr('class');
-
-        console.log(activeClasses);
-
-        $('#message-popup').attr('default-classes', activeClasses).addClass(type).addClass('active').css('display', 'flex').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
-
-
-        setTimeout(function() {
-
-            hideMessagePopup()
-
-        }, duration);
-
-    }
-
-    function hideMessagePopup() {
-
-        $('.popup-overlay').remove();
-        var defaultClass = $('#message-popup').attr('default-classes');
-
-        $('#message-popup').attr('class',defaultClass).css('display', 'none').html('');
-
-    }
-
-
 });
         
       
         
+
+
+
+
+function handleJoinClubNewsletterForm() {
+
+    var formContainer = $('#join-club-form');
+
+    var inputName = $('#join-club-form input#name');
+
+    var inputEmail = $('#join-club-form input#email');
+
+
+    if(inputName.val() == '' || inputEmail.val() == '') {
+
+        // Aler the user that the information should be filled
+        showMessagePopup("Name or email cannot be empty","error");
+        // alert("Name or email cant be empty.")
+        return false;
+    }
+
+
+    var integromatHookUrl = "https://hook.integromat.com/put63vxuxeo32wvtptagav81ol3et6aj";
+
+    // var submissionData = {
+    //     name: inputName.val(),
+    //     email:inputEmail.val()
+    // };
+
+
+    var submissionData = new FormData();
+
+    submissionData.append('name', inputName.val());
+    submissionData.append('email', inputEmail.val());
+
+
+    // console.log("Submitting form data", submissionData);
+
+    fetch(integromatHookUrl,{
+        method:"POST",
+        body: submissionData,
+        headers:{
+            "Content-type":"multipart/form-data"
+
+        }
+
+    })
+    .then(res => res.json)
+    .then(response => {
+        
+        if(response.success) {
+
+
+
+            showMessagePopup("Thanks for the subscription, you are subscribed successfully to the club!","success");
+
+
+        }
+        // alert("Successfully subscribed");
+        // console.log(response);
+
+    })
+
+}
+
+
+
+
+function showMessagePopup(message,type = "notification", duration = 2000) {
+
+
+    hideMessagePopup();
+
+    $('body').prepend($(`<div class="popup-overlay"></div>`));
+    
+    $('.popup-overlay').click(function(){
+
+        hideMessagePopup();
+
+    });
+
+
+    var activeClasses = $('#message-popup').attr('class');
+
+    console.log(activeClasses);
+
+    $('#message-popup').attr('default-classes', activeClasses).addClass(type).addClass('active').css('display', 'flex').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
+
+
+    setTimeout(function() {
+
+        hideMessagePopup()
+
+    }, duration);
+
+}
+
+function hideMessagePopup() {
+
+    $('.popup-overlay').remove();
+    var defaultClass = $('#message-popup').attr('default-classes');
+
+    $('#message-popup').attr('class',defaultClass).css('display', 'none').html('');
+
+}
