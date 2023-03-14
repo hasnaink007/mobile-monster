@@ -229,7 +229,7 @@ Webflow.push(function() {
 
         console.log(activeClasses);
 
-        $('#message-popup').attr('default-classes', activeClasses).addClass(type).addClass('active').css('display', 'block').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
+        $('#message-popup').attr('default-classes', activeClasses).addClass(type).addClass('active').css('display', 'flex').css('transform', 'translate(-50%,-50%)').html($(`<span>${message}</span>`));
 
 
         setTimeout(function() {
