@@ -183,7 +183,7 @@ Webflow.push(function() {
         submissionData.append('email', inputEmail.val());
 
 
-        console.log("Submitting form data", submissionData);
+        // console.log("Submitting form data", submissionData);
     
         fetch(integromatHookUrl,{
             method:"POST",
@@ -191,8 +191,7 @@ Webflow.push(function() {
             headers:{
                 "Content-type":"multipart/form-data"
 
-            },
-            mode:"no-cors"
+            }
     
         })
         .then(res => res.json)
