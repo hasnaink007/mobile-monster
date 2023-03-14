@@ -131,12 +131,23 @@ Webflow.push(function() {
         }
     });
 
-    $('#join-club-form #join-club-submit').click(function(e){
+    if($('#join-club-form').length > 0){
 
-        handleJoinClubNewsletterForm();
+        $('#join-club-form').submit(function(e) {
+            
+            e.preventDefault();
 
+        });
 
-    });
+        $('#join-club-form #join-club-submit').click(function(e){
+    
+           
+            handleJoinClubNewsletterForm();
+    
+    
+        });
+
+    } 
 
 
 
