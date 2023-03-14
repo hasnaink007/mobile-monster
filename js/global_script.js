@@ -226,6 +226,8 @@ Webflow.push(function() {
         }, duration);
     
     }
+
+    
     
     function hideMessagePopup() {
     
