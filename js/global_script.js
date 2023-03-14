@@ -187,7 +187,8 @@ Webflow.push(function() {
             headers:{
                 "Content-type":"multipart/form-data"
 
-            }
+            },
+            request:"no-cors"
     
         })
         .then(res => res.json)
