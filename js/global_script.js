@@ -2,7 +2,7 @@ var Webflow = Webflow || [];
       
 Webflow.push(function() {
 
-        
+    
     var endpointUrl = 'https://mmbuild.shop';
     if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
         endpointUrl = 'https://mmbuild.shop/version-test'
@@ -134,7 +134,7 @@ Webflow.push(function() {
     if($('#join-club-form').length > 0){
 
         $('#join-club-form').submit(function(e) {
-            
+
             e.preventDefault();
 
         });
@@ -176,11 +176,18 @@ Webflow.push(function() {
             email:inputEmail.val()
         };
     
+
+
+
         console.log("Submitting form data", submissionData);
     
         fetch(integromatHookUrl,{
             method:"POST",
-            body: JSON.stringify(submissionData)
+            body: JSON.stringify(submissionData),
+            headers:{
+                "Content-type":"multipart/form-data"
+
+            }
     
         })
         .then(res => res.json)
