@@ -2025,13 +2025,20 @@ function submitPurchaseOrder (e) {
     showLoader(true);
 
     verifyUserAuthToken(true)
-    .then(response => {
+    .then(async (response) => {
 
         if(!response) {
-            
             alert("You must login or register to place an order.");
             return;
+        }
 
+        let ip = {};
+        try{
+            let req = await fetch('https://api.ipify.org/?format=json')
+            ip = await req.json()
+            ip = ip.ip
+        }catch(e){
+            console.log(e)
         }
 
         // console.log(response);
@@ -2060,6 +2067,7 @@ function submitPurchaseOrder (e) {
             'Address': address,
             'UID': response.response.uid,
             'Payment_Method': paymentMethod,
+            'ip_address': ip
         }
 
 
