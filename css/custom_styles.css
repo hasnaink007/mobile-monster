@@ -216,3 +216,46 @@ input[type=checkbox], input[type=radio] {
 .menu_section.wf-section .desktop_menu .sub_models_menu {
     max-width: 100%;
 }
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.6);
+    z-index: 9;
+
+}
+
+#message-popup.error {
+    color: red;
+    border-color: red;
+}
+
+
+#message-popup {
+    border: 2px solid black;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#message-popup.error {
+    color: red;
+    border-color: red;
+}
+
+
+
+#message-popup.success {
+    color: #21d91d;
+    border-color: #148800;
+}
+
+
+
+
+
