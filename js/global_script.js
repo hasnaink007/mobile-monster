@@ -108,10 +108,16 @@ Webflow.push(function() {
         // console.log(e)
         container.show()
 
-        let regex = new RegExp(e.target.value, 'gi')
-        let matches = (hks_available_devices || [])?.filter(item => regex.test(item?.display_name))
+        let search = e.target.value.replaceAll(' ', '')?.toLowerCase()
+        let regex = new RegExp(search, 'gi')
+        let matches = (hks_available_devices || [])?.filter(item => {
+            let name = item?.display_name?.replaceAll(' ', '')?.toLowerCase()
+            let matched =  regex.test(name)
+            if(matched || name?.includes(search)){
+                return true
+            }
+        })
         matches = matches.filter(item => item?.display_name)
-        
         container.html( makeOptionsListHTML(matches) )
     })
     .on('blur', e => {
