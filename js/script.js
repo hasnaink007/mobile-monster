@@ -1591,6 +1591,9 @@ function triggerDirectPage() {
     }
 
 
+    showLoader(false);
+
+
 }
 
 function loadReviewCart() {
