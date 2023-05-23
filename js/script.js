@@ -88,6 +88,8 @@ window.addEventListener('load', function() {
 
 
 
+    // Check if page has Cart parameter then trigger straight to the Cart.
+    triggerDirectPage();
 
 
     
