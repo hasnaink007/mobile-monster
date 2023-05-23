@@ -1558,7 +1558,7 @@ function stepMoveToLoginPage() {
 
 
 function triggerDirectPage() {
-
+    showLoader(true);
     var windowUrl = window.location.href;
     var urlObj = new URL(windowUrl);
     var searchParams = new URLSearchParams(urlObj.search);
