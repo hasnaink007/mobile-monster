@@ -1558,6 +1558,7 @@ function stepMoveToLoginPage() {
 
 
 function triggerDirectPage() {
+
     showLoader(true);
     var windowUrl = window.location.href;
     var urlObj = new URL(windowUrl);
@@ -1565,7 +1566,11 @@ function triggerDirectPage() {
     
     if(searchParams.get('cart') && searchParams.get('cart') == "true") {
 
-        loadReviewCart();
+        setTimeout(function() {
+
+            loadReviewCart();
+
+        }, 1500)
 
     }
 
