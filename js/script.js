@@ -19,6 +19,14 @@ if(!isDev) {
 
 window.addEventListener('load', function() {
 
+    
+    alert("Trigger Direct Page checks");
+
+    // Check if page has Cart parameter then trigger straight to the Cart.
+    triggerDirectPage();
+
+    
+
     if($('.phone_condition_box').length > 0) {
 
         // var BubbleTableId = document.getElementById("bubble_table_").innerHTML;
@@ -87,13 +95,6 @@ window.addEventListener('load', function() {
     }
 
 
-    alert("Trigger Direct Page checks");
-
-    // Check if page has Cart parameter then trigger straight to the Cart.
-    triggerDirectPage();
-
-
-    
 
     // as jQuery add this event only on first occuring of the ID and we need on all occurings 
     /* $('#email-form').submit((e) => {
