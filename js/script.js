@@ -85,6 +85,11 @@ window.addEventListener('load', function() {
 
         });   
     }
+
+
+
+
+
     
 
     // as jQuery add this event only on first occuring of the ID and we need on all occurings 
@@ -1545,6 +1550,33 @@ function stepMoveToLoginPage() {
 
 
     scrollUIToTop();
+}
+
+
+function triggerDirectPage() {
+
+    var windowUrl = window.location.href;
+    var urlObj = new URL(windowUrl);
+    var searchParams = new URLSearchParams(urlObj.search);
+    
+    if(searchParams.get('cart') && searchParams.get('cart') == "true") {
+
+        loadReviewCart();
+
+    }
+
+
+}
+
+function loadReviewCart() {
+
+    let devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
+    window.localStorage.hksSelectedDevices = JSON.stringify( devices )
+    populateSelectedDevices(devices)
+    
+    showLoader(true);
+    stepMoveToReviewCart();
+
 }
 
 
