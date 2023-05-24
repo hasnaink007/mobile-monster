@@ -2,6 +2,11 @@ var Webflow = Webflow || [];
       
 Webflow.push(function() {
 
+
+
+    showConditionalNavButtons();
+
+
     
     var endpointUrl = 'https://mmbuild.shop';
     if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
@@ -163,6 +168,20 @@ Webflow.push(function() {
         
       
         
+
+
+function showConditionalNavButtons() {
+
+    var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
+
+    if(devices.length > 0) {
+
+        $('#check-page-link').show();
+
+    }
+
+}
+
 
 
 

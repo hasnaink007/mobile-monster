@@ -25,8 +25,6 @@ window.addEventListener('load', function() {
     // Check if page has Cart parameter then trigger straight to the Cart.
     triggerDirectPage();
 
-    showConditionalNavButtons();
-
 
     if($('.phone_condition_box').length > 0) {
 
@@ -1557,19 +1555,6 @@ function stepMoveToLoginPage() {
     scrollUIToTop();
 }
 
-
-
-function showConditionalNavButtons() {
-
-    var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
-
-    if(devices.length > 0) {
-
-        $('#check-page-link').show();
-
-    }
-
-}
 
 
 function triggerDirectPage() {
