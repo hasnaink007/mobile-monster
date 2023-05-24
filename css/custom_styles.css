@@ -62,6 +62,26 @@ input[type=checkbox], input[type=radio] {
 }
 
 
+#check-page-link .item-count {
+    background: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px -1px #222;
+    position: absolute;
+    bottom: -4px;
+    right: -10px;
+}
+
+#check-page-link {
+    text-decoration: none;
+    position: relative;
+}
+
+
 .search_suggestions {
     position: absolute;
     background: #FFF;

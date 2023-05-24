@@ -177,6 +177,8 @@ function showConditionalNavButtons() {
     if(devices.length > 0) {
 
         $('#check-page-link').show();
+        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+
 
     }
 
