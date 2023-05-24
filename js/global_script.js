@@ -166,8 +166,6 @@ Webflow.push(function() {
 
 });
         
-      
-        
 
 
 function showConditionalNavButtons() {
@@ -183,9 +181,6 @@ function showConditionalNavButtons() {
     }
 
 }
-
-
-
 
 
 function handleJoinClubNewsletterForm() {
