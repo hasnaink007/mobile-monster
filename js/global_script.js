@@ -201,7 +201,7 @@ function handleJoinClubNewsletterForm() {
     }
 
 
-    var integromatHookUrl = "https://hook.integromat.com/put63vxuxeo32wvtptagav81ol3et6aj";
+    var integromatHookUrl = "https://hook.eu1.make.com/wwo6xo0te5d2m9knwtirnrxgk19xtir5";
 
     // var submissionData = {
     //     name: inputName.val(),
