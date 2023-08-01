@@ -275,7 +275,7 @@ input[type=checkbox], input[type=radio] {
     color: #21d91d;
     border-color: #148800;
 }
-.dropdown-list-6.w--open{
+.dropdown-list-6.w--open, .dropdown-list_tabs_content.w--open{
     top: 70px !important;
 }
 
