@@ -121,7 +121,7 @@ window.addEventListener('load', function() {
 
 // Apply Coupon Code
 
-let couponStatus, couponAmount, couponId;
+let couponStatus, couponAmount = 0, couponId;
 
 document.getElementById("applyButton").addEventListener("click", () => {
   const couponCode = document.getElementById("couponInput").value;
@@ -2165,7 +2165,9 @@ function submitPurchaseOrder (e) {
             'UID': response.response.uid,
             'Payment_Method': paymentMethod,
             'ip_address': ip,
-            "optForCrm" : optInForCrm
+            "optForCrm" : optInForCrm,
+            "couponAmount" : couponAmount,
+            "couponId" : couponId
         }
 
 
