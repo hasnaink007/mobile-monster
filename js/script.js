@@ -142,9 +142,9 @@ document.getElementById("applyButton").addEventListener("click", () => {
       couponId = data.couponId;
 
       if (status === "Active") {
-        document.getElementById("message").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
+        document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
       } else {
-        document.getElementById("message").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
+        document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
       }
     })
     .catch(error => {
