@@ -141,7 +141,7 @@ document.getElementById("applyButton").addEventListener("click", () => {
       couponAmount = data.couponAmount;
       couponId = data.couponId;
 
-      if (status === "Active" && couponId) {
+      if (status === "Active") {
         document.getElementById("message").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
       } else {
         document.getElementById("message").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
