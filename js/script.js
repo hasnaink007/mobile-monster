@@ -145,7 +145,7 @@ document.getElementById("applyButton").addEventListener("click", () => {
         couponId = response.couponId;
 
         if (couponStatus === "Active" && couponId) {
-          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
+          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
         } else {
           document.getElementById("message_error").innerHTML = "Invalid coupon code. Please try again.";
         }
