@@ -121,7 +121,7 @@ window.addEventListener('load', function() {
 
 // Apply Coupon Code
 
-let status, couponAmount, couponId;
+let couponStatus, couponAmount, couponId;
 
 document.getElementById("applyButton").addEventListener("click", () => {
   const couponCode = document.getElementById("couponInput").value;
@@ -137,11 +137,11 @@ document.getElementById("applyButton").addEventListener("click", () => {
   })
     .then(response => response.json())
     .then(data => {
-      status = data.status;
+      couponStatus = data.couponStatus;
       couponAmount = data.couponAmount;
       couponId = data.couponId;
 
-      if (status === "Active") {
+      if (couponStatus === "Active") {
         document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
       } else {
         document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
