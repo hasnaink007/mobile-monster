@@ -145,12 +145,12 @@ document.getElementById("applyButton").addEventListener("click", () => {
         couponId = response.couponId;
 
         if (couponStatus === "Active" && couponId) {
-          document.getElementById("message").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
+          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
         } else {
-          document.getElementById("message").innerHTML = "Invalid coupon code. Please try again.";
+          document.getElementById("message_error").innerHTML = "Invalid coupon code. Please try again.";
         }
       } else {
-        document.getElementById("message").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
+        document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
       }
     })
     .catch(error => {
