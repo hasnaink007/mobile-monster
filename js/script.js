@@ -122,12 +122,17 @@ window.addEventListener('load', function() {
 // Apply Coupon Code
 
 let couponStatus, couponAmount, couponId;
+
 document.getElementById("applyButton").addEventListener("click", () => {
   const couponCode = document.getElementById("couponInput").value;
 
   const inputData = {
     coupon: couponCode
   };
+
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("message_error").style.display = "none";
+  document.getElementById("message_success").style.display = "none";
 
   fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_coupon/', {
     method: 'POST',
@@ -138,6 +143,8 @@ document.getElementById("applyButton").addEventListener("click", () => {
   })
     .then(response => response.json())
     .then(data => {
+      document.getElementById("loader").style.display = "none";
+
       if (data.status === "success") {
         const response = data.response;
         couponStatus = response.couponStatus;
@@ -145,16 +152,20 @@ document.getElementById("applyButton").addEventListener("click", () => {
         couponId = response.couponId;
 
         if (couponStatus === "Active" && couponId) {
-          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
+          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional $${couponAmount} in your total.`;
+          document.getElementById("message_success").style.display = "block";
         } else {
-          document.getElementById("message_error").innerHTML = "Invalid coupon code. Please try again.";
+          document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
+          document.getElementById("message_error").style.display = "block";
         }
       } else {
         document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
+        document.getElementById("message_error").style.display = "block";
       }
     })
     .catch(error => {
       console.error('Error:', error);
+      document.getElementById("loader").style.display = "none";
     });
 });
 
