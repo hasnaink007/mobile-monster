@@ -124,10 +124,11 @@ window.addEventListener('load', function() {
 let couponStatus, couponAmount = 0, couponId;
 
 document.getElementById("applyButton").addEventListener("click", () => {
-  const couponCode = document.getElementById("couponInput").value;
-
+  const couponName = document.getElementById("couponInput").value;
+  const userEmail = "hasnain.khalid@yopmail.com";
+  
   const inputData = {
-    coupon: couponCode
+    coupon: couponName
   };
 
   document.getElementById("loader").style.display = "block";
@@ -152,8 +153,19 @@ document.getElementById("applyButton").addEventListener("click", () => {
         couponId = response.couponId;
 
         if (couponStatus === "Active" && couponId) {
-          document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
-          document.getElementById("message_success").style.display = "block";
+          checkUserCouponUsage(userEmail, couponName)
+            .then(userHasUsedCoupon => {
+              if (userHasUsedCoupon) {
+                document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
+                document.getElementById("message_error").style.display = "block";
+              } else {
+                document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
+                document.getElementById("message_success").style.display = "block";
+              }
+            })
+            .catch(error => {
+              console.error('Error checking coupon usage:', error);
+            });
         } else {
           document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
           document.getElementById("message_error").style.display = "block";
@@ -168,6 +180,25 @@ document.getElementById("applyButton").addEventListener("click", () => {
       document.getElementById("loader").style.display = "none";
     });
 });
+
+function checkUserCouponUsage(userEmail, couponName) {
+  const jsonData = {
+    userEmail: userEmail,
+    couponName: couponName
+  };
+
+  return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/check_if_taken_promotion/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      return data.used;
+    });
+}
 
 // Load Functionality END
 
