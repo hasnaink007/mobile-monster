@@ -121,84 +121,85 @@ window.addEventListener('load', function() {
 
 // Apply Coupon Code
 
-    let couponStatus, couponAmount = 0, couponId;
+let couponStatus, couponAmount = 0, couponId;
 
-    document.getElementById("applyButton").addEventListener("click", () => {
-      const couponName = document.getElementById("couponInput").value;
-      const authKey = localStorage.getItem(`HKS_MM_auth_key`);
+document.getElementById("applyButton").addEventListener("click", () => {
+  const couponName = document.getElementById("couponInput").value;
+  const authKey = localStorage.getItem(`HKS_MM_auth_key`);
 
-      const inputData = {
-        coupon: couponName
-      };
+  const inputData = {
+    coupon: couponName
+  };
 
-      document.getElementById("loader").style.display = "block";
-      document.getElementById("message_error").style.display = "none";
-      document.getElementById("message_success").style.display = "none";
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("message_error").style.display = "none";
+  document.getElementById("message_success").style.display = "none";
 
-      fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_coupon/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(inputData)
-      })
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById("loader").style.display = "none";
+  fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_coupon/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(inputData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("loader").style.display = "none";
 
-          if (data.status === "success") {
-            const response = data.response;
-            couponStatus = response.couponStatus;
-            couponAmount = response.couponAmount;
-            couponId = response.couponId;
+      if (data.status === "success") {
+        const response = data.response;
+        couponStatus = response.couponStatus;
 
-            if (couponStatus === "Active" && couponId) {
-              checkUserCouponUsage(authKey, couponName)
-                .then(usedCoupons => {
-                  if (usedCoupons === true) {
-                    document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
-                    document.getElementById("message_error").style.display = "block";
-                  } else {
-                    document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
-                    document.getElementById("message_success").style.display = "block";
-                  }
-                })
-                .catch(error => {
-                  console.error('Error checking coupon usage:', error);
-                });
-            } else {
-              document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
-              document.getElementById("message_error").style.display = "block";
-            }
-          } else {
-            document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
-            document.getElementById("message_error").style.display = "block";
-          }
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          document.getElementById("loader").style.display = "none";
-        });
+        if (couponStatus === "Active") {
+          checkUserCouponUsage(authKey, couponName)
+            .then(usedCoupons => {
+              if (usedCoupons === true) {
+                document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
+                document.getElementById("message_error").style.display = "block";
+              } else {
+                couponAmount = response.couponAmount;
+                couponId = response.couponId;
+                document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
+                document.getElementById("message_success").style.display = "block";
+              }
+            })
+            .catch(error => {
+              console.error('Error checking coupon usage:', error);
+            });
+        } else {
+          document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
+          document.getElementById("message_error").style.display = "block";
+        }
+      } else {
+        document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
+        document.getElementById("message_error").style.display = "block";
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      document.getElementById("loader").style.display = "none";
     });
+});
 
-    function checkUserCouponUsage(authKey, couponName) {
-      const jsonData = {
-        authKey: authKey,
-        couponName: couponName
-      };
+function checkUserCouponUsage(authKey, couponName) {
+  const jsonData = {
+    authKey: authKey,
+    couponName: couponName
+  };
 
-      return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_if_taken_promotion/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(jsonData)
-      })
-        .then(response => response.json())
-        .then(data => {
-          return data.response.usedCoupons;
-        });
-    }
+  return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_if_taken_promotion/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      return data.response.usedCoupons;
+    });
+}
+
 
 // Load Functionality END
 
