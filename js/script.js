@@ -125,7 +125,7 @@ window.addEventListener('load', function() {
 
     document.getElementById("applyButton").addEventListener("click", () => {
       const couponName = document.getElementById("couponInput").value;
-      const userEmail = "hasnain.khalid@yopmail.com";
+      const authKey = localStorage.getItem(`HKS_MM_auth_key`);
 
       const inputData = {
         coupon: couponName
@@ -153,7 +153,7 @@ window.addEventListener('load', function() {
             couponId = response.couponId;
 
             if (couponStatus === "Active" && couponId) {
-              checkUserCouponUsage(userEmail, couponName)
+              checkUserCouponUsage(authKey, couponName)
                 .then(usedCoupons => {
                   if (usedCoupons === true) {
                     document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
@@ -181,13 +181,13 @@ window.addEventListener('load', function() {
         });
     });
 
-    function checkUserCouponUsage(userEmail, couponName) {
+    function checkUserCouponUsage(authKey, couponName) {
       const jsonData = {
-        userEmail: userEmail,
+        authKey: authKey,
         couponName: couponName
       };
 
-      return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/check_if_taken_promotion/', {
+      return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_if_taken_promotion/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
