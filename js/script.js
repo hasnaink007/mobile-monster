@@ -135,7 +135,7 @@ document.getElementById("applyButton").addEventListener("click", () => {
   document.getElementById("message_error").style.display = "none";
   document.getElementById("message_success").style.display = "none";
 
-  fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_coupon/', {
+  fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -187,7 +187,7 @@ function checkUserCouponUsage(authKey, couponName) {
     couponName: couponName
   };
 
-  return fetch('https://mobile-monster.bubbleapps.io/version-test/api/1.1/wf/mm_check_if_taken_promotion/', {
+  return fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_if_taken_promotion/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
