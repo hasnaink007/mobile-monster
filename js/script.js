@@ -1870,6 +1870,11 @@ $('.phone_condition_box').click(function(e) {
         phoneCondition = 'As New';
 
     }
+    if($(e.target).hasClass('phone_brandnew')) {
+
+        phoneCondition = 'Brand New';
+
+    }
 
     if($(e.target).hasClass('phone_working')) {
 
