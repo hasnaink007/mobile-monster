@@ -2458,10 +2458,14 @@ function criteriaMismatchOption() {
 
 function getPhoneCondition() {
 
-    var phoneCondition = null;
+    var phoneCondition = null; 
 
     if($('.new_active').css('display') != 'none') {
         phoneCondition = 'As New';
+    }
+    
+    if($('.brandnew_active').css('display') != 'none') {
+        phoneCondition = 'Brand New';
     }
 
     if($('.working_active').css('display') != 'none') {
