@@ -1437,12 +1437,7 @@ function populateSelectedDevices(devices){
     let titlesHTML = $('.s2-devices-grid.header-titles')[0]?.outerHTML
     let html = ''
 
-    if(devices.length < 1) {
-
-        $('.op-step-1').fadeIn(20);
-        $('.op-step-2').fadeOut(20);
-
-    }
+   
 
     devices.forEach(d => {
         html += `<div class="s2-devices-grid hks-selected-device-row" style="background-color: transparent" data-id=${d?.tableID}>
@@ -1516,7 +1511,12 @@ function populateSelectedDevices(devices){
     let total = devices.reduce((total, d) => total+d.total_sum, 0 )
     $('#TotalSalesValue').text( total );
 
-    $('.selected-price-holder').text( '$'  + total );
+
+    if(devices.length > 0 ) {
+
+        $('.selected-price-holder').text(  total );
+
+    } 
 
     $('#popup-total-price').text( total )
 
