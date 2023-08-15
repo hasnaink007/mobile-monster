@@ -2502,6 +2502,9 @@ function getSelectedPrice() {
         case 'As New':
             selectedPrice = $('#hks-NewPrice').text()
             break;
+        case 'Brand New':
+            selectedPrice = $('hks-brandNewPrice').text()
+            break;
         case 'working': 
             selectedPrice =  $('#hks-WorkingPrice').text()
             break;
