@@ -1164,6 +1164,15 @@ Webflow.push(function () {
 
         }
 
+        if(getPhoneCondition() == 'Brand New' && $('.input-criteria-mismatch-brandnew input:checked').val() == undefined) {
+            
+            $('.accept_box').addClass('error-border');
+            displayProcessError("Please select what to do if your device doesn't meet the criteria.")
+
+            return;
+
+        }
+
         
         if(getPhoneCondition() == '') {
             $($('.phone_condition_box').slice(0,3)).addClass('error-border');
