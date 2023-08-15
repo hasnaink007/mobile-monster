@@ -2516,6 +2516,7 @@ function getSelectedPrice() {
             selectedPrice = $('#hks-DeadPrice').text() 
     }
 
+    console.log("SElected price is", selectedPrice);
     return parseInt(selectedPrice);
 }
 
