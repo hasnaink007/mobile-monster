@@ -1976,7 +1976,7 @@ function reSyncUpdatePrices() {
 
             var targetPriceContainer = null;
 
-            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html();
+            var brandNewPrice = parseInt($('.condition_new').find('h1.amount_text').html()) + 50;
             var newPrice = $('.condition_new').find('h1.amount_text').html();
             var workingPrice = $('.condition_working').find('h1.amount_text').html();
             var deadPrice = $('.condition_dead').find('h1.amount_text').html();
@@ -2516,7 +2516,7 @@ function getSelectedPrice() {
             selectedPrice = $('#hks-DeadPrice').text() 
     }
 
-    console.log("SElected price is", selectedPrice);
+    
     return parseInt(selectedPrice);
 }
 
