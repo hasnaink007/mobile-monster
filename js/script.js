@@ -1976,6 +1976,7 @@ function reSyncUpdatePrices() {
 
             var targetPriceContainer = null;
 
+            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html();
             var newPrice = $('.condition_new').find('h1.amount_text').html();
             var workingPrice = $('.condition_working').find('h1.amount_text').html();
             var deadPrice = $('.condition_dead').find('h1.amount_text').html();
@@ -2002,6 +2003,7 @@ function reSyncUpdatePrices() {
             $('.selected-price-holder').html('$' + ((getSelectedPrice() - getWorkingFaultsTotal()) * getSelectedQuantity()) );
 
             $('.condition_new .selected-price-holder').html(newPrice);
+            $('.condition_brandnew .selected-price-holder').html(brandNewPrice);
             $('.condition_working .selected-price-holder').html(workingPrice);
             $('.condition_dead .selected-price-holder').html(deadPrice);
 
