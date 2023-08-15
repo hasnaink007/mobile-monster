@@ -1437,6 +1437,13 @@ function populateSelectedDevices(devices){
     let titlesHTML = $('.s2-devices-grid.header-titles')[0]?.outerHTML
     let html = ''
 
+    if(devices.length < 1) {
+
+        $('.op-step-1').fadeIn(20);
+        $('.op-step-2').fadeOut(20);
+
+    }
+
     devices.forEach(d => {
         html += `<div class="s2-devices-grid hks-selected-device-row" style="background-color: transparent" data-id=${d?.tableID}>
             <div class="hks-devices-cell thumb"><img src="${d?.thumb}"></div>
