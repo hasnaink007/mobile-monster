@@ -2469,23 +2469,22 @@ function getPhoneCondition() {
 
     var phoneCondition = null; 
 
-    if(typeof $('.new_active').css('display') != "undefined" && $('.new_active').css('display') != 'none') {
+    if( $('.new_active').length > 0 && $('.new_active').css('display') != 'none') {
         phoneCondition = 'As New';
     }
     
-    if(typeof $('.brandnew_active').css('display') != "undefined" && $('.brandnew_active').css('display') != 'none') {
+    if( $('.brandnew_active').length > 0 && $('.brandnew_active').css('display') != 'none') {
         phoneCondition = 'Brand New';
     }
 
-    if( typeof $('.working_active').css('display')  != "undefined" && $('.working_active').css('display') != 'none') {
+    if( $('.working_active').length > 0 && $('.working_active').css('display') != 'none') {
         phoneCondition = 'working';
     }
 
-    if( typeof $('.dead_selected').css('display')  != "undefined" && $('.dead_selected').css('display') != 'none') {
+    if( $('.dead_selected').length > 0 && $('.dead_selected').css('display') != 'none') {
         phoneCondition = 'Dead';
     }
 
-    
 
     return phoneCondition;
 
