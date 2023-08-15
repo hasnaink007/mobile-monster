@@ -1166,7 +1166,7 @@ Webflow.push(function () {
 
         if(getPhoneCondition() == 'Brand New' && $('.input-criteria-mismatch-brandnew input:checked').val() == undefined) {
             
-            $('.accept_box').addClass('error-border');
+            $('.accept_box_brandnew').addClass('error-border');
             displayProcessError("Please select what to do if your device doesn't meet the criteria.")
 
             return;
