@@ -2008,7 +2008,7 @@ function reSyncUpdatePrices() {
 
             $('.selected-price-holder').html('$' + ((getSelectedPrice() - getWorkingFaultsTotal()) * getSelectedQuantity()) );
 
-            console.log(newPrice, brandNewPrice, workingPrice, deadPrice);
+        
             $('.condition_new .selected-price-holder').html(newPrice);
             $('.condition_brandnew .selected-price-holder').html(brandNewPrice);
             $('.condition_working .selected-price-holder').html(workingPrice);
