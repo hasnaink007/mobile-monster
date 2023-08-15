@@ -1512,12 +1512,10 @@ function populateSelectedDevices(devices){
     $('#TotalSalesValue').text( total );
 
 
-    if(devices.length > 0 ) {
+   
+    // $('.selected-price-holder').text(  total );
 
-        $('.selected-price-holder').text(  total );
-
-    } 
-
+   
     $('#popup-total-price').text( total )
 
     $('.hks-device-lock-provider').change(e => {
