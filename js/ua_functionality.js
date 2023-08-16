@@ -6,11 +6,11 @@ var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true'
 var endpointUrl = 'https://mmbuild.shop/version-test';
 
 if(!isDev) {
-    endpointUrl = 'https://mmbuild.shop';
+    endpointUrl = 'https://portal.mobilemonster.com.au/';
 }
 
 
-// var endpointUrl = 'https://mmbuild.shop/version-test';
+// var endpointUrl = 'https://portal.mobilemonster.com.au/version-test';
 
 
 var Webflow = Webflow || [];
