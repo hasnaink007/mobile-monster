@@ -48,7 +48,7 @@ window.addEventListener('load', function() {
         }
         
 
-        document.getElementById("TotalSalesValue").innerHTML = NewPricing;
+        document.getElementById("TotalSalesValue").innerHTML = "$" + NewPricing;
 
 
 
@@ -1512,8 +1512,10 @@ function populateSelectedDevices(devices){
     $('#TotalSalesValue').text( total );
 
 
-   
-    // $('.selected-price-holder').text(  total );
+   if(total > 0) {
+
+       $('.selected-price-holder').text(  total );
+   }
 
    
     $('#popup-total-price').text( total )
