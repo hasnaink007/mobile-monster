@@ -1509,16 +1509,11 @@ function populateSelectedDevices(devices){
     $('#popup-device-list').html(html)
 
     let total = devices.reduce((total, d) => total+d.total_sum, 0 )
-    $('#TotalSalesValue').text( total );
 
+    $('#TotalSalesValue').text( "$" + total );
+    // $('.selected-price-holder').text(  total );
+    $('#popup-total-price').text( "$" + total )
 
-   if(total > 0) {
-
-       $('.selected-price-holder').text(  total );
-   }
-
-   
-    $('#popup-total-price').text( total )
 
     $('.hks-device-lock-provider').change(e => {
         let id = e.target?.closest('.hks-selected-device-row')?.getAttribute('data-id')
