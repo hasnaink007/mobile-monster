@@ -1512,7 +1512,8 @@ function populateSelectedDevices(devices){
 
     $('#TotalSalesValue').text( "$" + total );
     // $('.selected-price-holder').text(  total );
-    $('#popup-total-price').text( "$" + total )
+    // $('#popup-total-price').text( "$" + total )
+    $('.popup_confirm_order .selected-price-holder').text( "$" + total );
 
 
     $('.hks-device-lock-provider').change(e => {
