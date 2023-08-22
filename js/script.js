@@ -1980,7 +1980,15 @@ function reSyncUpdatePrices() {
 
             var targetPriceContainer = null;
 
-            var brandNewPrice = parseInt($('.condition_new').find('h1.amount_text').html()) + 50;
+            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html();
+
+
+            if (isNaN(brandNewPrice) || parseInt(brandNewPrice) === 0) {
+                brandNewPrice = parseInt($('#hks-NewPrice').text()) + 50;
+            }
+            else{
+                brandNewPrice = brandNewPrice ;
+            }
             var newPrice = $('.condition_new').find('h1.amount_text').html();
             var workingPrice = $('.condition_working').find('h1.amount_text').html();
             var deadPrice = $('.condition_dead').find('h1.amount_text').html();
@@ -2501,16 +2509,18 @@ function getSelectedQuantity() {
 }
 
 function getSelectedPrice() {
-
     var selectedPrice = 0;
-    
     switch(getPhoneCondition()){
         case 'As New':
             selectedPrice = $('#hks-NewPrice').text()
             break;
         case 'Brand New':
-            var brandNewPrice = $('#hks-brandNewPrice').text();
-            selectedPrice = parseInt(brandNewPrice) + 50;
+            var brandNewPrice = parseInt($('#hks-brandNewPrice').text());
+            if (isNaN(brandNewPrice) || brandNewPrice === 0) {
+              selectedPrice = parseInt($('#hks-NewPrice').text()) + 50;
+            } else {
+              selectedPrice = brandNewPrice;
+            }
             break;
         case 'working': 
             selectedPrice =  $('#hks-WorkingPrice').text()
@@ -2521,8 +2531,6 @@ function getSelectedPrice() {
         default: 
             selectedPrice = $('#hks-DeadPrice').text() 
     }
-
-    
     return parseInt(selectedPrice);
 }
 
