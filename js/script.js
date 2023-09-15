@@ -845,7 +845,7 @@ function validateRegistrationForm() {
 function handleRegistration(e){
 
     e.preventDefault();
-
+    e.stopPropagation();
     
     clearProcessErrors();
 
