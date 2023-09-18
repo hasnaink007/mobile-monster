@@ -123,7 +123,7 @@ window.addEventListener('load', function() {
 
 let couponStatus, couponAmount = 0, couponId;
 
-document.getElementById("applyButton").addEventListener("click", () => {
+document.getElementById("applyButton")?.addEventListener("click", () => {
   const couponName = document.getElementById("couponInput").value;
   const authKey = localStorage.getItem(`HKS_MM_auth_key`);
 
