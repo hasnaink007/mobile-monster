@@ -29,7 +29,7 @@ we can send back your device free of charge" fill="black" xml:space="preserve" s
     </g>
     </g>
     <g id="Best prices">
-    <text id="If a lower price is offered by another store, we'll beat it by 5%." fill="black" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="14" letter-spacing="0em"><tspan x="270.143" y="308.931">If a lower price is offered by </tspan><tspan x="252.581" y="331.931">another store, we'll beat it by 5%.</tspan></text>
+    <text id="If a lower price is offered by another store, we'll beat it by 5%." fill="black" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="14" letter-spacing="0em"><tspan x="270.143" y="308.931">If a lower price is offered by </tspan><tspan x="252.581" y="331.931"><a href="https://mobile-monster.win/best-price-guarantee" target="_blank">another store, we'll beat it by 5%</a></tspan></text>
     <text id="Best Prices Guaranteed" fill="#63388C" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="21" letter-spacing="0em"><tspan x="248" y="278.647">Best Prices Guaranteed</tspan></text>
     <g id="best prices">
     <g id="Ellipse 28" filter="url(#filter2_d_1248_386)">
