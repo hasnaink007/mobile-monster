@@ -2497,7 +2497,7 @@ function getPhoneCondition() {
 }
 
 function getBubbleTableID() {
-    return $('#hks-BubbleTableId').length > 0 ? $('#hks-BubbleTableId').html() : '343hd737dh3';
+    return $('#hks-BubbleTableId').length > 0 ? $('#hks-BubbleTableId')[0].innerText : '343hd737dh3';
 }
 
 
