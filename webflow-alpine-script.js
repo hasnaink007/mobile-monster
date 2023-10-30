@@ -15,9 +15,10 @@ document.addEventListener('alpine:init', function() {
             
 
             console.log(current_page_model);
+
             $pThis = this;
 
-            $pThis.loadDevicesData();
+            $pThis.loadDevicesData(current_page_model);
             
             console.log($pThis);
 
@@ -43,9 +44,15 @@ document.addEventListener('alpine:init', function() {
 
         //  ACTION  CREATORS - METHODS
 
-        loadDevicesData: function() {
+        loadDevicesData: function(current_model) {
 
-            axios.post('https://mobile-monster.bubbleapps.io/version-live/api/1.1/wf/get_macbook_details')
+
+            var formValues = new FormData();
+
+            formValues.append('model', current_model);
+
+
+            axios.post('https://mobile-monster.bubbleapps.io/version-live/api/1.1/wf/get_macbook_details', formValues)
             .then(response => {
                 
 
