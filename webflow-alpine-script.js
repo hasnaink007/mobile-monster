@@ -104,7 +104,6 @@ document.addEventListener('alpine:init', function() {
 
                 var selectedDevice = $pThis.groupDataBy('gpu',$pThis.appliedFilters)[attr_value].items[0];
                 
-                alert("Sending to device page");
                 // console.log(selectedDevice);
                 window.location = 'http://mobile-monster.webflow.io/sell-your-phone/' + selectedDevice['webflow-slug'];
                 
