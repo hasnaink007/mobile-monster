@@ -12,7 +12,9 @@ document.addEventListener('alpine:init', function() {
     Alpine.store("mm_laptops", {
 
         init: function() {
+            
 
+            console.log(current_page_model);
             $pThis = this;
 
             $pThis.loadDevicesData();
