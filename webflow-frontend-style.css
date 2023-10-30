@@ -1,1 +1,66 @@
-
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hks-custom-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h2 {
+    width: auto;
+    text-align: left;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 40px 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.27px;
+    display: flex;
+  }
+  
+  span {
+    width: 65px;
+    height: 42px;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Open Sans, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+    text-decoration: none;
+    display: flex;
+    box-shadow: 0 0 7px -5px #000;
+  }
+  
+  .image-wrapper {
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+  
+  .image_of_mobile {
+      margin-right: 10px;
+    width: 184px;
+    height: 200px;
+    max-width: 100%; 
+  }
+  
+  .options-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+  }
+  .image_and_options{
+      display: flex;
+  }
