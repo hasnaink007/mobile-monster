@@ -83,7 +83,6 @@ document.addEventListener('alpine:init', function() {
 
             var currentIndex = event.target.getAttribute('parentindex');
 
-            
 
             if($pThis.activeIndex != currentIndex) {
                 $pThis.currentLifecycleIndex = 0;
@@ -103,7 +102,11 @@ document.addEventListener('alpine:init', function() {
 
             } else {
 
-                window.open('http://google.com', '_blank');
+                var selectedDevice = $pThis.groupDataBy('gpu',$pThis.appliedFilters)[attr_value].items[0];
+                
+                // console.log(selectedDevice);
+                window.location = selectedDevice['webflow-slug'];
+                
 
             }
 
