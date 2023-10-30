@@ -14,7 +14,7 @@ document.addEventListener('alpine:init', function() {
         init: function() {
             
 
-            console.log(current_page_model);
+            console.log(current_page_model + 'v=3');
 
             $pThis = this;
 
