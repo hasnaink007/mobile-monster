@@ -59,9 +59,15 @@
 
 
   .img-wrap{
-      width: 50%;
+    display: flex;
+    width: 35%;
+    justify-content: center;
   }
 
   .options_wrapper{
-    width: 50%;
+    width: 65%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
