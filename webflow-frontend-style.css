@@ -90,3 +90,10 @@
   padding: 10px 25px;
   font-weight: 600;
 }
+
+.hks_item_title{
+   text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 36px;
+}
