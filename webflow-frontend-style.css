@@ -110,27 +110,26 @@
   
 
   .image_of_mobile {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-}
-.hks-custom-wrap {
+      width: 100%;
+      max-width: 300px;
+      height: 300px;
+  }
+  .hks-custom-wrap {
 
-  max-width: 50%;
-  padding: 8px;
- 
-}
+    max-width: 50%;
+    padding: 8px;
+  
+  }
 
-.hks_item_title{
-  font-size: 22px;
-}
+  .hks_item_title{
+    font-size: 22px;
+  }
 
-
-.hks-select-options {
- font-size: 16px;
-padding: 7px 17px;
- 
-}
+  .hks-select-options {
+  font-size: 16px;
+  padding: 7px 17px;
+  
+  }
 
 
 }
