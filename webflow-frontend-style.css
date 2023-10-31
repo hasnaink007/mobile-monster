@@ -104,3 +104,16 @@
     font-size: 32px;
     line-height: 36px;
 }
+
+
+@media (max-width: 1024px) {
+  
+
+  .image_of_mobile {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+}
