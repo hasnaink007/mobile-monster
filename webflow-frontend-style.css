@@ -24,25 +24,7 @@
     line-height: 18.27px;
     display: flex;
   }
-  
-  span {
-    width: 65px;
-    height: 42px;
-    color: #000;
-    text-align: center;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: Open Sans, sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 14.52px;
-    text-decoration: none;
-    display: flex;
-    box-shadow: 0 0 7px -5px #000;
-  }
+
   
   .image-wrapper {
     text-align: center;
