@@ -60,14 +60,14 @@
 
   .img-wrap{
     display: flex;
-    width: 35%;
+    width: 45%;
     justify-content: center;
   }
 
   .options_wrapper{
     padding: 0px 0px 0px 40px;
     border-left: 1px solid grey;
-    width: 65%;
+    width: 55%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
