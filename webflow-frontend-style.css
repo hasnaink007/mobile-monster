@@ -66,7 +66,7 @@
 
   .options_wrapper{
     padding: 0px 0px 0px 40px;
-    border-left: 1px solid grey;
+    border-left: 1px solid #77529c;
     width: 55%;
     display: flex;
     flex-wrap: wrap;
@@ -89,8 +89,14 @@
   border: 2px solid #c9c9c9;
   padding: 10px 25px;
   font-weight: 600;
-}
 
+  background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(215, 141, 245) 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+.hks-select-options:hover{
+  background-position: left;
+}
 .hks_item_title{
    text-align: center;
     margin-top: 20px;
