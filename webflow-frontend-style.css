@@ -34,9 +34,9 @@
   }
   
   .image_of_mobile {
-    width:100%;
-    height: 200px;
-    max-width:184px; 
+    width: 100%;
+    height: 300px;
+    max-width: 300px; 
   }
   
   .options-wrapper {
