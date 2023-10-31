@@ -96,7 +96,7 @@
 }
 .hks-select-options:hover{
   background-position: left;
-  border: #000;
+  border-color: #000;
 }
 .hks_item_title{
    text-align: center;
