@@ -47,3 +47,7 @@
   .image_and_options{
       display: flex;
   }
+
+  .hks_select_view{
+    width: 100%;
+  }
