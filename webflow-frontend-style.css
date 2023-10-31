@@ -12,14 +12,14 @@
     justify-content: space-between;
   }
   
-  h2 {
+  h2.hks_device_heading {
     width: auto;
     text-align: left;
     justify-content: flex-start;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 40px 0;
+    padding: 10px 10px 0;
     font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 700;
