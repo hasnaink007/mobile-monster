@@ -90,7 +90,7 @@
   padding: 10px 25px;
   font-weight: 600;
 
-  background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(215, 141, 245) 50%) right;
+  background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(193, 88, 235) 50%) right;
   background-size: 200%;
   transition: .5s ease-out;
 }
