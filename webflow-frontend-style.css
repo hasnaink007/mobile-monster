@@ -201,3 +201,29 @@
 
 
 }
+
+
+
+
+@media (max-width: 420px){
+
+  h2.hks_device_heading {
+    width: auto;
+    padding: 0px 0px 0;
+    font-size: 15px;
+    font-weight: 700;
+
+  }
+  .hks-custom-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .options_wrapper {
+    padding: 0px 7px 0px 7px;
+  }
+
+}
