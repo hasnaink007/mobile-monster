@@ -71,3 +71,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+.hks-options{
+  display: block;
+  width: 100%;
+}
