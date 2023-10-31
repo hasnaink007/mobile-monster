@@ -88,7 +88,7 @@ document.addEventListener('alpine:init', function() {
  
                  var webflow_slug = $pThis.deviceOptions[attr_value].items[0]['webflow-slug'];
  
-                 window.location.href = "/" + webflow_slug;
+                 window.location.href = "/sell-your-laptop/" + webflow_slug;
  
                  return ;
  
