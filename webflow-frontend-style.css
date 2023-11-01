@@ -40,6 +40,7 @@
     padding: 9px 35px;
   }
   .hks-clear{
+    background-color: transparent;
     text-decoration: underline;
     color: #63388c;
     font-weight: 500;
