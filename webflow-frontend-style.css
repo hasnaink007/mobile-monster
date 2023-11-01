@@ -25,8 +25,20 @@
     padding: 9px 35px;
   }
 
+ 
+  .hks-clear:hover {
+    background-color: #004369;
+  }
+  
+  .hks-clear:focus,
+  .hks-clear:active {
+    background-color: black;
+    transition: none;
+  }
+
+
   .hks-clear{
-    
+    transition: background-color 1s;
     background: #fdfdfd;
     font-weight: 500;
     font-size: 16px;
