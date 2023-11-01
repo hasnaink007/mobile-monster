@@ -14,7 +14,8 @@
   .nav_btns{
     padding: 20px 0px;
     width: 100%;
-    display: block;
+    display: flex;
+    column-gap: 20px;
   }
 
   .hks-back{
