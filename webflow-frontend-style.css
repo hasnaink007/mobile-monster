@@ -157,6 +157,7 @@
 
   .image_of_mobile {
       width: 100%;
+      height: auto;
   }
   .hks-custom-wrap {
 
@@ -193,6 +194,7 @@
 
   .image_of_mobile {
       width: 100%;
+      height: auto;
       
   }
   .hks-custom-wrap {
@@ -283,7 +285,10 @@
     justify-content: space-between;
   }
 
-
+  .image_of_mobile {
+    width: 100%;
+    height: auto;
+  }
 
   .nav_btns {
     padding: 35px 0px;
