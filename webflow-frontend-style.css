@@ -18,6 +18,20 @@
     column-gap: 20px;
   }
 
+  
+  .hks-back:hover {
+    color: #fff;
+    background-color: #000000;
+  }
+  
+  .hks-back:focus,
+  .hks-back:active {
+    color: #fff;
+    background-color: black;
+    transition: none;
+  }
+
+
   .hks-back{
     font-weight: 500;
     font-size: 16px;
@@ -27,11 +41,12 @@
 
  
   .hks-clear:hover {
-    background-color: #004369;
+    background-color: #faf3ff;
   }
   
   .hks-clear:focus,
   .hks-clear:active {
+    color: #fff;
     background-color: black;
     transition: none;
   }
