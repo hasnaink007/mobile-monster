@@ -30,6 +30,7 @@
 .hks-custom-wrap:hover {
   border-radius: 5px;
   background: #faf3ff;
+  cursor: pointer;
 }
   
   .image-wrapper {
