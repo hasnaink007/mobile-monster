@@ -273,6 +273,16 @@
 
 
 @media (max-width: 420px){
+
+
+  .main-content-wrapper {
+    padding-bottom: 64px;
+    border-bottom: 1px solid #d5d0d0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
   .product-info-wrap{
     border-bottom: 1px solid #d7d7d7;
   }
