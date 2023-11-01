@@ -77,8 +77,8 @@ document.addEventListener('alpine:init', function() {
             
             if($pThis.currentLifecycleIndex > 0) {
                 
-                var current_lifecycle_name = $pThis.getCurrentLifecycleName();
                 $pThis.currentLifecycleIndex = $pThis.currentLifecycleIndex - 1;
+                var current_lifecycle_name = $pThis.getCurrentLifecycleName();
                 
                 $pThis.appliedFilters = $pThis.appliedFilters.filter((item, index) => {
 
@@ -89,6 +89,7 @@ document.addEventListener('alpine:init', function() {
 
                 // if getting back to the variants screen
                 if($pThis.currentLifecycleIndex == 0) {
+                    
                     $pThis.deviceOptions = null;
                     $pThis.selectedDeviceInfo = null;
 
