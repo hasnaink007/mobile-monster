@@ -41,25 +41,16 @@
   }
 
  
-  .hks-clear:hover {
-    background-color: #faf3ff;
-  }
   
-  .hks-clear:focus,
-  .hks-clear:active {
-    color: #fff;
-    background-color: black;
-    transition: none;
-  }
 
 
   .hks-clear{
-    transition: background-color 1s;
-    background: #fdfdfd;
+    text-decoration: underline;
+    color: #63388c;
     font-weight: 500;
     font-size: 16px;
     border-radius: 19px;
-    padding: 9px 35px;
+    padding: 9px 20px;
   }
   h2.hks_device_heading {
     margin-top: 0px;
