@@ -230,13 +230,13 @@
     justify-content: center;
   }
   .options_wrapper {
-    padding: 0px 0px 0px 40px;
+    padding: 0px 15px 0px 15px;
     border-left: none;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
 
