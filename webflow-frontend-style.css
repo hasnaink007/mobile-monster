@@ -27,7 +27,10 @@
     line-height: 18.27px;
     display: flex;
 }
-
+.hks-custom-wrap:hover {
+  border-radius: 5px;
+  background: #faf3ff;
+}
   
   .image-wrapper {
     text-align: center;
