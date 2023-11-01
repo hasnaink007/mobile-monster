@@ -170,8 +170,8 @@
   }
 
   .hks-select-options {
-  font-size: 16px;
-  padding: 7px 17px;
+    font-size: 14px;
+    padding: 7px 25px;
   
   }
   .img-wrap{
@@ -187,8 +187,7 @@
 
   .image_of_mobile {
       width: 100%;
-      max-width: 300px;
-      height:auto;
+      
   }
   .hks-custom-wrap {
 
