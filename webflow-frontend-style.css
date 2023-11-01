@@ -13,19 +13,20 @@
   }
   
   h2.hks_device_heading {
+    margin-top: 0px;
     width: auto;
     text-align: left;
     justify-content: flex-start;
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 10px 0;
+    padding: 0px 10px 0;
     font-family: Open Sans, sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 18.27px;
     display: flex;
-  }
+}
 
   
   .image-wrapper {
