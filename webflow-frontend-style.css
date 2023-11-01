@@ -19,11 +19,15 @@
   }
 
   .hks-back{
+    font-weight: 500;
+    font-size: 16px;
     border-radius: 19px;
     padding: 9px 35px;
   }
 
   .hks-clear{
+    font-weight: 500;
+    font-size: 16px;
     border-radius: 19px;
     padding: 9px 35px;
   }
