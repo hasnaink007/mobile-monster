@@ -137,7 +137,7 @@
 
   background: linear-gradient(to left, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%) right;
   background-size: 200%;
-  transition: .3s ease-out;
+  transition: .2s ease-out;
 }
 .hks-select-options:hover{
   background-position: left;
