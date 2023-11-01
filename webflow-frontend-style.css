@@ -29,7 +29,7 @@
 }
 .hks-custom-wrap:hover {
   border-radius: 5px;
-  background: #f8f5fa;
+  /* background: #f8f5fa; */
   cursor: pointer;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
