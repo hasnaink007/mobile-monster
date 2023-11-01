@@ -240,6 +240,12 @@
     align-content: center;
     justify-content: center;
   }
+  .hks-options{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
 
 
