@@ -72,8 +72,34 @@ document.addEventListener('alpine:init', function() {
  
  
          },
+        
+        moveToPreviousStep: function() {
+            
+            if($pThis.currentLifecycleIndex > 0) {
+                
+                var current_lifecycle_name = $pThis.getCurrentLifecycleName();
+                $pThis.currentLifecycleIndex = $pThis.currentLifecycleIndex - 1;
+                
+                $pThis.appliedFilters = $pThis.appliedFilters.filter((item, index) => {
 
-         clearSelectedDevices: function() {
+                    return item[0] !== current_lifecycle_name;
+
+                });
+
+
+                // if getting back to the variants screen
+                if($pThis.currentLifecycleIndex == 0) {
+                    $pThis.deviceOptions = null;
+                    $pThis.selectedDeviceInfo = null;
+
+                }
+
+            }
+
+
+        },
+
+        clearSelectedDevices: function() {
 
 
             $pThis.currentLifecycleIndex = 0;
@@ -81,9 +107,9 @@ document.addEventListener('alpine:init', function() {
             $pThis.appliedFilters = [];
             $pThis.deviceOptions = null;
 
-         },
+        },
  
-         handleOptionClick: function(event) {
+        handleOptionClick: function(event) {
  
              var attr_name = event.target.getAttribute('attrname');
              var attr_value = event.target.getAttribute('attrvalue');
