@@ -72,6 +72,16 @@ document.addEventListener('alpine:init', function() {
  
  
          },
+
+         clearSelectedDevices: function() {
+
+
+            $pThis.currentLifecycleIndex = 0;
+            $pThis.selectedDeviceInfo = null;
+            $pThis.appliedFilters = [];
+            $pThis.deviceOptions = null;
+
+         },
  
          handleOptionClick: function(event) {
  
