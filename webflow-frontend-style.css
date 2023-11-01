@@ -11,7 +11,21 @@
     padding: 19px;
     justify-content: space-between;
   }
-  
+  .nav_btns{
+    padding: 20px 0px;
+    width: 100%;
+    display: block;
+  }
+
+  .hks-back{
+    border-radius: 19px;
+    padding: 9px 35px;
+  }
+
+  .hks-clear{
+    border-radius: 19px;
+    padding: 9px 35px;
+  }
   h2.hks_device_heading {
     margin-top: 0px;
     width: auto;
