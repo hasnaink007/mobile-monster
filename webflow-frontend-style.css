@@ -186,6 +186,15 @@
 
 @media (max-width: 900px) {
   
+  .main-content-wrapper{
+    margin-bottom: 58px;
+    padding-bottom: 58px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   .hks-select-options {
     font-size: 14px;
     padding: 7px 17px;
@@ -274,6 +283,7 @@
     border-bottom: 1px solid #d5d0d0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
 
