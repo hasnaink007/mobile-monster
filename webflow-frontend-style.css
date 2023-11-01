@@ -246,6 +246,13 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .nav_btns {
+    padding: 35px 0px;
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-around;
+  }
 
 
 
@@ -260,6 +267,13 @@
 
 @media (max-width: 420px){
 
+  .nav_btns {
+    padding: 35px 0px;
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-around;
+  }
   h2.hks_device_heading {
     width: auto;
     padding: 0px 0px 0;
