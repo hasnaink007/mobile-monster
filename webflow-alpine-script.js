@@ -92,6 +92,10 @@ document.addEventListener('alpine:init', function() {
                     $pThis.deviceOptions = null;
                     $pThis.selectedDeviceInfo = null;
 
+                } else {
+
+                    $pThis.updateDevicesOptions();
+
                 }
 
             }
