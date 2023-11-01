@@ -144,8 +144,9 @@
   color: #fff;
 }
 .hks_item_title{
+
    text-align: center;
-    margin-top: 20px;
+    margin: 30px 0px;
     font-size: 32px;
     line-height: 36px;
 }
