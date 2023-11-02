@@ -8,9 +8,9 @@
     font-size: 17px;
   }
    
-  .hks-selected-options .hks-applied-filter:first-child {
+  /* .hks-selected-options .hks-applied-filter:first-child {
     display: none;
-  }
+  } */
 
   .hks-custom-wrap {
     max-width: 33%;
