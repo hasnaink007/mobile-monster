@@ -8,8 +8,8 @@
     font-size: 17px;
   }
    
-  #yourDivId .hks-applied-filter:first-child {
-    display: none !important;
+  .hks-selected-options .hks-applied-filter:first-child {
+    display: none;
   }
 
   .hks-custom-wrap {
