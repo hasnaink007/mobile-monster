@@ -8,8 +8,8 @@
     font-size: 17px;
   }
    
-  .hks-selected-options p:first-child {
-    display: none;
+  .hks-sel-opt p:first-child {
+    display: none !important;
   }
 
   .hks-custom-wrap {
