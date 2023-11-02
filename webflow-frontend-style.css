@@ -256,6 +256,7 @@
   }
 
   .img-wrap {
+    border-bottom: 1px solid #e5e0e0;
     display: flex;
     width: 100%;
     justify-content: center;
