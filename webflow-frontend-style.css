@@ -290,7 +290,12 @@
 
 
 @media (max-width: 420px){
-
+ 
+  .hks-applied-filter {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+  }
   
   div#yourDivId{
     column-gap: 18px;
@@ -298,7 +303,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
+
   }
 
   .main-content-wrapper {
