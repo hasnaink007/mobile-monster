@@ -291,6 +291,15 @@
 
 @media (max-width: 420px){
 
+  
+  div#yourDivId{
+    column-gap: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
 
   .main-content-wrapper {
     padding-bottom: 64px;
