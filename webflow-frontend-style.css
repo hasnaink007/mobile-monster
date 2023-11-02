@@ -2,7 +2,13 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
+  .hks-applied-filter{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 17px;
+  }
+   
+
   .hks-custom-wrap {
     max-width: 33%;
     display: flex;
