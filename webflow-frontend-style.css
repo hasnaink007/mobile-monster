@@ -297,7 +297,7 @@
     font-size: 14px;
   }
   
-  div#yourDivId{
+  div#opt_id{
     column-gap: 18px;
     width: 100%;
     display: flex;
