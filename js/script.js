@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
         // Set Reduced Price Trigger
 
         try {
-            var workingPrice = $('.condition_working').find('.amount_text').html();
+            var workingPrice = $('.condition_working').find('h1.amount_text').html();
 
             $('.reduce-price-holder').html(parseFloat(workingPrice).toFixed(2));
         } catch {
@@ -1980,7 +1980,7 @@ function reSyncUpdatePrices() {
 
             var targetPriceContainer = null;
 
-            var brandNewPrice = $('.condition_brandnew').find('.amount_text').html();
+            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html();
 
 
             if (isNaN(brandNewPrice) || parseInt(brandNewPrice) === 0) {
@@ -1989,9 +1989,9 @@ function reSyncUpdatePrices() {
             else{
                 brandNewPrice = brandNewPrice ;
             }
-            var newPrice = $('.condition_new').find('.amount_text').html();
-            var workingPrice = $('.condition_working').find('.amount_text').html();
-            var deadPrice = $('.condition_dead').find('.amount_text').html();
+            var newPrice = $('.condition_new').find('h1.amount_text').html();
+            var workingPrice = $('.condition_working').find('h1.amount_text').html();
+            var deadPrice = $('.condition_dead').find('h1.amount_text').html();
 
 
             // if (phoneCondition  == 'As New') {
