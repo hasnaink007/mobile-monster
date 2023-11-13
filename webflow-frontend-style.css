@@ -356,8 +356,12 @@
   }
   .redirect-message {
     font-size: 18px;
-    color: #ffffff;
+    color: #6b6b6b;
     font-family: 'Arial', sans-serif;
+  }
+  .loader_image {
+    max-width: 50px;
+    max-height: 50px;
   }
 
 }
