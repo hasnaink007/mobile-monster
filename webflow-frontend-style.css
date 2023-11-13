@@ -11,6 +11,15 @@
   /* .hks-selected-options .hks-applied-filter:first-child {
     display: none;
   } */
+  .redirect-message {
+    font-size: 18px;
+    color: #6b6b6b;
+    font-family: 'Arial', sans-serif;
+  }
+  .loader_image {
+    max-width: 50px;
+    max-height: 50px;
+  }
 
   .hks-custom-wrap {
     max-width: 33%;
@@ -287,8 +296,6 @@
 }
 
 
-
-
 @media (max-width: 420px){
  
   .hks-applied-filter {
@@ -354,14 +361,4 @@
   .options_wrapper {
     padding: 0px 7px 0px 7px;
   }
-  .redirect-message {
-    font-size: 18px;
-    color: #6b6b6b;
-    font-family: 'Arial', sans-serif;
-  }
-  .loader_image {
-    max-width: 50px;
-    max-height: 50px;
-  }
-
 }
