@@ -13,7 +13,7 @@
   } */
   .loading_container_wrapper {
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
   .loading-container {
     width: 100%;
