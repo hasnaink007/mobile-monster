@@ -1980,7 +1980,7 @@ function reSyncUpdatePrices() {
 
             var targetPriceContainer = null;
 
-            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html();
+            var brandNewPrice = $('.condition_brandnew').find('h1.amount_text').html() || $('.condition_brandnew').find('div#BranNewPricing').html();
 
 
             if (isNaN(brandNewPrice) || parseInt(brandNewPrice) === 0) {
@@ -1989,9 +1989,9 @@ function reSyncUpdatePrices() {
             else{
                 brandNewPrice = brandNewPrice ;
             }
-            var newPrice = $('.condition_new').find('h1.amount_text').html();
-            var workingPrice = $('.condition_working').find('h1.amount_text').html();
-            var deadPrice = $('.condition_dead').find('h1.amount_text').html();
+            var newPrice = $('.condition_new').find('h1.amount_text').html() || $('.condition_new').find('div#NewPricing').html();
+            var workingPrice = $('.condition_working').find('h1.amount_text').html() || $('.condition_working').find('div#per_unit_final_pricing').html();
+            var deadPrice = $('.condition_dead').find('h1.amount_text').html() || $('.condition_dead').find('div#mm-dead-cond-price').html();
 
 
             // if (phoneCondition  == 'As New') {
