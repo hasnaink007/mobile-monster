@@ -11,6 +11,14 @@
   /* .hks-selected-options .hks-applied-filter:first-child {
     display: none;
   } */
+  .loading_container_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .loading-container {
+    width: 100%;
+    max-width: 540px;
+  }
   .redirect-message {
     font-size: 18px;
     color: #6b6b6b;
