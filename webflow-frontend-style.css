@@ -11,11 +11,11 @@
   /* .hks-selected-options .hks-applied-filter:first-child {
     display: none;
   } */
-  .loading_container_wrapper {
+  .loading-container {
     display: flex;
     align-items: center;
   }
-  .loading-container {
+  .loading_container_wrapper {
     width: 100%;
     max-width: 540px;
   }
