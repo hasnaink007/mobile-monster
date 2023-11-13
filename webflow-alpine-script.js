@@ -125,7 +125,9 @@ document.addEventListener('alpine:init', function() {
                  
                  $pThis.currentLifecycleIndex = $pThis.currentLifecycleIndex + 1;
              
-             } else {
+             } else {   
+
+                $pThis.currentLifecycleIndex = 5;
  
                  var webflow_slug = $pThis.deviceOptions[attr_value].items[0]['webflow-slug'];
  
