@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
         // Set Reduced Price Trigger
 
         try {
-            var workingPrice = $('.condition_working').find('h1.amount_text').html();
+            var workingPrice = $('.condition_working').find('h1.amount_text').html() || $('.condition_working').find('div#per_unit_final_pricing').html();
 
             $('.reduce-price-holder').html(parseFloat(workingPrice).toFixed(2));
         } catch {
