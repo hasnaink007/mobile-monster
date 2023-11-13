@@ -371,3 +371,8 @@
     padding: 0px 7px 0px 7px;
   }
 }
+@media screen and (max-width: 1366px) {
+  .submenu {
+    top: 100px !important;
+  }
+}
