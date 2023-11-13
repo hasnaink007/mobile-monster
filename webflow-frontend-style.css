@@ -354,5 +354,10 @@
   .options_wrapper {
     padding: 0px 7px 0px 7px;
   }
+  .redirect-message {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
 
 }
