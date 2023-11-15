@@ -371,3 +371,19 @@
     padding: 0px 7px 0px 7px;
   }
 }
+
+
+
+
+
+/* css for header navigations */
+
+
+@media only screen and (min-width: 1200px) {
+ 
+  .dropdown-list_tabs_content.w--open {
+    top: 0px !important;
+  }
+
+  
+}
