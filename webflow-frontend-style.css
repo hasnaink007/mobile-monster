@@ -379,8 +379,8 @@
 /* css for header navigations */
 
 
-@media only screen and (min-width: 1200px) {
+//@media only screen and (min-width: 1200px) {
   #desktop-top-header-menu .dropdown-list_tabs_content.w--open {
     top: 106px !important;
   }
-}
+//}
