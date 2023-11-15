@@ -379,7 +379,7 @@
 /* css for header navigations */
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
  
   .dropdown-list_tabs_content.w--open {
     width: auto;
@@ -387,7 +387,7 @@
     background-color: transparent;
     margin-top: 0;
     display: block;
-    top:0.5px !important;
+    top:0px !important;
 }
 
   
