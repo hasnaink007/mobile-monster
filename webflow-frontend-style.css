@@ -382,7 +382,7 @@
 @media only screen and (min-width: 1200px) {
  
   .dropdown-list_tabs_content.w--open {
-    top: 1px !important;
+    top: 0px !important;
   }
   
   .dropdown-list_tabs_content {
