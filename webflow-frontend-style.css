@@ -386,12 +386,9 @@
   }
   
   .dropdown-list_tabs_content {
-    margin-top: 0;
-    display: none;
-    top: 41%;
-    bottom: auto;
-    left: 0%;
-    right: 0%;
+
+    top:0% !important;
+ 
 }
 
 
