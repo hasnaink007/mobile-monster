@@ -380,19 +380,7 @@
 
 
 @media only screen and (min-width: 1200px) {
- 
-  .dropdown-list_tabs_content.w--open {
-    top: 0px !important;
+  #desktop-top-header-menu .dropdown-list_tabs_content.w--open {
+    top: 106px !important;
   }
-  
-  .dropdown-list_tabs_content {
-
-    top:0% !important;
- 
-}
-
-
-
-
-  
 }
