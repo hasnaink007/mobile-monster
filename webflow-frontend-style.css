@@ -384,6 +384,18 @@
   .dropdown-list_tabs_content.w--open {
     top: 0px !important;
   }
+  
+  .dropdown-list_tabs_content {
+    margin-top: 0;
+    display: none;
+    top: 41%;
+    bottom: auto;
+    left: 0%;
+    right: 0%;
+}
+
+
+
 
   
 }
