@@ -281,8 +281,11 @@ input[type=checkbox], input[type=radio] {
 
 
 /* @media only screen and (min-width: 1200px) { */
-  #desktop-top-header-menu .dropdown-list_tabs_content.w--open {
+#desktop-top-header-menu .dropdown-list_tabs_content.w--open {
     top: auto !important;
-  }
+}
+#desktop-top-header-menu nav.w-dropdown-list.w--open {
+    top: auto;
+}
 /* } */
 
