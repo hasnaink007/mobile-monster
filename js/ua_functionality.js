@@ -520,11 +520,11 @@ function bindCancelOrderHandler() {
         // alert('Order canceled')
         showLoader(false);
 
-        if(!cancelResponse?.response?.updated){
+        if(cancelResponse?.response?.updated == 'false'){
             return alert("Cancel order failed. \nReason: Device already processed.")
         }
         setTimeout(function() {
-            // window.location.reload(true);
+            window.location.reload(true);
 
         }, 1500);
         // alert("Cancelled")
