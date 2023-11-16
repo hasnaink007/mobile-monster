@@ -516,7 +516,7 @@ function bindCancelOrderHandler() {
     .then(res => res.json())
     .then(cancelResponse => {
 
-        console.log(JSON.stringify(cancelResponse));
+        console.log(cancelResponse);
         // alert('Order canceled')
         showLoader(false);
 
@@ -524,7 +524,7 @@ function bindCancelOrderHandler() {
             return alert("Cancel order failed. \nReason: Device already processed.")
         }
         setTimeout(function() {
-            window.location.reload(true);
+            // window.location.reload(true);
 
         }, 1500);
         // alert("Cancelled")
