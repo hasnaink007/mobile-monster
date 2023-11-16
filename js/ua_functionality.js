@@ -516,7 +516,8 @@ function bindCancelOrderHandler() {
     .then(res => res.json())
     .then(cancelResponse => {
 
-        console.log(cancelResponse);
+        console.log(JSON.stringify(cancelResponse));
+        // alert('Order canceled')
         showLoader(false);
 
         setTimeout(function() {
