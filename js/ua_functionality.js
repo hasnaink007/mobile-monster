@@ -511,7 +511,7 @@ function bindCancelOrderHandler() {
     requestData.append('user_email', user_email);
     requestData.append("auth_token", auth_key);
 
-    fetch(`${endpointUrl}/api/1.1/wf/cancel_order_by_seller`,
+    fetch(`https://hook.eu1.make.com/t27plodxwj81thw9ut4mbrndq3rsttme`,
         {
             method:"POST",
             body: requestData
