@@ -212,7 +212,9 @@
  }
 
 }
-
+.hks-select-the{
+  font-weight: bold;
+}
 
 
 @media (max-width: 900px) {
@@ -371,3 +373,24 @@
     padding: 0px 7px 0px 7px;
   }
 }
+
+<<<<<<< HEAD
+
+
+
+
+/* css for header navigations */
+
+
+@media only screen and (max-width: 1367px) {
+
+  .dropdown-list_tabs_content.w--open {
+    top: 0px !important;
+  }
+  
+  .dropdown-list_tabs_content {
+    top:0% !important;
+  }
+}
+=======
+>>>>>>> d0be4523e5981f355ec99714d37ec2568a3452e2
