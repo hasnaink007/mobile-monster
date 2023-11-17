@@ -503,7 +503,9 @@ function bindCancelOrderHandler() {
     var requestData = getAuthTokensData();
     var cancelReason = $('[data-name="Cancel_order_form"] select').val() != '' ? $('[data-name="Cancel_order_form"] select').val()  : "none";
 
-
+    var auth_key = getLocalDataValue('auth_key');
+    var user_email = getLocalDataValue('user_email');
+    
     requestData.append('order_id', order_id);
     requestData.append('cancel_reason', cancelReason);
     requestData.append('user_email', user_email);
