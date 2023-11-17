@@ -506,6 +506,8 @@ function bindCancelOrderHandler() {
 
     requestData.append('order_id', order_id);
     requestData.append('cancel_reason', cancelReason);
+    requestData.append('user_email', user_email);
+    requestData.append("auth_token", auth_key);
 
     fetch(`${endpointUrl}/api/1.1/wf/cancel_order_by_seller`,
         {
