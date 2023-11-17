@@ -525,7 +525,7 @@ function bindCancelOrderHandler() {
         showLoader(false);
 
         if(cancelResponse?.response?.updated == 'false'){
-            return alert("Cancel order failed. \nReason: Device already processed.")
+            return alert("Cancel order failed!")
         }
         setTimeout(function() {
             window.location.reload(true);
