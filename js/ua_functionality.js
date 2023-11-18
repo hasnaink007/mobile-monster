@@ -487,7 +487,6 @@ function hidePopup(popupClass) {
 
 function bindCancelOrderHandler() {
 
-
     hidePopup('.popup_cancel_order');
     showLoader(true);
 
@@ -497,8 +496,6 @@ function bindCancelOrderHandler() {
         showLoader(false);
         return;
     }
-
-
 
     var requestData = getAuthTokensData();
     var cancelReason = $('[data-name="Cancel_order_form"] select').val() != '' ? $('[data-name="Cancel_order_form"] select').val()  : "none";
@@ -525,22 +522,7 @@ function bindCancelOrderHandler() {
         showLoader(false);
 
         if(cancelResponse?.response?.updated == 'false'){
-            var errorPopup = document.getElementById("hks-error-popup");
-            var errorMsg = document.getElementById("hks-error-msg");
-            
-            function updateErrorMessage(newMessage) {
-                errorMsg.innerText = newMessage;
-            }
-            
-            function showAlertAndReturnValue(message, value) {
-                updateErrorMessage(message);
-                errorPopup.style.display = "block";
-                return value;
-            }
-            
-            var result = showAlertAndReturnValue("The order cancellation failed! The order has already been processed, or this order has already been cancelled.", false);
-            
-            console.log(result);
+            return alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.")
         }
         setTimeout(function() {
             window.location.reload(true);
@@ -550,10 +532,7 @@ function bindCancelOrderHandler() {
 
 
     });
-
-    
     showLoader(false);
-
 }
 
 
