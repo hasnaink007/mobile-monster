@@ -525,7 +525,22 @@ function bindCancelOrderHandler() {
         showLoader(false);
 
         if(cancelResponse?.response?.updated == 'false'){
-            return alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.")
+            var errorPopup = document.getElementById("hks-error-popup");
+            var errorMsg = document.getElementById("hks-error-msg");
+            
+            function updateErrorMessage(newMessage) {
+                errorMsg.innerText = newMessage;
+            }
+            
+            function showAlertAndReturnValue(message, value) {
+                updateErrorMessage(message);
+                errorPopup.style.display = "block";
+                return value;
+            }
+            
+            var result = showAlertAndReturnValue("The order cancellation failed! The order has already been processed, or this order has already been cancelled.", false);
+            
+            console.log(result);
         }
         setTimeout(function() {
             window.location.reload(true);
