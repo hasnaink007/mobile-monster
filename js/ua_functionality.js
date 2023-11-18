@@ -484,7 +484,6 @@ function hidePopup(popupClass) {
 }
 
 
-
 function bindCancelOrderHandler() {
 
     hidePopup('.popup_cancel_order');
@@ -510,31 +509,28 @@ function bindCancelOrderHandler() {
 
     fetch(`https://hook.eu1.make.com/t27plodxwj81thw9ut4mbrndq3rsttme`,
         {
-            method:"POST",
+            method: "POST",
             body: requestData
         }
     )
     .then(res => res.json())
     .then(cancelResponse => {
-
         console.log(cancelResponse);
-        // alert('Order canceled')
         showLoader(false);
 
-        if(cancelResponse?.response?.updated == 'false'){
-            return alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.")
+        if (cancelResponse?.response?.updated === 'false') {
+            alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.");
+        } else {
+            setTimeout(function() {
+                window.location.reload(true);
+            }, 1500);
         }
-        setTimeout(function() {
-            window.location.reload(true);
-
-        }, 1500);
-        // alert("Cancelled")
-
-
+    })
+    .catch(error => {
+        console.error('Error during fetch:', error);
+        showLoader(false);
     });
-    showLoader(false);
 }
-
 
 // bindCancelOrderHandler
 function bindCancelOrderButton() {
