@@ -49,7 +49,7 @@ Webflow.push(function() {
         // console.log(list)
         let items = list.map((item, index) => {
             let url  = '';
-            let parts = item.webflow_slug?.split('-000-');
+            let parts = (item.webflow_slug?.split('-000-')||[]);
             switch(item.device_type){
                 // case 'Tablet': url = '/sell-your-tablets/'+item.webflow_slug; break;
                 // case 'Smart Watch': url = '/sell-your-watches/'+item.webflow_slug; break;
