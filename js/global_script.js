@@ -49,10 +49,14 @@ Webflow.push(function() {
         // console.log(list)
         let items = list.map((item, index) => {
             let url  = '';
+            let parts = item.webflow_slug?.split('-000-');
             switch(item.device_type){
-                case 'Tablet': url = '/sell-your-tablets/'+item.webflow_slug; break;
-                case 'Smart Watch': url = '/sell-your-watches/'+item.webflow_slug; break;
-                default: url = '/sell-your-phone/'+item.webflow_slug; break;
+                // case 'Tablet': url = '/sell-your-tablets/'+item.webflow_slug; break;
+                // case 'Smart Watch': url = '/sell-your-watches/'+item.webflow_slug; break;
+                case 'Laptop': url = `/sell-your-laptop/${parts[0]}/laptops/${parts[1]}/${parts[2]}`; break;
+                case 'Tablet': url = `/sell-your-tablet/${parts[0]}/tablets/${parts[1]}/${parts[2]}`; break;
+                case 'Smart Watch': url = `/sell-your-watch/${parts[0]}/watches/${parts[1]}/${parts[2]}`; break;
+                default: url = `/sell-your-phone/${parts[0]}/mobiles/${parts[1]}/${parts[2]}; break;
             }
             return `<div role="listitem" class="collection-item-12 search-item w-dyn-item search-option ${index==0 ? 'active':''}"><a href="${url}" class="link-23">${item.display_name}</a></div>`
         })
