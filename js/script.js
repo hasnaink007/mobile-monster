@@ -1445,7 +1445,7 @@ function populateSelectedDevices(devices){
             <div class="hks-devices-cell name">${d?.name}</div>
             <div class="hks-devices-cell condition">${d?.condition}</div>
             <div class="hks-devices-cell imei">${d?.IMEI}</div>
-            <div class="hks-devices-cell selected-deviceprice">$${d?.price} X ${d?.quantiity}</div>
+            <div class="hks-devices-cell selected-deviceprice">$${d?.price} x ${d?.quantiity}</div>
             <div class="hks-devices-cell lockProvider">
                 <select id="LockedProvider" name="LockedProvider" required="" class="input-quantity w-select hks-device-lock-provider">
                     <option value="No" selected>No</option>
