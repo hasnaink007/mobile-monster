@@ -1585,7 +1585,7 @@ function stepMoveToLoginPage() {
                 $('.user-email-holder').html(email);
                 $('.user-mobile-number-hoder').html(mobileNumber);
                 $('.user-address-one-hoder').html(firstName);
-                $('.user-full-name-holder').html(firstName + '' + lastName);
+                $('.user-full-name-holder').html(firstName + ' ' + lastName);
                 $('.user-full-address').html(address);
 
                 $('div#tab_1').hide() ;
@@ -1784,7 +1784,7 @@ validateUserDetails = res => {
             $('.user-email-holder').html(res.response.user_email);
             $('.user-mobile-number-hoder').html(res.response.mobileNumber);
             $('.user-address-one-hoder').html(res.response.firstName);
-            $('.user-full-name-holder').html(res.response.firstName + '' + res.response.lastName);
+            $('.user-full-name-holder').html(res.response.firstName + ' ' + res.response.lastName);
             $('.user-full-address').html(res.response.address);
             $('.login_popup').fadeOut()
             stepMoveToPaymentMethods()
@@ -2607,7 +2607,7 @@ function setUserValues(response) {
     $('.user-email-holder').html(email);
     $('.user-mobile-number-hoder').html(mobileNumber);
     $('.user-address-one-hoder').html(firstName);
-    $('.user-full-name-holder').html(firstName + '' + lastName);
+    $('.user-full-name-holder').html(firstName + ' ' + lastName);
     $('.user-full-address').html(address);
 
 }
