@@ -1785,7 +1785,7 @@ validateUserDetails = res => {
             $('.user-mobile-number-hoder').html(res.response.mobileNumber);
             $('.user-address-one-hoder').html(res.response.firstName);
             $('.user-full-name-holder').html(res.response.firstName + ' ' + res.response.lastName);
-            $('.user-full-address').html(res.response.address);
+            $('.user-full-address').html(res.response.address + ' ' + res.response.suburb + ' ' + res.response.state + ' ' + res.response.postcode);
             $('.login_popup').fadeOut()
             stepMoveToPaymentMethods()
         }
@@ -2601,6 +2601,9 @@ function setUserValues(response) {
     var mobileNumber = response.response.mobileNumber;
     var email = response.response.user_email;
     var address = response.response.address;
+    var suburb = response.response.suburb;
+    var postcode = response.response.postcode;
+    var state = response.response.state;
 
     $('.user-firstname-holder').html(firstName);
     $('.user-last-name-holder').html(lastName);
@@ -2608,7 +2611,7 @@ function setUserValues(response) {
     $('.user-mobile-number-hoder').html(mobileNumber);
     $('.user-address-one-hoder').html(firstName);
     $('.user-full-name-holder').html(firstName + ' ' + lastName);
-    $('.user-full-address').html(address);
+    $('.user-full-address').html(address + ' ' + suburb + ' ' + state + ' ' + postcode);
 
 }
 
