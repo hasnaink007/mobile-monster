@@ -302,7 +302,7 @@ function getValue() {
 
     if(sum < DeadPrice) {
 
-        totalPrice = $('#Quantity').val() * DeadPrice;
+        totalPrice = DeadPrice; // $('#Quantity').val() * DeadPrice;
         
         var perUnitFinalPricingBox = document.getElementById("per_unit_final_pricing");
         if(perUnitFinalPricingBox) {
@@ -346,7 +346,7 @@ function getValue() {
         // document.getElementById("TotalPrice").innerHTML = totalPrice ;
 
     } else {
-        totalPrice = $('#Quantity').val() * sum;
+        totalPrice = sum; // $('#Quantity').val() * sum;
 
         
 
@@ -1131,14 +1131,14 @@ Webflow.push(function () {
     $($('.phone_condition_box')[0]).click();
 
 
-    let quantities = document.querySelectorAll('#Quantity')
+    /* let quantities = document.querySelectorAll('#Quantity')
     quantities.forEach(el => {
         el.addEventListener('change', (e)=>{
             quantities.forEach(select => {
                 select.value = e.target.value
             })
         })
-    })
+    }) */
 
     // wORKS
     $('.to-review-cart').on('click', function () {
@@ -1212,7 +1212,7 @@ Webflow.push(function () {
             vendor: getDeviceVendor(),
             productID: getDeviceID(),
             IMEI: $('#WokingIMEI').val(),
-            quantiity: $('#Quantity').val(),
+            quantiity: 1, // $('#Quantity').val(),
             condition: getPhoneCondition(),
             thumb: getDeviceThumb(),
             sendBack: $('#SendBack')[0]?.checked,
@@ -1253,7 +1253,7 @@ Webflow.push(function () {
         device.price = device.price - getWorkingFaultsTotal();
 
         // recalculate total
-        device.total_sum = Number($('#Quantity').val()) * Number(device.price),
+        device.total_sum = Number(device.price), //Number($('#Quantity').val()) * Number(device.price),
 
 
 
@@ -2502,6 +2502,7 @@ function getBubbleTableID() {
 
 
 function getSelectedQuantity() {
+    return 1;
     var quantity = $('.input-quantiity:visible').val();
 
 
