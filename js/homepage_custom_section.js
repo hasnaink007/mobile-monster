@@ -44,7 +44,7 @@ we can send back your device free of charge" fill="black" xml:space="preserve" s
     <g id="Fast payment">
     <text id="Get paid within 24 hours
 after device is received." fill="black" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="14" letter-spacing="0em"><tspan x="2.41699" y="55.9312">Get paid within 3-5 business days\n</tspan><tspan x="6.21777" y="78.9312">after the device is received.</tspan></text>
-    <text id="Fast Payment" fill="#63388C" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="21" letter-spacing="0em"><tspan x="16" y="22.6467">Fast Payment</tspan></text>
+    <text id="Fast Payment" fill="#63388C" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="21" letter-spacing="0em"><tspan x="16" y="22.6467">Quick Payment</tspan></text>
     <g id="24 hour icon">
     <g id="Ellipse 27" filter="url(#filter3_d_1248_386)">
     <circle cx="78" cy="181" r="40" fill="#FAF3FF"/>
