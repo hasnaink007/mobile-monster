@@ -2656,20 +2656,22 @@ function need_imei_number() {
         "GPS + Cellular" : true
 
     };
+
     if(window.location.pathname.startsWith('/sell-your-watches/')){
         return false
     }
 
     var connectivity = $('.connectivity-holder').html().trim();
-
-    if(connectivity == "") {
-        return true;
-    }
     
-    if(conditon_mapping[connectivity]) {
+    
+    if(Object.keys(conditon_mapping).includes(connectivity)) {
+
         return conditon_mapping[connectivity];
+
     } else {
-        conditon_mapping["default"];
+
+        return true
+
     }
 
 
