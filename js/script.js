@@ -2661,12 +2661,13 @@ function need_imei_number() {
         return false
     }
 
-    var connectivity = $('.connectivity-holder').html().trim();
-    
-    
-    if(Object.keys(conditon_mapping).includes(connectivity)) {
+    var connectivity = $('.connectivity-holder').html();
 
-        return conditon_mapping[connectivity];
+    var connectivity_trimmed = connectivity ? connectivity.trim() : '';
+    
+    if(connectivity && Object.keys(conditon_mapping).includes(connectivity_trimmed)) {
+        
+        return conditon_mapping[connectivity_trimmed];
 
     } else {
 
