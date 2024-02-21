@@ -2658,7 +2658,7 @@ function need_imei_number() {
         return false
     }
 
-    var connectivity = $('.connectivity-holder').html();
+    var connectivity = $('.connectivity-holder').html().trim();
 
     if(connectivity == "") {
         return true;
