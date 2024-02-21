@@ -502,6 +502,7 @@ document.querySelectorAll('#SignIn').forEach(btn => {
 })
 
 if(!need_imei_number()) {
+    debugger;
     // $('.emi_section').fadeOut(0);
     $('.emi_section .emi-box *').fadeOut(0);
     // $('.emi_section .emi-box').fadeOut(0);
@@ -2659,7 +2660,7 @@ function need_imei_number() {
     }
 
     var connectivity = $('.connectivity-holder').html().trim();
-
+    debugger;
     if(connectivity == "") {
         return true;
     }
