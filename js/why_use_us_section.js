@@ -1,301 +1,282 @@
 const hks_flow_element = document.getElementById('whyuseus-steps')
 if(hks_flow_element){
-    hks_flow_element.innerHTML = `<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1057.57 1096.35">
+    hks_flow_element.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1086" height="1119.465" viewBox="0 0 1086 1119.465">
   <defs>
-    <style>
-      .cls-1 {
-        filter: url(#drop-shadow-10);
-      }
-
-      .cls-2 {
-        filter: url(#drop-shadow-7);
-      }
-
-      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
-        stroke: #633a8e;
-      }
-
-      .cls-3, .cls-4, .cls-5, .cls-8, .cls-7 {
-        fill: none;
-      }
-
-      .cls-3, .cls-4, .cls-8 {
-        stroke-linecap: round;
-      }
-
-      .cls-3, .cls-4, .cls-7 {
-        stroke-width: 2px;
-      }
-
-      .cls-3, .cls-8 {
-        stroke-linejoin: round;
-      }
-
-      .cls-9, .cls-10 {
-        font-family: OpenSans, 'Open Sans';
-      }
-
-      .cls-11, .cls-12, .cls-6 {
-        fill: #633a8e;
-      }
-
-      .cls-13 {
-        filter: url(#drop-shadow-4);
-      }
-
-      .cls-14 {
-        filter: url(#drop-shadow-8);
-      }
-
-      .cls-15, .cls-10 {
-        fill: #010101;
-        font-size: 15px;
-        letter-spacing: -.03em;
-      }
-
-      .cls-16 {
-        filter: url(#drop-shadow-3);
-      }
-
-      .cls-17 {
-        filter: url(#drop-shadow-11);
-      }
-
-      .cls-18 {
-        filter: url(#drop-shadow-1);
-      }
-
-      .cls-19 {
-        filter: url(#drop-shadow-6);
-      }
-
-      .cls-12 {
-        font-size: 17.69px;
-        letter-spacing: -.01em;
-      }
-
-      .cls-12, .cls-20 {
-        font-family: OpenSans-Bold, 'Open Sans';
-        font-weight: 700;
-      }
-
-      .cls-21 {
-        filter: url(#drop-shadow-5);
-      }
-
-      .cls-22 {
-        filter: url(#drop-shadow-2);
-      }
-
-      .cls-5 {
-        stroke-width: 1.86px;
-      }
-
-      .cls-5, .cls-7 {
-        stroke-miterlimit: 10;
-      }
-
-      .cls-23 {
-        filter: url(#drop-shadow-9);
-      }
-
-      .cls-6 {
-        stroke-width: .5px;
-      }
-
-      .cls-8 {
-        stroke: #663489;
-        stroke-dasharray: 0 0 3.96 9.9;
-        stroke-width: 1.5px;
-      }
-
-      .cls-24 {
-        fill: #f9f3f8;
-      }
-
-      .cls-25 {
-        filter: url(#drop-shadow-12);
-      }
-    </style>
-    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="6"/>
-      <feGaussianBlur result="blur" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".22"/>
-      <feComposite in2="blur" operator="in"/>
+    <filter id="Path_28" x="5.339" y="866.766" width="220.819" height="161.975" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-2" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-2" operator="in"/>
+    <filter id="Ellipse_6" x="133.158" y="851.08" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-2"/>
+      <feFlood flood-color="#871793" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="4"/>
-      <feGaussianBlur result="blur-3" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".21"/>
-      <feComposite in2="blur-3" operator="in"/>
+    <filter id="Path_28-2" x="542.754" y="852.84" width="213.176" height="170.585" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-3"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-4" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-4" operator="in"/>
+    <filter id="Ellipse_6-2" x="595.261" y="831.419" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-4"/>
+      <feFlood flood-color="#871793" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="4"/>
-      <feGaussianBlur result="blur-5" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".21"/>
-      <feComposite in2="blur-5" operator="in"/>
+    <filter id="Path_28-3" x="513.17" y="592.292" width="313.638" height="166.581" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-5"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-5"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-6" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-6" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-6" operator="in"/>
+    <filter id="Ellipse_6-3" x="605.989" y="567.213" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-6"/>
+      <feFlood flood-color="#871793" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-7" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="6"/>
-      <feGaussianBlur result="blur-7" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".24"/>
-      <feComposite in2="blur-7" operator="in"/>
+    <filter id="Path_28-4" x="344.126" y="331.641" width="282.421" height="161.971" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-7"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-7"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-8" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-8" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-8" operator="in"/>
+    <filter id="Ellipse_6-4" x="365.258" y="298.56" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-8"/>
+      <feFlood flood-color="#871793" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-9" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="4"/>
-      <feGaussianBlur result="blur-9" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".21"/>
-      <feComposite in2="blur-9" operator="in"/>
+    <filter id="Path_28-5" x="4.841" y="522.478" width="267.985" height="159.983" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-9"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-9"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-10" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-10" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-10" operator="in"/>
+    <filter id="Ellipse_6-5" x="25.269" y="493.682" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-11" filterUnits="userSpaceOnUse">
-      <feOffset dx="2" dy="4"/>
-      <feGaussianBlur result="blur-11" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".21"/>
-      <feComposite in2="blur-11" operator="in"/>
+    <filter id="Path_28-6" x="1.158" y="7.165" width="272.4" height="154.1" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-11"/>
+      <feFlood flood-color="#871793" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-11"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="drop-shadow-12" filterUnits="userSpaceOnUse">
-      <feOffset dx="3" dy="15"/>
-      <feGaussianBlur result="blur-12" stdDeviation="9"/>
-      <feFlood flood-color="#682061" flood-opacity=".2"/>
-      <feComposite in2="blur-12" operator="in"/>
+    <filter id="Ellipse_6-6" x="71.858" y="69.665" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feOffset dy="11" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-12"/>
+      <feFlood flood-color="#871793" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-12"/>
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
-    <g>
-      <path class="cls-8" d="m405.41,407.73c0,31.84-10.31,119.37-125.1,67.76-92.96-51.31-203.03-86.27-217.63,32.58"/>
-      <path class="cls-8" d="m117.57,105.28c-16.91,54.61-8,156.93,55.18,135.42,23.81-8.11,26.84-45.11-8.93-51.99-24.04-8.22-103.72,42.25-68.21,111.66,16.77,36.62,86.48,65.99,180.78,9.17,20.67-15.09,90.43-53.86,126.08,14.93"/>
-      <path class="cls-8" d="m413.91,936.77c-66.45,1.77-178.27-37.64-134.45-97.83,16.52-22.68,58.91-15.01,55.45,24.66,1.7,27.72-79.71,96.78-146.37,39.03"/>
-      <path class="cls-8" d="m413.94,937.13c59.81,1.1,139.7-12.91,181.59-57.79"/>
-      <path class="cls-8" d="m161.27,556.01c33-6.29,65.42-27.7,100.18,37.07,35.54,75.83,96.36,57.22,172.19,10.07,68.62-49.24,189.56-76.42,205.36,51.53"/>
-      <path class="cls-8" d="m646.61,673.51c31.28,91.01-75.36,85.32,0,178.45"/>
-      <g>
-        <g class="cls-18">
-          <path class="cls-24" d="m12.37,975.5h158.73c4.29,0,7.77-4.91,7.77-10.96v-94.41c0-6.05-3.48-10.96-7.77-10.96H12.37c-4.29,0-7.77,4.91-7.77,10.96v94.41c0,6.05,3.48,10.96,7.77,10.96Z"/>
-        </g>
-        <g class="cls-22">
-          <circle class="cls-24" cx="173.79" cy="879.02" r="40"/>
+  <g id="Group_59" data-name="Group 59" transform="translate(-412 -31)">
+    <g id="N_46" data-name="N 46" transform="translate(-404.029 588.52)">
+      <g id="Group_45" data-name="Group 45" transform="translate(825.199 323.703)">
+        <g id="Group_36" data-name="Group 36" transform="translate(20.168 1.543)">
+          <g transform="matrix(1, 0, 0, 1, -29.34, -882.77)" filter="url(#Path_28)">
+            <path id="Path_28-7" data-name="Path 28" d="M32.3,5.9H189.718c4.236,0,7.7,4.834,7.7,10.742v92.49c0,5.908-3.466,10.742-7.7,10.742H32.3c-4.236,0-7.7-4.834-7.7-10.742V16.642C24.6,10.734,28.066,5.9,32.3,5.9Z" transform="translate(4.74 876.87)" fill="#faf3ff"/>
+          </g>
         </g>
       </g>
-      <path class="cls-5" d="m190.95,868.14h-36.4c-.47,0-.85.38-.85.85v22.63c0,.47.38.85.85.85h36.4c.47,0,.85-.38.85-.85v-22.63c0-.47-.38-.85-.85-.85Z"/>
-      <path class="cls-5" d="m154.04,892.3l14.21-11.99-14.28-11.93"/>
-      <path class="cls-5" d="m191.68,892.47l-13.7-12.16,13.7-12.17"/>
-      <path class="cls-5" d="m168.44,880.47c2.67,2.25,4.31,2.25,4.31,2.25h.72s1.91,0,4.5-2.42"/>
-      <g>
-        <g class="cls-16">
-          <path class="cls-24" d="m548.45,971h151.46c4.09,0,7.41-5.22,7.41-11.65v-100.33c0-6.43-3.32-11.65-7.41-11.65h-151.46c-4.09,0-7.41,5.22-7.41,11.65v100.33c0,6.43,3.32,11.65,7.41,11.65Z"/>
-        </g>
-        <g class="cls-13">
-          <circle class="cls-24" cx="634.8" cy="864.1" r="40"/>
+      <g id="Group_44" data-name="Group 44" transform="translate(882.887 238.16)">
+        <g id="Group_39" data-name="Group 39" transform="translate(-5 3)">
+          <g transform="matrix(1, 0, 0, 1, -61.86, -798.68)" filter="url(#Ellipse_6)">
+            <circle id="Ellipse_6-7" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(157.16 864.08)" fill="#faf3ff"/>
+          </g>
         </g>
       </g>
-      <path class="cls-6" d="m634,867.68s0,.09-.02.13c-.01.04-.03.08-.06.11-.03.03-.06.05-.09.07-.04.02-.08.02-.11.02h-6.42s-.08,0-.11-.02c-.03-.02-.07-.04-.1-.07-.03-.03-.05-.07-.06-.11-.01-.04-.02-.08-.02-.13v-.51c0-.21.08-.4.2-.56l2.39-2.66.41-.46s1.22-1.42,1.49-1.83c.25-.37.46-.77.61-1.19.15-.4.23-.83.23-1.26.01-.28-.03-.55-.12-.81-.09-.26-.23-.49-.41-.68-.19-.19-.41-.34-.66-.44-.24-.1-.5-.14-.76-.12-.43,0-.86.08-1.26.25-.38.19-.74.43-1.08.7-.07.05-.14.07-.22.05-.08-.01-.15-.06-.19-.13l-.28-.41s-.04-.07-.05-.11c-.01-.04-.01-.08,0-.12,0-.04.02-.08.04-.11.02-.03.05-.06.08-.08.89-.61,1.71-1.19,2.9-1.19.85-.06,1.7.25,2.35.86.28.29.51.64.66,1.04.15.4.21.82.2,1.25,0,.78-.2,1.55-.56,2.22-.59.9-1.24,1.75-1.94,2.55l-.41.46-1.94,2.07c-.08.08-.21.26-.21.26,0,0,5.09.02,5.19,0,.08,0,.15.03.21.09.05.06.09.14.09.23l.04.63Z"/>
-      <path class="cls-6" d="m644,864.92s0,.09-.02.13c-.02.04-.04.08-.07.11-.03.03-.07.05-.11.07-.04.02-.12.02-.16.02h-1.06c-.09,0-.17.04-.23.1-.06.06-.1.14-.1.23v2.1s0,.09-.02.13c-.02.04-.04.08-.07.11-.03.03-.07.05-.11.07-.04.02-.08.02-.13.02h-.66c-.09,0-.17-.03-.23-.1-.06-.06-.1-.14-.1-.23v-2.06c0-.09-.03-.17-.1-.23-.06-.06-.15-.09-.23-.09h-5.24s-.1,0-.14-.02c-.05-.02-.09-.05-.12-.08-.03-.04-.06-.08-.07-.12-.02-.05-.02-.1-.01-.14v-.53c.02-.2.01-.55.56-1.26l4.69-6.82q.31-.31.62-.31s.11,0,.22,0h.79c.09,0,.17.03.23.1.06.06.1.14.1.23v7.4c0,.09.04.17.1.23.06.06.14.1.23.1h1.1s.09,0,.13.02c.04.02.08.04.11.07.03.03.05.07.07.11.02.04.02.08.02.13l.03.54Zm-3.43-.9c.09,0,.17-.03.23-.1.06-.06.1-.14.1-.23v-6.16l-4.31,6.3c-.1.15,0,.27.14.27l3.84-.09Z"/>
-      <path class="cls-3" d="m636,840.5l4,4.5c-4.4-1.49-8.58-1.36-12.8.58-4.22,1.94-7.54,5.43-9.27,9.74-1.74,4.31-1.76,9.12-.06,13.45,1.7,4.33,4.99,7.84,9.2,9.81,4.21,1.98,9.01,2.27,13.42.82,4.41-1.45,8.11-4.54,10.32-8.62,2.21-4.09,2.78-8.86,1.58-13.35-.6-2.26-1.63-4.37-3.01-6.21"/>
-      <path class="cls-3" d="m635,848l5-3"/>
-      <g>
-        <g class="cls-21">
-          <path class="cls-24" d="m522.34,704.15h244.04c6.59,0,11.94-5,11.94-11.16v-96.11c0-6.16-5.35-11.16-11.94-11.16h-244.04c-6.59,0-11.94,5-11.94,11.16v96.11c0,6.16,5.35,11.16,11.94,11.16Z"/>
-        </g>
-        <g class="cls-19">
-          <circle class="cls-24" cx="644.36" cy="597.5" r="40"/>
-        </g>
-      </g>
-      <path class="cls-7" d="m646.88,582.68c.19-.39.3-.84.3-1.31,0-1.67-1.36-3.03-3.03-3.03s-3.03,1.36-3.03,3.03c0,.45.1.88.28,1.27"/>
-      <path class="cls-7" d="m656.84,608.64c1.3,0,2.36-1.05,2.36-2.36s-2.04-2.64-2.22-2.84c0,0-1.8-1.44-1.99-8.35,0,0,.35-10.42-8.28-12.45,0,0-.25-.08-.7-.17-1.06-.2-2.15-.21-3.22-.05l-.71.11c-.44.07-.88.15-1.31.28-7.98,2.39-7.65,12.3-7.65,12.3-.19,6.91-1.99,8.35-1.99,8.35-.17.2-2.22,1.54-2.22,2.84s1.05,2.36,2.36,2.36"/>
-      <path class="cls-7" d="m648.07,612.05c.48,0,.83.44.73.91-.42,2.05-2.24,3.59-4.42,3.59s-3.99-1.54-4.42-3.59c-.1-.47.25-.91.73-.91h7.37Z"/>
-      <path class="cls-7" d="m656.84,608.64h-25.7"/>
-      <g>
-        <g class="cls-2">
-          <path class="cls-24" d="m11.63,629.76h204.77c5.53,0,10.02-4.83,10.02-10.78v-92.83c0-5.95-4.48-10.78-10.02-10.78H11.63c-5.53,0-10.02,4.83-10.02,10.78v92.83c0,5.95,4.48,10.78,10.02,10.78Z"/>
-        </g>
-        <g class="cls-14">
-          <circle class="cls-24" cx="63.88" cy="519.65" r="40"/>
-        </g>
-      </g>
-      <path class="cls-3" d="m76.82,509.68c-.03-.21-.14-.41-.3-.55-.16-.14-.37-.22-.58-.23-2.56-.03-5.08-.54-7.45-1.5-1.9-.77-3.68-1.82-5.26-3.11-.17-.13-.38-.21-.6-.2-.21,0-.42.07-.59.2-1.61,1.3-3.41,2.35-5.33,3.11-2.37.96-4.9,1.46-7.45,1.5-.22,0-.42.08-.58.23-.16.14-.27.34-.3.55-.52,3.86-1.59,15.79,6.3,25.32,2.03,2.42,4.46,4.49,7.18,6.09.24.14.5.21.78.22.28,0,.55-.08.79-.22,2.72-1.61,5.15-3.67,7.18-6.09,7.89-9.52,6.8-21.42,6.23-25.29v-.03Z"/>
-      <path class="cls-3" d="m68.99,517.09l-8.17,10.41-3.82-3.82"/>
-      <g>
-        <g class="cls-23">
-          <path class="cls-24" d="m352.57,435.82h213.97c5.78,0,10.47-4.83,10.47-10.78v-92.83c0-5.95-4.69-10.78-10.47-10.78h-213.97c-5.78,0-10.47,4.83-10.47,10.78v92.83c0,5.95,4.69,10.78,10.47,10.78Z"/>
-        </g>
-        <g class="cls-1">
-          <circle class="cls-24" cx="404.37" cy="325.71" r="40"/>
-        </g>
-      </g>
-      <path class="cls-3" d="m413.49,343.07c-.31.46-.83.72-1.38.69l-3.93-.2c-.27-.01-.54.04-.78.16l-3.51,1.73c-.49.24-1.07.21-1.54-.08l-3.29-2.09c-.23-.14-.49-.23-.76-.24l-3.92-.2c-.55-.03-1.05-.35-1.31-.84l-1.77-3.38c-.13-.24-.32-.45-.55-.6l-3.26-2.07c-.48-.3-.76-.84-.73-1.41l.2-3.74c.02-.28-.05-.56-.17-.81l-1.74-3.35c-.26-.51-.23-1.12.09-1.6l2.1-3.14c.16-.23.25-.51.26-.79l.21-3.75c.03-.56.36-1.07.87-1.32l3.47-1.73c.24-.12.45-.31.6-.53l2.13-3.19c.31-.46.83-.72,1.38-.69l3.93.2c.27.01.53-.04.78-.16l3.51-1.73c.49-.24,1.07-.21,1.54.08l3.29,2.09c.23.15.49.23.76.24l3.92.2c.55.03,1.05.35,1.31.84l1.77,3.38c.13.24.32.45.55.6l3.26,2.07c.48.3.76.84.73,1.41l-.2,3.74c-.02.28.05.56.17.81l1.74,3.35c.26.51.23,1.12-.09,1.6l-2.1,3.14c-.16.23-.25.51-.26.79l-.2,3.75c-.03.56-.36,1.07-.87,1.32l-3.47,1.73c-.24.12-.45.3-.6.53l-2.13,3.19Z"/>
-      <path class="cls-11" d="m404.16,317.84c-.23,0-.45.1-.61.27-.16.17-.25.39-.25.62v1.18s-.27,0-.69.09c-.42.09-1.37.51-2,1.21-.63.7-1.04,1.18-1.04,2.54s.44,1.79,1.07,2.47c.63.68,1.47,1.12,2.39,1.25,1.15.3,1.86.18,2.66.47.8.3,1.54,1.39,1.27,2.25-.26.51-.66.92-1.15,1.21-.49.28-1.06.42-1.62.39-.48.01-.95-.08-1.39-.27-.43-.19-.82-.48-1.13-.85-.14-.19-.35-.31-.58-.35-.23-.04-.47.01-.66.14-.19.14-.31.35-.35.58-.04.23.01.47.14.66.73.94,1.78,1.57,2.95,1.77v1.21c0,.23.09.45.25.62.16.17.38.26.61.27.12,0,.23-.01.34-.06.11-.04.21-.1.29-.18.08-.08.15-.18.2-.28s.08-.22.08-.34v-1.21c.78-.09,1.52-.39,2.15-.87.62-.48,1.11-1.12,1.4-1.85.25-.88.17-1.82-.23-2.64-.4-.82-1.1-1.46-1.95-1.79-.96-.27-1.95-.45-2.95-.53-.52-.06-1-.29-1.38-.65-.37-.36-.69-.73-.69-1.36,0-.62.3-1,.68-1.37.38-.36.86-.59,1.39-.64.59-.15,1.22-.13,1.8.05.58.18,1.11.52,1.51.98.14.19.35.31.58.35.23.04.47-.01.66-.14.19-.14.31-.35.35-.58.04-.23-.01-.47-.14-.66-.72-.95-1.78-1.6-2.95-1.8v-1.15c0-.24-.05-.57-.22-.73-.26-.26-.55-.27-.55-.27h-.23Z"/>
-      <g>
-        <g class="cls-17">
-          <rect class="cls-24" x="0" width="224.41" height="106.12" rx="10" ry="10"/>
-        </g>
-        <g class="cls-25">
-          <circle class="cls-24" cx="110.65" cy="99.52" r="40"/>
-        </g>
-      </g>
-      <path class="cls-3" d="m117.06,92.39v-7.18c0-1.6-.68-3.14-1.88-4.28-1.2-1.13-2.83-1.77-4.54-1.77s-3.33.64-4.54,1.77c-1.2,1.13-1.88,2.67-1.88,4.28v7.18"/>
-      <path class="cls-3" d="m119.63,92.39h-17.96c-2.13,0-3.85,1.62-3.85,3.63v13.3c0,2,1.72,3.63,3.85,3.63h17.96c2.12,0,3.85-1.62,3.85-3.63v-13.3c0-2-1.72-3.63-3.85-3.63Z"/>
-      <circle class="cls-11" cx="110.82" cy="99.39" r="2.89"/>
-      <path class="cls-4" d="m110.82,100.11v5.78"/>
-      <text class="cls-12" transform="translate(20.15 35.06)"><tspan x="0" y="0">Your Privacy Matters</tspan></text>
-      <text class="cls-12" transform="translate(370.78 412.33)"><tspan x="0" y="0">Best Price Guarantee</tspan></text>
-      <text class="cls-12" transform="translate(23.06 606.29)"><tspan x="0" y="0">Risk Free Service</tspan></text>
-      <text class="cls-12" transform="translate(539.08 678.5)"><tspan x="0" y="0">Email &amp; SMS Notification</tspan></text>
-      <text class="cls-12" transform="translate(34.4 949.5)"><tspan x="0" y="0">Free Postage</tspan></text>
-      <text class="cls-12" transform="translate(558.07 947)"><tspan x="0" y="0">Quick Payment</tspan></text>
-      <g>
-        <text class="cls-15" transform="translate(272.97 37.2)"><tspan class="cls-9" x="0" y="0">We know that the information on your phone is sensitive, </tspan><tspan class="cls-20" x="381.49" y="0">so we take </tspan><tspan class="cls-20"><tspan x="0" y="18">extra steps to make sure your device is erased and your personal </tspan></tspan><tspan class="cls-20"><tspan x="0" y="36">data is removed from any device we receive.</tspan></tspan></text>
-        <text class="cls-10" transform="translate(272.97 120.1)"><tspan x="0" y="0">During our testing procedure, our testing team will factory reset any </tspan><tspan x="0" y="18">device we receive twice, once at the beginning at once at the end. This </tspan><tspan x="0" y="36">process ensures that your data is removed before we test the phone.</tspan></text>
-        <text class="cls-10" transform="translate(274.41 196.53)"><tspan x="0" y="0">We still highly recommend that you backup and remove your personal </tspan><tspan x="0" y="18">data before you send your device. Please see our page on how to erase </tspan><tspan x="0" y="36">your data before you ship it to us.</tspan></text>
-      </g>
-      <text class="cls-15" transform="translate(610.2 357.51)"><tspan class="cls-9"><tspan x="0" y="0">If you happen to see a better </tspan></tspan><tspan class="cls-9"><tspan x="0" y="20">offer, send us an email in our </tspan></tspan><tspan class="cls-9" x="0" y="40">Help Centre. </tspan><tspan class="cls-20" x="86.1" y="40">We will beat </tspan><tspan class="cls-20"><tspan x="0" y="60">the price by 5%*</tspan></tspan></text>
-      <text class="cls-15" transform="translate(818.71 592.65)"><tspan class="cls-9"><tspan x="0" y="0">Wondering if your device already </tspan></tspan><tspan class="cls-9"><tspan x="0" y="20">reached our office or when you&apos;ll </tspan></tspan><tspan class="cls-9" x="0" y="40">get paid? </tspan><tspan class="cls-20" x="62.78" y="40">We keep you updated </tspan><tspan class="cls-20" x="0" y="60">along the process</tspan><tspan class="cls-9" x="124.73" y="60" xml:space="preserve"> - from receiving </tspan><tspan class="cls-9"><tspan x="0" y="80">your device to testing results and to </tspan></tspan><tspan class="cls-9"><tspan x="0" y="100">getting paid - so you don&apos;t have to </tspan></tspan><tspan class="cls-9"><tspan x="0" y="120">guess on the status of your device.</tspan></tspan></text>
-      <text class="cls-15" transform="translate(745.86 879.94)"><tspan class="cls-9"><tspan x="0" y="0">﻿Our Mobile Monster</tspan></tspan><tspan class="cls-9" x="0" y="20">guarantee that </tspan><tspan class="cls-20" x="101.65" y="20">payment</tspan><tspan class="cls-20"><tspan x="0" y="40">will be made within</tspan></tspan><tspan class="cls-20" x="0" y="60">3-5 business days</tspan><tspan class="cls-9" x="61.17" y="60" xml:space="preserve"></tspan><tspan class="cls-9"><tspan x="0" y="80">after receiving the device!</tspan></tspan></text>
-      <text class="cls-15" transform="translate(1.93 680.38)"><tspan class="cls-9"><tspan x="0" y="0">If we receive a device and disagree with </tspan></tspan><tspan class="cls-9"><tspan x="0" y="20">the condition you selected, Mobile </tspan></tspan><tspan class="cls-9"><tspan x="0" y="40">Monster will offer you a revised price </tspan></tspan><tspan class="cls-9"><tspan x="0" y="60">and you will have the option to accept </tspan></tspan><tspan class="cls-9"><tspan x="0" y="80">this offer, or have the device sent back </tspan></tspan><tspan class="cls-9" x="0" y="100">to you free of charge - </tspan><tspan class="cls-20" x="148.65" y="100">100% risk free!</tspan></text>
-      <text class="cls-15" transform="translate(2.92 1024.45)"><tspan class="cls-9" x="0" y="0">﻿</tspan><tspan class="cls-20" x="0" y="0">You never have to pay for </tspan><tspan class="cls-20" x="0" y="20">shipping fees </tspan><tspan class="cls-9" x="97.11" y="20">for the delivery</tspan><tspan class="cls-9"><tspan x="0" y="40">of your device to our office </tspan></tspan><tspan class="cls-9"><tspan x="0" y="60">because we shoulder the cost!</tspan></tspan></text>
     </g>
+    <path id="Path_1" data-name="Path 1" d="M430,413.6c0,31.8-10.3,119.4-125.1,67.8-93-51.3-203-86.3-217.6,32.6" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+    <path id="Path_2" data-name="Path 2" d="M142.2,111.2c-16.9,54.6-8,156.9,55.2,135.4,23.8-8.1,26.8-45.1-8.9-52-24-8.2-103.7,42.3-68.2,111.7,16.8,36.6,86.5,66,180.8,9.2,20.7-15.1,90.4-53.9,126.1,14.9" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+    <g id="Group_62" data-name="Group 62">
+      <path id="Path_3" data-name="Path 3" d="M438.5,942.7C372,944.5,260.2,905.1,304,844.9c16.5-22.7,58.9-15,55.4,24.7,1.7,27.7-79.7,96.8-146.4,39" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+      <path id="Path_4" data-name="Path 4" d="M438.6,943c59.8,1.1,139.7-12.9,181.6-57.8" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+    </g>
+    <path id="Path_5" data-name="Path 5" d="M185.9,561.9c33-6.3,65.4-27.7,100.2,37.1,35.5,75.8,96.4,57.2,172.2,10.1,68.6-49.2,189.6-76.4,205.4,51.5" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+    <path id="Path_6" data-name="Path 6" d="M671.2,679.4c31.3,91-75.4,85.3,0,178.5" transform="translate(412.558 48.265)" fill="none" stroke="#663489" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="3.96 9.9"/>
+    <g id="N_46-2" data-name="N 46" transform="translate(123.893 576.859)">
+      <g id="Group_45-2" data-name="Group 45" transform="translate(834.693 321.438)">
+        <g id="Group_36-2" data-name="Group 36" transform="translate(20.168 1.543)">
+          <g transform="matrix(1, 0, 0, 1, -566.75, -868.84)" filter="url(#Path_28-2)">
+            <path id="Path_28-8" data-name="Path 28" d="M31.961,5.9H182.415c4.048,0,7.361,5.2,7.361,11.554v99.478c0,6.355-3.312,11.554-7.361,11.554H31.961c-4.048,0-7.361-5.2-7.361-11.554V17.454C24.6,11.1,27.912,5.9,31.961,5.9Z" transform="translate(542.15 862.94)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_44-2" data-name="Group 44" transform="translate(812.067 233.16)">
+        <g id="Group_39-2" data-name="Group 39">
+          <g transform="matrix(1, 0, 0, 1, -523.96, -779.02)" filter="url(#Ellipse_6-2)">
+            <circle id="Ellipse_6-8" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(619.26 844.42)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_66" data-name="Group 66">
+      <path id="Path_8" data-name="Path 8" d="M215.6,874H179.2a.9.9,0,0,0-.9.9v22.6a.9.9,0,0,0,.9.9h36.4a.9.9,0,0,0,.9-.9V874.9A1.055,1.055,0,0,0,215.6,874Z" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="1.857"/>
+      <path id="Path_9" data-name="Path 9" d="M178.7,898.2l14.2-12-14.3-11.9" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="1.857"/>
+      <path id="Path_10" data-name="Path 10" d="M216.3,898.3l-13.7-12.2,13.7-12.2" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="1.857"/>
+      <path id="Path_11" data-name="Path 11" d="M193.1,886.4c2.7,2.3,4.3,2.3,4.3,2.3h.7s1.9,0,4.5-2.4" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="1.857"/>
+    </g>
+    <g id="N_46-3" data-name="N 46" transform="translate(196.622 318.653)">
+      <g id="Group_45-3" data-name="Group 45" transform="translate(732.38 319.097)">
+        <g id="Group_36-3" data-name="Group 36" transform="translate(20.168 1.543)">
+          <g transform="matrix(1, 0, 0, 1, -537.17, -608.29)" filter="url(#Path_28-3)">
+            <path id="Path_28-9" data-name="Path 28" d="M36.438,5.9H278.4c6.511,0,11.838,5.029,11.838,11.176v96.229c0,6.147-5.327,11.176-11.838,11.176H36.438c-6.511,0-11.838-5.029-11.838-11.176V17.076C24.6,10.929,29.927,5.9,36.438,5.9Z" transform="translate(512.57 602.39)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_44-3" data-name="Group 44" transform="translate(750.067 227.16)">
+        <g id="Group_39-3" data-name="Group 39">
+          <g transform="matrix(1, 0, 0, 1, -534.69, -514.81)" filter="url(#Ellipse_6-3)">
+            <circle id="Ellipse_6-9" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(629.99 580.21)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_65" data-name="Group 65">
+      <g id="Group_64" data-name="Group 64">
+        <path id="Path_13" data-name="Path 13" d="M658.6,873.6v.1a.1.1,0,0,1-.1.1l-.1.1h-6.6a.1.1,0,0,1-.1-.1.1.1,0,0,0-.1-.1v-.6a1.42,1.42,0,0,1,.2-.6l2.4-2.7.4-.5s1.2-1.4,1.5-1.8a6.718,6.718,0,0,0,.6-1.2,5.068,5.068,0,0,0,.2-1.3,1.95,1.95,0,0,0-.1-.8,1.532,1.532,0,0,0-1.1-1.1,1.95,1.95,0,0,0-.8-.1,5.85,5.85,0,0,0-1.3.2,6.725,6.725,0,0,0-1.1.7c-.1,0-.1.1-.2.1s-.1-.1-.2-.1l-.3-.4a.1.1,0,0,0-.1-.1v-.2l.1-.1a5.032,5.032,0,0,1,2.9-1.2,3.153,3.153,0,0,1,2.4.9,3.592,3.592,0,0,1,.7,1,5.021,5.021,0,0,1,.2,1.2,4.032,4.032,0,0,1-.6,2.2,23.473,23.473,0,0,1-1.9,2.5l-.4.5-1.9,2.1a1.439,1.439,0,0,0-.2.3h5.2c.1,0,.2,0,.2.1.1.1.1.1.1.2Z" transform="translate(412.558 48.265)" fill="#633a8e" stroke="#633a8e" stroke-width="0.5"/>
+        <path id="Path_14" data-name="Path 14" d="M668.6,870.8v.1a.1.1,0,0,1-.1.1l-.1.1h-1.3c-.1,0-.2,0-.2.1-.1.1-.1.1-.1.2v2.2a.1.1,0,0,1-.1.1l-.1.1h-.8c-.1,0-.2,0-.2-.1-.1-.1-.1-.1-.1-.2v-2.1c0-.1,0-.2-.1-.2-.1-.1-.1-.1-.2-.1h-5.3a.1.1,0,0,1-.1-.1l-.1-.1v-.6a1.842,1.842,0,0,1,.6-1.3l4.7-6.8c.3-.3.3-.3.6-.3h1c.1,0,.2,0,.2.1.1.1.1.1.1.2v7.4c0,.1,0,.2.1.2.1.1.1.1.2.1h1.2a.1.1,0,0,1,.1.1l.1.1v.7Zm-3.4-.9c.1,0,.2,0,.2-.1.1-.1.1-.1.1-.2v-6.2l-4.3,6.3c-.1.2,0,.3.1.3Z" transform="translate(412.558 48.265)" fill="#633a8e" stroke="#633a8e" stroke-width="0.5"/>
+        <path id="Path_15" data-name="Path 15" d="M660.6,846.4l4,4.5a16.271,16.271,0,0,0-12.8.6,18.1,18.1,0,0,0-.2,32.9,17.791,17.791,0,0,0,13.4.8,18.225,18.225,0,0,0,11.9-22,17.033,17.033,0,0,0-3-6.2" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <path id="Path_16" data-name="Path 16" d="M659.6,853.9l5-3" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="322.08" height="172.56" transform="translate(922.48 616.84)" fill="none" opacity="0.21"/>
+    <g id="Group_63" data-name="Group 63">
+      <path id="Path_18" data-name="Path 18" d="M671.5,588.6a2.768,2.768,0,0,0,.3-1.3,3,3,0,0,0-6,0,2.768,2.768,0,0,0,.3,1.3" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="2"/>
+      <path id="Path_19" data-name="Path 19" d="M681.4,614.5a2.433,2.433,0,0,0,2.4-2.4c0-1.3-2-2.6-2.2-2.8,0,0-1.8-1.4-2-8.4,0,0,.4-10.4-8.3-12.5a3.128,3.128,0,0,0-.7-.2,11.561,11.561,0,0,0-3.2-.1l-.7.1c-.4.1-.9.2-1.3.3-8,2.4-7.7,12.3-7.7,12.3-.2,6.9-2,8.4-2,8.4-.2.2-2.2,1.5-2.2,2.8a2.433,2.433,0,0,0,2.4,2.4" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="2"/>
+      <path id="Path_20" data-name="Path 20" d="M672.7,617.9a.7.7,0,0,1,.7.9,4.489,4.489,0,0,1-8.8,0,.748.748,0,0,1,.7-.9Z" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="2"/>
+    </g>
+    <path id="Path_21" data-name="Path 21" d="M681.4,614.5H655.7" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-width="2"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="279.12" height="168.48" transform="translate(413.68 548.44)" fill="none" opacity="0.24"/>
+    <g id="Group_22" data-name="Group 22" transform="translate(412.558 48.265)">
+      <path id="Path_22" data-name="Path 22" d="M36.2,635.6H241c5.5,0,10-4.8,10-10.8V532c0-6-4.5-10.8-10-10.8H36.2c-5.5,0-10,4.8-10,10.8v92.8C26.2,630.8,30.7,635.6,36.2,635.6Z" fill="#f9f3f8"/>
+    </g>
+    <g id="N_46-4" data-name="N 46" transform="translate(0 53)">
+      <g id="Group_45-4" data-name="Group 45" transform="translate(759.958 324.099)">
+        <g id="Group_36-4" data-name="Group 36" transform="translate(20.168 1.543)">
+          <g transform="matrix(1, 0, 0, 1, -368.13, -347.64)" filter="url(#Path_28-4)">
+            <path id="Path_28-10" data-name="Path 28" d="M35.047,5.9H248.574a10.628,10.628,0,0,1,10.447,10.742v92.487a10.628,10.628,0,0,1-10.447,10.742H35.047A10.628,10.628,0,0,1,24.6,109.129V16.642A10.628,10.628,0,0,1,35.047,5.9Z" transform="translate(343.53 341.74)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_44-4" data-name="Group 44" transform="translate(705.958 224.16)">
+        <g id="Group_39-4" data-name="Group 39">
+          <g transform="matrix(1, 0, 0, 1, -293.96, -246.16)" filter="url(#Ellipse_6-4)">
+            <circle id="Ellipse_6-10" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(389.26 311.56)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="N_46-5" data-name="N 46" transform="translate(-350.989 241.122)">
+      <g id="Group_45-5" data-name="Group 45" transform="translate(771.661 326.813)">
+        <g id="Group_36-5" data-name="Group 36" transform="translate(20.168 1.543)">
+          <g transform="matrix(1, 0, 0, 1, -28.84, -538.48)" filter="url(#Path_28-5)">
+            <path id="Path_28-11" data-name="Path 28" d="M34.4,5.9H234.782c5.392,0,9.8,4.75,9.8,10.555v90.874c0,5.8-4.411,10.555-9.8,10.555H34.4c-5.392,0-9.8-4.75-9.8-10.555V16.455C24.6,10.65,29.011,5.9,34.4,5.9Z" transform="translate(4.24 532.58)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_44-5" data-name="Group 44" transform="translate(716.958 231.16)">
+        <g id="Group_39-5" data-name="Group 39">
+          <g transform="matrix(1, 0, 0, 1, 46.03, -441.28)" filter="url(#Ellipse_6-5)">
+            <circle id="Ellipse_6-11" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(49.27 506.68)" fill="#faf3ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_67" data-name="Group 67">
+      <path id="Path_23" data-name="Path 23" d="M101.4,515.6a.55.55,0,0,0-.3-.5,1.422,1.422,0,0,0-.6-.2,19.313,19.313,0,0,1-7.5-1.5,21.661,21.661,0,0,1-5.3-3.1,1,1,0,0,0-1.2,0,18.9,18.9,0,0,1-5.3,3.1,19.313,19.313,0,0,1-7.5,1.5,1.421,1.421,0,0,0-.6.2.55.55,0,0,0-.3.5c-.5,3.9-1.6,15.8,6.3,25.3a28.125,28.125,0,0,0,7.2,6.1,1.884,1.884,0,0,0,.8.2,2.353,2.353,0,0,0,.8-.2,28.127,28.127,0,0,0,7.2-6.1c8-9.5,6.9-21.4,6.3-25.3Z" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_24" data-name="Path 24" d="M93.6,523l-8.2,10.4-3.8-3.8" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_61" data-name="Group 61">
+      <path id="Path_26" data-name="Path 26" d="M438.1,348.9a1.513,1.513,0,0,1-1.4.7l-3.9-.2a1.2,1.2,0,0,0-.8.2l-3.5,1.7a1.583,1.583,0,0,1-1.5-.1l-3.3-2.1a1.884,1.884,0,0,0-.8-.2l-3.9-.2a1.34,1.34,0,0,1-1.3-.8l-1.8-3.4a2.651,2.651,0,0,0-.5-.6l-3.3-2.1a1.343,1.343,0,0,1-.7-1.4l.2-3.7a1.077,1.077,0,0,0-.2-.8l-1.7-3.3a1.542,1.542,0,0,1,.1-1.6l2.1-3.1c.2-.2.2-.5.3-.8l.2-3.8a1.424,1.424,0,0,1,.9-1.3l3.5-1.7a1.47,1.47,0,0,0,.6-.5l2.1-3.2a1.513,1.513,0,0,1,1.4-.7l3.9.2a1.2,1.2,0,0,0,.8-.2l3.5-1.7a1.583,1.583,0,0,1,1.5.1l3.3,2.1a1.884,1.884,0,0,0,.8.2l3.9.2a1.441,1.441,0,0,1,1.3.8l1.8,3.4a2.651,2.651,0,0,0,.5.6l3.3,2.1a1.343,1.343,0,0,1,.7,1.4l-.2,3.7a1.077,1.077,0,0,0,.2.8l1.7,3.3a1.542,1.542,0,0,1-.1,1.6l-2.1,3.1c-.2.2-.2.5-.3.8l-.2,3.8a1.424,1.424,0,0,1-.9,1.3l-3.5,1.7a1.47,1.47,0,0,0-.6.5Z" transform="translate(413.558 49.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_27" data-name="Path 27" d="M428.8,323.7a.864.864,0,0,0-.6.3.735.735,0,0,0-.2.6v1.2a3.2,3.2,0,0,0-.7.1,4.381,4.381,0,0,0-2,1.2,3.22,3.22,0,0,0-1,2.5,2.845,2.845,0,0,0,1.1,2.5,4.372,4.372,0,0,0,2.4,1.3c1.2.3,1.9.2,2.7.5a2.16,2.16,0,0,1,1.3,2.2,3.447,3.447,0,0,1-1.2,1.2,3.408,3.408,0,0,1-3,.1,4.441,4.441,0,0,1-1.1-.8.918.918,0,0,0-.6-.4,1.7,1.7,0,0,0-.7.1.918.918,0,0,0-.4.6,1.7,1.7,0,0,0,.1.7,4.918,4.918,0,0,0,3,1.8v1.2a1.072,1.072,0,0,0,.2.6.864.864,0,0,0,.6.3.367.367,0,0,0,.3-.1c.1,0,.2-.1.3-.2s.2-.2.2-.3.1-.2.1-.3v-1.2a3.981,3.981,0,0,0,2.1-.9,4.5,4.5,0,0,0,1.4-1.9,3.344,3.344,0,0,0-.2-2.6,3.55,3.55,0,0,0-2-1.8,10.474,10.474,0,0,0-3-.5,2.666,2.666,0,0,1-1.4-.7,1.75,1.75,0,0,1-.7-1.4,1.91,1.91,0,0,1,.7-1.4,1.974,1.974,0,0,1,1.4-.6,3.672,3.672,0,0,1,1.8.1,3.072,3.072,0,0,1,1.5,1,.918.918,0,0,0,.6.4,1.7,1.7,0,0,0,.7-.1.918.918,0,0,0,.4-.6,1.7,1.7,0,0,0-.1-.7,4.5,4.5,0,0,0-3-1.8v-1.2a1.445,1.445,0,0,0-.2-.7.929.929,0,0,0-.6-.3h-.2Z" transform="translate(413.558 49.265)" fill="#633a8e"/>
+    </g>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="278.64" height="160.32" transform="translate(412 31)" fill="none" opacity="0.21"/>
+    <g id="Group_37" data-name="Group 37" transform="translate(412.558 48.265)">
+      <g id="Group_36-6" data-name="Group 36">
+        <g transform="matrix(1, 0, 0, 1, -0.56, -17.26)" filter="url(#Path_28-6)">
+          <path id="Path_28-12" data-name="Path 28" d="M34.6,5.9H239a10.029,10.029,0,0,1,10,10V102a10.029,10.029,0,0,1-10,10H34.6a10.029,10.029,0,0,1-10-10V15.9A10.029,10.029,0,0,1,34.6,5.9Z" transform="translate(0.56 17.26)" fill="#faf3ff"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="134.16" height="134.16" transform="translate(483.76 101.56)" fill="none" opacity="0.2"/>
+    <g id="Group_40" data-name="Group 40" transform="translate(412.558 48.265)">
+      <g id="Group_39-6" data-name="Group 39">
+        <g transform="matrix(1, 0, 0, 1, -0.56, -17.26)" filter="url(#Ellipse_6-6)">
+          <circle id="Ellipse_6-12" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(95.86 82.66)" fill="#faf3ff"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_60" data-name="Group 60">
+      <path id="Path_29" data-name="Path 29" d="M141.7,98.3V91.1a6.084,6.084,0,0,0-1.9-4.3,6.713,6.713,0,0,0-4.5-1.8,6.267,6.267,0,0,0-4.5,1.8,5.912,5.912,0,0,0-1.9,4.3v7.2" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_30" data-name="Path 30" d="M144.2,98.3h-18a3.7,3.7,0,0,0-3.8,3.6v13.3a3.7,3.7,0,0,0,3.8,3.6h18a3.7,3.7,0,0,0,3.8-3.6V101.9A3.576,3.576,0,0,0,144.2,98.3Z" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" cx="2.9" cy="2.9" r="2.9" transform="translate(545.058 150.665)" fill="#633a8e"/>
+      <path id="Path_31" data-name="Path 31" d="M135.4,106v5.8" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <text id="Your_Privacy_Matters" data-name="Your Privacy Matters" transform="translate(457.32 89.202)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Your Privacy Matters</tspan></text>
+    <text id="Best_Price_Guarantee" data-name="Best Price Guarantee" transform="translate(807.954 466.469)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Best Price Guarantee</tspan></text>
+    <text id="Risk_Free_Service" data-name="Risk Free Service" transform="translate(460.234 660.434)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Risk Free Service</tspan></text>
+    <text id="Email_SMS_Notification" data-name="Email &amp; SMS Notification" transform="translate(976.256 732.639)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Email &amp; SMS Notification</tspan></text>
+    <text id="Free_Postage" data-name="Free Postage" transform="translate(471.573 1003.644)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Free Postage</tspan></text>
+    <text id="Quick_Payment" data-name="Quick Payment" transform="translate(995.242 1001.143)" fill="#633a8e" font-size="17.69" font-family="Open Sans" font-weight="700"><tspan x="0" y="0">Quick Payment</tspan></text>
+    <rect id="Rectangle_16" data-name="Rectangle 16" width="194.2" height="82.4" transform="translate(1047.358 400.265)" fill="none"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="238.6" height="166.6" transform="translate(1255.858 635.365)" fill="none"/>
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="238.6" height="166.6" transform="translate(1183.058 922.665)" fill="none"/>
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="263.7" height="166.6" transform="translate(439.058 723.165)" fill="none"/>
+    <rect id="Rectangle_20" data-name="Rectangle 20" width="205" height="83.3" transform="translate(440.058 1067.165)" fill="none"/>
+    <text id="We_know_that_the_information_on_your_phone_is_sensitive_so_we_take_extra_steps_to_make_sure_your_device_is_erased_and_your_personal_data_is_removed_from_any_device_we_receive." data-name="We know that the information on your phone is sensitive, so we take 
+extra steps to make sure your device is erased and your personal 
+data is removed from any device we receive." transform="translate(710 75)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">We know that the information on your phone is sensitive,</tspan><tspan y="15" xml:space="preserve" font-family="OpenSans-Bold, Open Sans" font-weight="700"> so we take </tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="34">extra steps to make sure your device is erased and your personal </tspan><tspan x="0" y="53">data is removed from any device we receive.</tspan></tspan></text>
+    <text id="During_our_testing_procedure_our_testing_team_will_factory_reset_any_device_we_receive_twice_once_at_the_beginning_at_once_at_the_end._This_process_ensures_that_your_data_is_removed_before_we_test_the_phone." data-name="During our testing procedure, our testing team will factory reset any 
+device we receive twice, once at the beginning at once at the end. This 
+process ensures that your data is removed before we test the phone." transform="translate(710 156)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">During our testing procedure, our testing team will factory reset any </tspan><tspan x="0" y="34">device we receive twice, once at the beginning at once at the end. This </tspan><tspan x="0" y="53">process ensures that your data is removed before we test the phone.</tspan></text>
+    <text id="We_still_highly_recommend_that_you_backup_and_remove_your_personal_data_before_you_send_your_device._Please_see_our_page_on_how_to_erase_your_data_before_you_ship_it_to_us." data-name="We still highly recommend that you backup and remove your personal 
+data before you send your device. Please see our page on how to erase 
+your data before you ship it to us." transform="translate(710 237)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">We still highly recommend that you backup and remove your personal </tspan><tspan x="0" y="34">data before you send your device. Please see our page on how to erase </tspan><tspan x="0" y="53">your data before you ship it to us.</tspan></text>
+    <text id="If_you_happen_to_see_a_better_offer_send_us_an_email_in_our_Help_Centre._We_will_beat_the_price_by_5_" data-name="If you happen to see a better 
+offer, send us an email in our 
+Help Centre. We will beat 
+the price by 5%*" transform="translate(1047 398)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">If you happen to see a better </tspan><tspan x="0" y="34">offer, send us an email in our </tspan><tspan x="0" y="53">Help Centre. </tspan><tspan y="53" font-family="OpenSans-Bold, Open Sans" font-weight="700">We will beat </tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="72">the price by 5%*</tspan></tspan></text>
+    <text id="Wondering_if_your_device_already_reached_our_office_or_when_you_ll_get_paid_We_keep_you_updated_along_the_process_-_from_receiving_your_device_to_testing_results_and_to_getting_paid_-_so_you_don_t_have_to_guess_on_the_status_of_your_device." data-name="Wondering if your device already 
+reached our office or when you&apos;ll 
+get paid? We keep you updated 
+along the process - from receiving 
+your device to testing results and to 
+getting paid - so you don&apos;t have to 
+guess on the status of your device." transform="translate(1256 631)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">Wondering if your device already </tspan><tspan x="0" y="34">reached our office or when you&apos;ll </tspan><tspan x="0" y="53">get paid? </tspan><tspan y="53" font-family="OpenSans-Bold, Open Sans" font-weight="700">We keep you updated </tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="72">along the process</tspan><tspan y="72" xml:space="preserve" font-family="OpenSans, Open Sans" font-weight="400"> - from receiving </tspan></tspan><tspan x="0" y="91">your device to testing results and to </tspan><tspan x="0" y="110">getting paid - so you don&apos;t have to </tspan><tspan x="0" y="129">guess on the status of your device.</tspan></text>
+    <text id="Our_Mobile_Monster_guarantee_that_payment_will_be_made_within_3-5_business_days_after_receiving_the_device_" data-name="Our Mobile Monster
+guarantee that payment
+will be made within
+3-5 business days
+after receiving the device!" transform="translate(1183 918)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">Our Mobile Monster</tspan><tspan x="0" y="34">guarantee that </tspan><tspan y="34" font-family="OpenSans-Bold, Open Sans" font-weight="700">payment</tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="53">will be made within</tspan><tspan x="0" y="72">3-5 business days</tspan><tspan y="72" font-family="OpenSans, Open Sans" font-weight="400"></tspan></tspan><tspan x="0" y="91">after receiving the device!</tspan></text>
+    <text id="You_never_have_to_pay_for_shipping_fees_for_the_delivery_of_your_device_to_our_office_because_we_shoulder_the_cost_" data-name="You never have to pay for 
+shipping fees for the delivery
+of your device to our office 
+because we shoulder the cost!" transform="translate(440 1066)" font-size="14" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="15">You never have to pay for </tspan><tspan x="0" y="34">shipping fees</tspan><tspan y="34" xml:space="preserve" font-family="OpenSans, Open Sans" font-weight="400"> for the delivery</tspan><tspan font-family="OpenSans, Open Sans" font-weight="400"><tspan x="0" y="53">of your device to our office </tspan><tspan x="0" y="72">because we shoulder the cost!</tspan></tspan></text>
+    <text id="If_we_receive_a_device_and_disagree_with_the_condition_you_selected_Mobile_Monster_will_offer_you_a_revised_price_and_you_will_have_the_option_to_accept_this_offer_or_have_the_device_sent_back_to_you_free_of_charge_-_100_risk_free_" data-name="If we receive a device and disagree with 
+the condition you selected, Mobile 
+Monster will offer you a revised price 
+and you will have the option to accept 
+this offer, or have the device sent back 
+to you free of charge - 100% risk free!" transform="translate(441 719)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">If we receive a device and disagree with </tspan><tspan x="0" y="34">the condition you selected, Mobile </tspan><tspan x="0" y="53">Monster will offer you a revised price </tspan><tspan x="0" y="72">and you will have the option to accept </tspan><tspan x="0" y="91">this offer, or have the device sent back </tspan><tspan x="0" y="110">to you free of charge - </tspan><tspan y="110" font-family="OpenSans-Bold, Open Sans" font-weight="700">100% risk free!</tspan></text>
   </g>
 </svg>`
 }
