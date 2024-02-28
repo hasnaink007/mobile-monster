@@ -23,7 +23,7 @@ if(hks_flow_element){
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <filter id="Ellipse_6-2" x="595.261" y="831.419" width="128" height="128" filterUnits="userSpaceOnUse">
+    <filter id="Ellipse_6-2" x="595" y="828" width="128" height="128" filterUnits="userSpaceOnUse">
       <feOffset dy="11" input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="8" result="blur-4"/>
       <feFlood flood-color="#871793" flood-opacity="0.161"/>
@@ -120,10 +120,10 @@ if(hks_flow_element){
           </g>
         </g>
       </g>
-      <g id="Group_44-2" data-name="Group 44" transform="translate(812.067 233.16)">
+      <g id="Group_44-2" data-name="Group 44" transform="translate(812.067 230.16)">
         <g id="Group_39-2" data-name="Group 39">
-          <g transform="matrix(1, 0, 0, 1, -523.96, -779.02)" filter="url(#Ellipse_6-2)">
-            <circle id="Ellipse_6-8" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(619.26 844.42)" fill="#faf3ff"/>
+          <g transform="matrix(1, 0, 0, 1, -523.96, -776.02)" filter="url(#Ellipse_6-2)">
+            <circle id="Ellipse_6-8" data-name="Ellipse 6" cx="40" cy="40" r="40" transform="translate(619 841)" fill="#faf3ff"/>
           </g>
         </g>
       </g>
@@ -149,14 +149,6 @@ if(hks_flow_element){
           </g>
         </g>
       </g>
-    </g>
-    <g id="Group_65" data-name="Group 65">
-      <g id="Group_64" data-name="Group 64">
-        <path id="Path_13" data-name="Path 13" d="M658.6,873.6v.1a.1.1,0,0,1-.1.1l-.1.1h-6.6a.1.1,0,0,1-.1-.1.1.1,0,0,0-.1-.1v-.6a1.42,1.42,0,0,1,.2-.6l2.4-2.7.4-.5s1.2-1.4,1.5-1.8a6.718,6.718,0,0,0,.6-1.2,5.068,5.068,0,0,0,.2-1.3,1.95,1.95,0,0,0-.1-.8,1.532,1.532,0,0,0-1.1-1.1,1.95,1.95,0,0,0-.8-.1,5.85,5.85,0,0,0-1.3.2,6.725,6.725,0,0,0-1.1.7c-.1,0-.1.1-.2.1s-.1-.1-.2-.1l-.3-.4a.1.1,0,0,0-.1-.1v-.2l.1-.1a5.032,5.032,0,0,1,2.9-1.2,3.153,3.153,0,0,1,2.4.9,3.592,3.592,0,0,1,.7,1,5.021,5.021,0,0,1,.2,1.2,4.032,4.032,0,0,1-.6,2.2,23.473,23.473,0,0,1-1.9,2.5l-.4.5-1.9,2.1a1.439,1.439,0,0,0-.2.3h5.2c.1,0,.2,0,.2.1.1.1.1.1.1.2Z" transform="translate(412.558 48.265)" fill="#633a8e" stroke="#633a8e" stroke-width="0.5"/>
-        <path id="Path_14" data-name="Path 14" d="M668.6,870.8v.1a.1.1,0,0,1-.1.1l-.1.1h-1.3c-.1,0-.2,0-.2.1-.1.1-.1.1-.1.2v2.2a.1.1,0,0,1-.1.1l-.1.1h-.8c-.1,0-.2,0-.2-.1-.1-.1-.1-.1-.1-.2v-2.1c0-.1,0-.2-.1-.2-.1-.1-.1-.1-.2-.1h-5.3a.1.1,0,0,1-.1-.1l-.1-.1v-.6a1.842,1.842,0,0,1,.6-1.3l4.7-6.8c.3-.3.3-.3.6-.3h1c.1,0,.2,0,.2.1.1.1.1.1.1.2v7.4c0,.1,0,.2.1.2.1.1.1.1.2.1h1.2a.1.1,0,0,1,.1.1l.1.1v.7Zm-3.4-.9c.1,0,.2,0,.2-.1.1-.1.1-.1.1-.2v-6.2l-4.3,6.3c-.1.2,0,.3.1.3Z" transform="translate(412.558 48.265)" fill="#633a8e" stroke="#633a8e" stroke-width="0.5"/>
-        <path id="Path_15" data-name="Path 15" d="M660.6,846.4l4,4.5a16.271,16.271,0,0,0-12.8.6,18.1,18.1,0,0,0-.2,32.9,17.791,17.791,0,0,0,13.4.8,18.225,18.225,0,0,0,11.9-22,17.033,17.033,0,0,0-3-6.2" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      </g>
-      <path id="Path_16" data-name="Path 16" d="M659.6,853.9l5-3" transform="translate(412.558 48.265)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
     <rect id="Rectangle_5" data-name="Rectangle 5" width="322.08" height="172.56" transform="translate(922.48 616.84)" fill="none" opacity="0.21"/>
     <g id="Group_63" data-name="Group 63">
@@ -277,6 +269,10 @@ Monster will offer you a revised price
 and you will have the option to accept 
 this offer, or have the device sent back 
 to you free of charge - 100% risk free!" transform="translate(441 719)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">If we receive a device and disagree with </tspan><tspan x="0" y="34">the condition you selected, Mobile </tspan><tspan x="0" y="53">Monster will offer you a revised price </tspan><tspan x="0" y="72">and you will have the option to accept </tspan><tspan x="0" y="91">this offer, or have the device sent back </tspan><tspan x="0" y="110">to you free of charge - </tspan><tspan y="110" font-family="OpenSans-Bold, Open Sans" font-weight="700">100% risk free!</tspan></text>
+    <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(1050 891)">
+      <path id="Path_32" data-name="Path 32" d="M38.556,20.778A17.778,17.778,0,1,1,20.778,3,17.778,17.778,0,0,1,38.556,20.778Z" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_33" data-name="Path 33" d="M18,9V19.667l7.111,3.556" transform="translate(2.778 1.111)" fill="none" stroke="#633a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
   </g>
 </svg>`
 }
