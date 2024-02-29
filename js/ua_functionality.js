@@ -235,9 +235,9 @@ function addOrderRow(newNode ,orderData) {
     newNode.attr('order-id', orderData.order_id);
     newNode.find('.order-number-holder').html(orderData.order_number);
     newNode.find('.order-date-holder').html(orderData.created_date);
+    newNode.find('.order-status-holder').html(orderData.user_status);
     newNode.find('.order-recive-holder').html(orderData.recieve_holder);
     newNode.find('.order-complete-date-holder').html(orderData.complete_date);
-    newNode.find('.order-status-holder').html(orderData.user_status);
     
                 
     newNode.find('.selected-price-holder').html(orderData.price ? orderData.price : 0);
