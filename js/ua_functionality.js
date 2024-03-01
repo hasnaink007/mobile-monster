@@ -236,12 +236,16 @@ function addOrderRow(newNode ,orderData) {
     newNode.find('.order-number-holder').html(orderData.order_number);
     newNode.find('.order-date-holder').html(orderData.created_date);
     newNode.find('.order-status-holder').html(orderData.user_status);
-    newNode.find('.order-recive-holder').html(orderData.recieve_holder);
-    newNode.find('.order-complete-date-holder').html(orderData.complete_date);
+    // newNode.find('.order-recive-holder').html(orderData.recieve_holder);
+    // newNode.find('.order-complete-date-holder').html(orderData.complete_date);
     
-                
+    
     newNode.find('.selected-price-holder').html(orderData.price ? orderData.price : 0);
-    newNode.find('.order-status-holder').html(orderData.user_status);
+    // newNode.find('.order-status-holder').html(orderData.user_status);
+    
+    newNode.find('.order-recive-holder').html(orderData.total_devices);
+    newNode.find('.order-status-holder').html(orderData.delivery_method);
+    newNode.find('.order-complete-date-holder').html(orderData.total_price);
 
 
     if("device_title" in orderData) {
@@ -379,6 +383,9 @@ function init_my_account_page() {
                     order_status: item[`Status`] ,
                     price: '$' + ("Initial Offer" in item ? item[`Initial Offer`] : '0'),
                     user_status: item[`User Journey Status`],
+                    delivery_method: item[`Delivery Method`],
+                    total_devices: item['PO Devices']?.length||0,
+                    total_price: (item['Initial Offer']||[]).reduce((i,n) => i+n, 0)
 
                 };
 
