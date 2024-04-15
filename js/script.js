@@ -125,7 +125,7 @@ let couponStatus, couponAmount = 0, couponId;
 
 document.getElementById("applyButton")?.addEventListener("click", () => {
   const couponName = document.getElementById("couponInput").value;
-  const authKey = localStorage.getItem(`HKS_MM_auth_key`);
+  const authEmail = localStorage.getItem(`HKS_MM_user_email`);
 
   const inputData = {
     coupon: couponName
@@ -151,7 +151,7 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
         couponStatus = response.couponStatus;
 
         if (couponStatus === "Active") {
-          checkUserCouponUsage(authKey, couponName)
+          checkUserCouponUsage(authEmail, couponName)
             .then(usedCoupons => {
               if (usedCoupons === true) {
                 document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
@@ -181,9 +181,9 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
     });
 });
 
-function checkUserCouponUsage(authKey, couponName) {
+function checkUserCouponUsage(authEmail, couponName) {
   const jsonData = {
-    authKey: authKey,
+    authEmail: authEmail,
     couponName: couponName
   };
 
