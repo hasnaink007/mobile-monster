@@ -144,7 +144,6 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
   })
     .then(response => response.json())
     .then(data => {
-      document.getElementById("loader").style.display = "none";
 
       if (data.status === "success") {
         const response = data.response;
@@ -153,6 +152,7 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
         if (couponStatus === "Active") {
           checkUserCouponUsage(authEmail, couponName)
             .then(usedCoupons => {
+              document.getElementById("loader").style.display = "none";
               if (usedCoupons === true) {
                 document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
                 document.getElementById("message_error").style.display = "block";
@@ -164,13 +164,16 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
               }
             })
             .catch(error => {
+              document.getElementById("loader").style.display = "none";
               console.error('Error checking coupon usage:', error);
             });
         } else {
+          document.getElementById("loader").style.display = "none";
           document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
           document.getElementById("message_error").style.display = "block";
         }
       } else {
+        document.getElementById("loader").style.display = "none";
         document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
         document.getElementById("message_error").style.display = "block";
       }
