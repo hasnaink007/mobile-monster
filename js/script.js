@@ -143,7 +143,7 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
 
     if (totalOfDevices <= 200) {
         document.getElementById("loader").style.display = "none";
-        document.getElementById("message_error").innerHTML = "Your total price is less than $200, but the coupon code is only applicable for values greater than $200";
+        document.getElementById("message_error").innerHTML = "Your total price is less than $200, Coupon codes can only be applied to sales with a price value greater than $200.";
         document.getElementById("message_error").style.display = "block";
     } else {
         fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon/', {
