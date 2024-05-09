@@ -124,64 +124,76 @@ window.addEventListener('load', function() {
 let couponStatus, couponAmount = 0, couponId;
 
 document.getElementById("applyButton")?.addEventListener("click", () => {
-  const couponName = document.getElementById("couponInput").value;
-  const authEmail = localStorage.getItem(`HKS_MM_user_email`);
+    const couponName = document.getElementById("couponInput").value;
+    const authEmail = localStorage.getItem(`HKS_MM_user_email`);
 
-  const inputData = {
-    coupon: couponName
-  };
+    const inputData = {
+        coupon: couponName
+    };
 
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("message_error").style.display = "none";
-  document.getElementById("message_success").style.display = "none";
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("message_error").style.display = "none";
+    document.getElementById("message_success").style.display = "none";
 
-  fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(inputData)
-  })
-    .then(response => response.json())
-    .then(data => {
+    const devicesByLC = localStorage.getItem(`hksSelectedDevices`);
+    const parsedDevices = JSON.parse(devicesByLC);
+    const totalOfDevices = parsedDevices.reduce((sum, device) => sum + device.price, 0);
 
-      if (data.status === "success") {
-        const response = data.response;
-        couponStatus = response.couponStatus;
+    console.log(totalOfDevices);
 
-        if (couponStatus === "Active") {
-          checkUserCouponUsage(authEmail, couponName)
-            .then(usedCoupons => {
-              document.getElementById("loader").style.display = "none";
-              if (usedCoupons === true) {
-                document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
-                document.getElementById("message_error").style.display = "block";
-              } else {
-                couponAmount = response.couponAmount;
-                couponId = response.couponId;
-                document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
-                document.getElementById("message_success").style.display = "block";
-              }
+    if (totalOfDevices <= 200) {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("message_error").innerHTML = "Your total price is less than $200, but the coupon code is only applicable for values greater than $200";
+        document.getElementById("message_error").style.display = "block";
+    } else {
+        fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inputData)
+        })
+            .then(response => response.json())
+            .then(data => {
+
+                if (data.status === "success") {
+                    const response = data.response;
+                    couponStatus = response.couponStatus;
+
+                    if (couponStatus === "Active") {
+                        checkUserCouponUsage(authEmail, couponName)
+                            .then(usedCoupons => {
+                                document.getElementById("loader").style.display = "none";
+                                if (usedCoupons === true) {
+                                    document.getElementById("message_error").innerHTML = "Coupon code has already been used by this user.";
+                                    document.getElementById("message_error").style.display = "block";
+                                } else {
+                                    couponAmount = response.couponAmount;
+                                    couponId = response.couponId;
+                                    document.getElementById("message_success").innerHTML = `Congratulations! The coupon code has been successfully applied. You will now receive an additional <strong>$${couponAmount}</strong> in your total.`;
+                                    document.getElementById("message_success").style.display = "block";
+                                }
+                            })
+                            .catch(error => {
+                                document.getElementById("loader").style.display = "none";
+                                console.error('Error checking coupon usage:', error);
+                            });
+                    } else {
+                        document.getElementById("loader").style.display = "none";
+                        document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
+                        document.getElementById("message_error").style.display = "block";
+                    }
+                } else {
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
+                    document.getElementById("message_error").style.display = "block";
+                }
             })
             .catch(error => {
-              document.getElementById("loader").style.display = "none";
-              console.error('Error checking coupon usage:', error);
+                console.error('Error:', error);
+                document.getElementById("loader").style.display = "none";
             });
-        } else {
-          document.getElementById("loader").style.display = "none";
-          document.getElementById("message_error").innerHTML = "Invalid coupon code. The coupon code you entered is either incorrect or inactive. Please double-check and try again.";
-          document.getElementById("message_error").style.display = "block";
-        }
-      } else {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("message_error").innerHTML = "Error: Failed to process the coupon code. Please try again later.";
-        document.getElementById("message_error").style.display = "block";
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      document.getElementById("loader").style.display = "none";
-    });
+    }
 });
 
 function checkUserCouponUsage(authEmail, couponName) {
@@ -203,9 +215,7 @@ function checkUserCouponUsage(authEmail, couponName) {
     });
 }
 
-
 // Load Functionality END
-
 
 function handleResetPassword(e) {
     
