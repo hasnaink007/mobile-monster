@@ -89,6 +89,23 @@
     line-height: 18.27px;
     display: flex;
 }
+
+span.hks_device_heading {
+    color: #000;
+    text-align: left;
+    justify-content: flex-start;
+    width: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 40px 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18.27px;
+    display: flex;
+}
+
 .hks-custom-wrap:hover {
   border-radius: 5px;
   /* background: #f8f5fa; */
