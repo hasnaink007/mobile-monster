@@ -3,10 +3,10 @@
 var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
 
 
-var endpointUrl = 'https://portal.mobilemonster.com.au/version-test';
+var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test';
 
 if(!isDev) {
-    endpointUrl = 'https://portal.mobilemonster.com.au/';
+    endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
 }
 
 
