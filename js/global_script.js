@@ -8,7 +8,7 @@ Webflow.push(function() {
 
 
     
-    var endpointUrl = 'https://portal.mobilemonster.com.au/';
+    var endpointUrl = 'https://portal.mobilemonster.com.au';
     if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
         endpointUrl = 'https://portal.mobilemonster.com.au/version-test'
     }
