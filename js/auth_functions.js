@@ -6,7 +6,7 @@ var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true'
 var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test';
 
 if(!isDev) {
-    endpointUrl = 'https://mobile-monster.bubbleapps.io';
+    endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
 }
 
 function setLocalDataValue(key, value) {
