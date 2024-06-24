@@ -12,6 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo $jsonResponse;
 } else {
     http_response_code(405);
-    echo json_encode(["message" => "Method Not Allowed"]);
+    echo json_encode(["message" => "Method Not Allowed - HKS TECHLABS"]);
 }
 ?>
