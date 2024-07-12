@@ -35,7 +35,7 @@ document.addEventListener('alpine:init', function() {
          
          deviceOptions: null,
          avlOptions:[],
- 
+         storageOrderMap: ['128GB', '256GB', '512GB', '1TB', '2TB', '3TB', '4TB'],
  
  
  
@@ -178,9 +178,12 @@ document.addEventListener('alpine:init', function() {
  
          updateDevicesOptions: function() {
  
-             $pThis.deviceOptions = $pThis.groupDataBy($pThis.getCurrentLifecycleName(), $pThis.appliedFilters); 
-         
+            $pThis.deviceOptions = $pThis.groupDataBy($pThis.getCurrentLifecycleName(), $pThis.appliedFilters); 
+        
          },
+
+
+         
  
          getCurrentLifecycleName: () => {
  
