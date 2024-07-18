@@ -36,7 +36,7 @@
     max-width: 286px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     padding: 12px;
     justify-content: space-between;
   }
@@ -104,6 +104,7 @@ span.hks_device_heading {
     padding: 10px 10px 0;
     font-family: Open Sans, sans-serif;
     font-size: 14px;
+    min-height:48px;
     font-weight: 700;
     line-height: 18.27px;
     display: flex;
