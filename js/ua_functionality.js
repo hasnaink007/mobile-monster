@@ -783,6 +783,7 @@ function getAuthTokensData() {
 
     formData.append("user_email", user_email);
     formData.append("auth_key", auth_key);
+    formData.append("origin", window.location.origin?.split('//')[1]);
     
     return formData
 }
