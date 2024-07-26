@@ -583,7 +583,8 @@ function init_edit_details_page() {
 function loadFormListener() {
 
         $('#email-form-5').submit(function(e) {
-
+            
+            e.preventDefault();
             var auth_key = getLocalDataValue('auth_key');
             var user_email = getLocalDataValue('user_email');
 
@@ -593,7 +594,6 @@ function loadFormListener() {
 
             }
             
-            e.preventDefault();
             
             
             var shouldUpdatePassword = false;
@@ -762,6 +762,7 @@ function loadUserData() {
             }
 
         }
+        $('.input-reg-email-edit-page')[0].disabled = true;
 
 
 
