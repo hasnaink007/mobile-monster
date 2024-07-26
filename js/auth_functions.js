@@ -62,6 +62,7 @@ function verifyUserAuthToken(returnData = false) {
 
         formDataToVerify.append('auth_key', auth_key);
         formDataToVerify.append('user_email', user_email);
+        formDataToVerify.append('origin', window.location.origin?.split('//')?.[1]);
 
         fetch(`${endpointUrl}/api/1.1/wf/verify_auth_token`, {
             method:"POST",
