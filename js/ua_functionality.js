@@ -65,7 +65,7 @@ function authenticateAccess() {
             fetch(endpointUrl+ '/api/1.1/wf/seller_signup_with_google', {
                 method:"POST",
                 headers: {'content-type':'application/json'},
-                body: JSON.stringify({ idToken })
+                body: JSON.stringify({ idToken, origin: window.location.host })
             })
             .then(res => res.json())
             .then(res => {
@@ -161,6 +161,7 @@ function init_login_page() {
 
         loginFormData.append("email", user_name);
         loginFormData.append("password", password);
+        loginFormData.append("origin", window.location.host);
         
 
         fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
@@ -450,7 +451,7 @@ function get_device_information(device_id) {
         var requestData = getAuthTokensData();
 
         requestData.append('device_id', device_id);
-    
+        requestData.append('origin', window.location.host);
     
         fetch(`${endpointUrl}/api/1.1/wf/get_device_by_id`,
             {
@@ -513,6 +514,7 @@ function bindCancelOrderHandler() {
     requestData.append('cancel_reason', cancelReason);
     requestData.append('user_email', user_email);
     requestData.append("auth_token", auth_key);
+    requestData.append("origin", window.location.host);
 
     fetch(`https://hook.eu1.make.com/t27plodxwj81thw9ut4mbrndq3rsttme`,
         {
@@ -632,6 +634,7 @@ function loadFormListener() {
 
             data.append('user_email', user_email);
             data.append("auth_token", auth_key);
+            data.append("origin", window.location.host);
 
             if(shouldUpdatePassword) {
                 data.append('password', password);
@@ -783,7 +786,7 @@ function getAuthTokensData() {
 
     formData.append("user_email", user_email);
     formData.append("auth_key", auth_key);
-    formData.append("origin", window.location.origin?.split('//')[1]);
+    formData.append("origin", window.location.host);
     
     return formData
 }
