@@ -727,20 +727,22 @@ function loadUserData() {
                 
             },
             "input-address-two" : {
-
+                value: userData.address2,
             },
 
             "input-suburb" : {
-
+                value: userData.suburb,
             },
             "input-postcode" : {
-
+                value: userData.postcode,
             },
             "input-state" : {
-
+                value: userData.state,
             },
+            "input-reg-email-edit-page": {
+                value: userData.user_email,
+            }
             "input-reg-password" : {
-
             },
             "input-reg-confirm-password": {
 
