@@ -741,7 +741,7 @@ function loadUserData() {
             },
             "input-reg-email-edit-page": {
                 value: userData.user_email,
-            }
+            },
             "input-reg-password" : {
             },
             "input-reg-confirm-password": {
