@@ -128,7 +128,8 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
     const authEmail = localStorage.getItem(`HKS_MM_user_email`);
 
     const inputData = {
-        coupon: couponName
+        coupon: couponName,
+        origin: window.location.host
     };
 
     document.getElementById("loader").style.display = "block";
@@ -146,7 +147,7 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
         document.getElementById("message_error").innerHTML = "Your total price is less than $200, Coupon codes can only be applied to sales with a price value greater than $200.";
         document.getElementById("message_error").style.display = "block";
     } else {
-        fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon/', {
+        fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -199,7 +200,8 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
 function checkUserCouponUsage(authEmail, couponName) {
   const jsonData = {
     authEmail: authEmail,
-    couponName: couponName
+    couponName: couponName,
+    origin: window.location.host
   };
 
   return fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_if_taken_promotion/', {
@@ -241,6 +243,7 @@ function handleResetPassword(e) {
 
     var requestData = new FormData();
     requestData.append('seller_email', user_email);
+    requestData.append('origin', window.location.host);
 
     fetch(`${endpointUrl}/api/1.1/wf/reset_password_api`, {
         method:"POST",
@@ -426,6 +429,7 @@ function Authenticate() {
 
     loginFormData.append("email", $('#LoginEmail').val());
     loginFormData.append("password", $('#LoginPassword-2').val());
+    loginFormData.append("origin", window.location.host);
     
 
     fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
@@ -632,7 +636,8 @@ function handleLogin(e) {
     var SendData = {
 
       "email" : $('.input-login-email:visible').val(),
-      "password" : $('.input-login-password:visible').val()
+      "password" : $('.input-login-password:visible').val(),
+      "origin": window.location.host
 
 
     }
@@ -897,7 +902,8 @@ function handleRegistration(e){
             
             "Password" :    $('#name-3').val(),
 
-            "HearAboutUs" : $('#Hear-about-us').val()
+            "HearAboutUs" : $('#Hear-about-us').val(),
+            "origin": window.location.host
 
     
     }
@@ -1646,7 +1652,7 @@ function stepMoveToLoginPage() {
             fetch(endpointUrl+ '/api/1.1/wf/seller_signup_with_google', {
                 method:"POST",
                 headers: {'content-type':'application/json'},
-                body: JSON.stringify({ idToken })
+                body: JSON.stringify({ idToken, origin: window.location.host })
             })
             .then(res => res.json())
             .then(validateUserDetails)
@@ -1833,6 +1839,7 @@ saveMissingData = (e, res, fieldsMap) => {
         referrer: res.response.referrer || '',
         user_email: res.response.user_email,
         auth: res.response.auth_key,
+        origin: window.location.host
     }
     delete fieldsMap['#AddressLine2']
     for(field in fieldsMap){
@@ -2244,7 +2251,8 @@ function submitPurchaseOrder (e) {
             'ip_address': ip,
             "optForCrm" : optInForCrm,
             "couponAmount" : couponAmount,
-            "couponId" : couponId
+            "couponId" : couponId,
+            "location": window.location.host
         }
 
 
