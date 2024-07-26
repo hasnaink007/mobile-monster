@@ -257,7 +257,7 @@ function addOrderRow(newNode ,orderData) {
         var vendorName = titleSplit.length > 0 ? titleSplit[0] : '';
         newNode.find('.model-holder').html(vendorName);                
         newNode.find('.device-name-holder').html(orderData.device_title);    
-        newNode.find('.imei-holder').html(orderData.device_imei);
+        newNode.find('.imei-holder').html(orderData.device_imei||' ');
 
     }
 
