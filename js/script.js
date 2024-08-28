@@ -2320,7 +2320,7 @@ function submitPurchaseOrder (e) {
             // window.location.href = window.location.origin + '/thank-you?order_id=MM-TEST-ORDER';
             // window.location.href = window.location.origin + '/my-account-page';
             
-            if (response.label_url != null) {
+            if (response.label_url) {
                 const encodedLabelUrl = encodeURI(response.label_url);
                 window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id + '&label_url=' + encodedLabelUrl;
             } else {
