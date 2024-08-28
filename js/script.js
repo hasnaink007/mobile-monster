@@ -2320,15 +2320,20 @@ function submitPurchaseOrder (e) {
             // window.location.href = window.location.origin + '/thank-you?order_id=MM-TEST-ORDER';
             // window.location.href = window.location.origin + '/my-account-page';
 
-            console.log(response.label_url);
             
-            if (response.label_url) {
-                const encodedLabelUrl = encodeURI(response.label_url);
-                if(!isDev){
-                    window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id + '&label_url=' + encodedLabelUrl;
+            if(!isDev) {
+                if (response.label_url) {
+                    const encodedLabelUrl = encodeURI(response.label_url);
+                    if(!isDev) {
+                        window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id + '&label_url=' + encodedLabelUrl;
+                    }
+                } else {
+                    window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id;
                 }
             } else {
-                window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id;
+                console.log(response.label_url);
+                const encodedLabelUrl = encodeURI(response.label_url);
+                console.log(encodedLabelUrl) ;
             }
 
         })
