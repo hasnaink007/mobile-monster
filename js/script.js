@@ -2324,7 +2324,9 @@ function submitPurchaseOrder (e) {
             
             if (response.label_url) {
                 const encodedLabelUrl = encodeURI(response.label_url);
-                window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id + '&label_url=' + encodedLabelUrl;
+                if(!isDev){
+                    window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id + '&label_url=' + encodedLabelUrl;
+                }
             } else {
                 window.location.href = window.location.origin + '/thank-you?order_id=' + response.purchase_order_id;
             }
