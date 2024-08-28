@@ -2319,6 +2319,8 @@ function submitPurchaseOrder (e) {
             window.localStorage.hksSelectedDevices = '[]'
             // window.location.href = window.location.origin + '/thank-you?order_id=MM-TEST-ORDER';
             // window.location.href = window.location.origin + '/my-account-page';
+
+            console.log(response.label_url);
             
             if (response.label_url) {
                 const encodedLabelUrl = encodeURI(response.label_url);
