@@ -259,10 +259,10 @@ guarantee that payment
 will be made within
 3-5 business days
 after receiving the device!" transform="translate(1183 918)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">Our Mobile Monster</tspan><tspan x="0" y="34">guarantee that </tspan><tspan y="34" font-family="OpenSans-Bold, Open Sans" font-weight="700">payment</tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="53">will be made within</tspan><tspan x="0" y="72">3-5 business days</tspan><tspan y="72" font-family="OpenSans, Open Sans" font-weight="400"></tspan></tspan><tspan x="0" y="91">after receiving the device!</tspan></text>
-    <text id="You_never_have_to_pay_for_shipping_fees_for_the_delivery_of_your_device_to_our_office_because_we_shoulder_the_cost_" data-name="You never have to pay for 
+    <text id="You_never_have_to_pay_for_shipping_fees_for_the_delivery_of_your_device_to_our_office_because_we_shoulder_the_cost_" data-name="You never have to pay 
 shipping fees for the delivery
 of your device to our office 
-because we shoulder the cost!" transform="translate(440 1066)" font-size="14" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="15">You never have to pay for </tspan><tspan x="0" y="34">shipping fees</tspan><tspan y="34" xml:space="preserve" font-family="OpenSans, Open Sans" font-weight="400"> for the delivery</tspan><tspan font-family="OpenSans, Open Sans" font-weight="400"><tspan x="0" y="53">of your device to our office </tspan><tspan x="0" y="72">because we shoulder the cost!</tspan></tspan></text>
+because we shoulder the cost!" transform="translate(440 1066)" font-size="14" font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="15">You never have to pay </tspan><tspan x="0" y="34">shipping fees</tspan><tspan y="34" xml:space="preserve" font-family="OpenSans, Open Sans" font-weight="400"> for the delivery</tspan><tspan font-family="OpenSans, Open Sans" font-weight="400"><tspan x="0" y="53">of your device to our office </tspan><tspan x="0" y="72">because we shoulder the cost!</tspan></tspan></text>
     <text id="If_we_receive_a_device_and_disagree_with_the_condition_you_selected_Mobile_Monster_will_offer_you_a_revised_price_and_you_will_have_the_option_to_accept_this_offer_or_have_the_device_sent_back_to_you_free_of_charge_-_100_risk_free_" data-name="If we receive a device and disagree with 
 the condition you selected, Mobile 
 Monster will offer you a revised price 
