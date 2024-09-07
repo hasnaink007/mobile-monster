@@ -622,6 +622,10 @@ function loadFormListener() {
             var lastName = $('.input-last-name').val();
             var phone = $('.input-mobile').val();
             var address = $('.input-address-one').val();
+            var address_two = $('.input-address-two').val();
+            var suburb = $('.input-suburb').val();
+            var postcode = $('.input-postcode').val();
+            var state = $('.input-state').val();
 
             var data = new FormData();
             
@@ -630,6 +634,10 @@ function loadFormListener() {
             data.append('last_name', lastName);
             data.append('phone', phone);
             data.append('address1', address);
+            data.append('address2', address_two);
+            data.append('suburb', suburb);
+            data.append('postcode', postcode);
+            data.append('state', state);
 
 
             data.append('user_email', user_email);
