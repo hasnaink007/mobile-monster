@@ -799,6 +799,7 @@ function getAuthTokensData() {
     formData.append("user_email", user_email);
     formData.append("auth_key", auth_key);
     formData.append("origin", window.location.host);
+    formData.append('href', window.location.href);
     
     return formData
 }
