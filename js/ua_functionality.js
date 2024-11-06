@@ -162,6 +162,7 @@ function init_login_page() {
         loginFormData.append("email", user_name);
         loginFormData.append("password", password);
         loginFormData.append("origin", window.location.host);
+        loginFormData.append('href', window.location.href);
         
 
         fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
