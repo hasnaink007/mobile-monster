@@ -51,7 +51,7 @@ document.addEventListener('alpine:init', function() {
              formValues.append('model', current_model);
  
  
-             axios.post('https://mobile-monster.bubbleapps.io/version-live/api/1.1/wf/get_macbook_details', formValues)
+             axios.post('https://api.mobilemonster.com.au/request/get_macbook_details', formValues)
              .then(response => {
                  
  

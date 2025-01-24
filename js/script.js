@@ -6,14 +6,14 @@
 // to-complete-order
 
 
-var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
+// var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
 
 
-var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test';
+var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
-if(!isDev) {
-    endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
-}
+// if(!isDev) {
+//     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
+// }
 
 // On Page Load Get Working Faults 
 
@@ -52,7 +52,7 @@ window.addEventListener('load', function() {
 
 
 
-        fetch(`${endpointUrl}/api/1.1/wf/get_faults_data?device_id=${BubbleTableId}`)
+        fetch(`${endpointUrl}get_faults_data?device_id=${BubbleTableId}`)
 
 
 
@@ -147,7 +147,7 @@ document.getElementById("applyButton")?.addEventListener("click", () => {
         document.getElementById("message_error").innerHTML = "Your total price is less than $200, Coupon codes can only be applied to sales with a price value greater than $200.";
         document.getElementById("message_error").style.display = "block";
     } else {
-        fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_coupon', {
+        fetch(endpointUrl +'mm_check_coupon', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -204,7 +204,7 @@ function checkUserCouponUsage(authEmail, couponName) {
     origin: window.location.host
   };
 
-  return fetch('https://mobile-monster.bubbleapps.io/api/1.1/wf/mm_check_if_taken_promotion/', {
+  return fetch(endpointUrl +'mm_check_if_taken_promotion/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -245,7 +245,7 @@ function handleResetPassword(e) {
     requestData.append('seller_email', user_email);
     requestData.append('origin', window.location.host);
 
-    fetch(`${endpointUrl}/api/1.1/wf/reset_password_api`, {
+    fetch(`${endpointUrl}reset_password_api`, {
         method:"POST",
         body:requestData,
     })  
@@ -432,7 +432,7 @@ function Authenticate() {
     loginFormData.append("origin", window.location.host);
     
 
-    fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
+    fetch(`${endpointUrl}authenticate_login`, {
         body: loginFormData,
         method: "POST"   
 
@@ -653,7 +653,7 @@ function handleLogin(e) {
     }
 
 
-    fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
+    fetch(`${endpointUrl}authenticate_login`, {
 
         method: 'POST',
 
@@ -920,7 +920,7 @@ function handleRegistration(e){
 
     }
 
-    fetch(`${endpointUrl}/api/1.1/wf/seller_signup`, {
+    fetch(`${endpointUrl}seller_signup`, {
 
         method: 'POST',
 
@@ -1056,7 +1056,7 @@ function scrollUIToTop() {
 
 
 
-//     fetch('https://mmbuild.shop/version-test/api/1.1/wf/seller_signup', {
+//     fetch(endpointUrl +'seller_signup', {
 
 //         method: 'POST',
 
@@ -1143,7 +1143,7 @@ Webflow.push(function () {
     $('.search-button').click(e => e.preventDefault());
 
     // Find and Load Search bar
-    // https://mobile-monster.bubbleapps.io/version-hks-dev-v5-ua/api/1.1/wf/devices_json_endpoint
+    // endpointUrl+'devices_json_endpoint'
 
     
 
@@ -1651,7 +1651,7 @@ function stepMoveToLoginPage() {
     if(auth?.currentUser){
         console.log('checking firebase auth')
         auth.currentUser.getIdToken().then(idToken => {
-            fetch(endpointUrl+ '/api/1.1/wf/seller_signup_with_google', {
+            fetch(endpointUrl+ 'seller_signup_with_google', {
                 method:"POST",
                 headers: {'content-type':'application/json'},
                 body: JSON.stringify({ idToken, origin: window.location.host })
@@ -1857,7 +1857,7 @@ saveMissingData = (e, res, fieldsMap) => {
     values.address2 = $('#AddressLine2').val(),
     
     showLoader(true)
-    fetch(endpointUrl+'/api/1.1/wf/update_details_from_checkout', {
+    fetch(endpointUrl+'update_details_from_checkout', {
         method: 'post',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(values)
