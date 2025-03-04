@@ -402,12 +402,13 @@ function init_my_account_page() {
                             var deviceInfo = deviceData.response.device;
 
                             ordersReadyArray[index].device_title = deviceInfo["Device Title"];
-                            ordersReadyArray[index].device_imei = deviceInfo.IMEI
+                            ordersReadyArray[index].device_imei = deviceInfo.IMEI ;
+
+                            var device_status = deviceInfo["Status"];
+                            if (device_status && device_status !== "Awaiting Delivery") {
+                                $('.order_cancel-button').eq(index).hide();
+                            }
                             
-                        }
-                        var device_status = deviceInfo["Status"];
-                        if (device_status && device_status !== "Awaiting Delivery") {
-                            $('.order_cancel-button').eq(index).hide();
                         }
 
                         addOrderRow(orderElement, ordersReadyArray[index])
