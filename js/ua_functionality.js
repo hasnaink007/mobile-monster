@@ -525,9 +525,10 @@ function bindCancelOrderHandler() {
         console.log(cancelResponse);
         showLoader(false);
 
-        if (cancelResponse && cancelResponse[0]?.body === 'false') {
+        if (cancelResponse && cancelResponse === 'false') {
             alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.");
         } else {
+            alert("The order has been cancelled.");
             setTimeout(function() {
                 window.location.reload(true);
             }, 1500);
