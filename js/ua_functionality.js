@@ -405,10 +405,16 @@ function init_my_account_page() {
                             ordersReadyArray[index].device_imei = deviceInfo.IMEI ;
 
                             var device_status = deviceInfo["Status"];
-                            console.log(device_status);
                             if (device_status && device_status !== "Awaiting Delivery") {
-                                $('.order_cancel-button').eq(index).hide();
+                                var $cancelBtn = $('.order_cancel-button').eq(index);
+                                console.log("Found cancel button at index", index, ":", $cancelBtn);
+                                if ($cancelBtn.length) {
+                                    $cancelBtn.hide();
+                                } else {
+                                    console.error("No cancel button found at index", index);
+                                }
                             }
+
                             
                         }
 
