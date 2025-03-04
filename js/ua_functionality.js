@@ -524,9 +524,10 @@ function bindCancelOrderHandler() {
     .then(cancelResponse => {
         console.log(cancelResponse);
         showLoader(false);
-
-        if (cancelResponse && cancelResponse[0]?.body === 'false') {
-            alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.");
+        
+        const bodyValue = String(cancelResponse[0]?.body).trim().toLowerCase();
+        if (bodyValue === 'false') {
+            alert("Cancellation failed! Order already processed/cancelled.");
         } else {
             alert("The order has been cancelled.");
             setTimeout(function() {
