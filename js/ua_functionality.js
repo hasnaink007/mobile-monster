@@ -392,28 +392,32 @@ function init_my_account_page() {
                 };
 
 
-                if (deviceId) {
-                    get_device_information(deviceId).then(deviceData => {
-                        var deviceInfo = deviceData.response.device;
-                        
-                        if (deviceInfo.Status && deviceInfo.Status !== 'Awaiting Delivery') {
-                            ordersReadyArray[index].hideCancel = true;
-                        } else {
-                            ordersReadyArray[index].hideCancel = false;
-                        }
-                        
-                        if ("Device Title" in deviceInfo) {
+                if(deviceId) {
+
+                    get_device_information(deviceId)
+                    .then(deviceData => {
+
+                        if("Device Title" in deviceData.response.device) {
+
+                            var deviceInfo = deviceData.response.device;
+
                             ordersReadyArray[index].device_title = deviceInfo["Device Title"];
-                            ordersReadyArray[index].device_imei = deviceInfo.IMEI;
+                            ordersReadyArray[index].device_imei = deviceInfo.IMEI
+                            
                         }
-                        
-                        addOrderRow(orderElement, ordersReadyArray[index]);
+                        var device_status = deviceInfo["Status"] ;
+                        if (deviceData.device_status && deviceData.device_status !== "Awaiting Delivery") {
+                            $('.order_cancel-button').eq(index).hide();
+                        }
+
+                        addOrderRow(orderElement, ordersReadyArray[index])
+
                     })
                     .catch((rejected) => {
-                        // Default to showing the button on error
-                        ordersReadyArray[index].hideCancel = false;
-                        addOrderRow(orderElement, ordersReadyArray[index]);
-                    });
+
+                        addOrderRow(orderElement, ordersReadyArray[index])
+
+                    })
                 }
 
 
