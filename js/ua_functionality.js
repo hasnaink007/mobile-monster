@@ -405,8 +405,8 @@ function init_my_account_page() {
                             ordersReadyArray[index].device_imei = deviceInfo.IMEI
                             
                         }
-                        var device_status = deviceInfo["Status"] ;
-                        if (deviceData.device_status && deviceData.device_status !== "Awaiting Delivery") {
+                        var device_status = deviceInfo["Status"];
+                        if (device_status && device_status !== "Awaiting Delivery") {
                             $('.order_cancel-button').eq(index).hide();
                         }
 
