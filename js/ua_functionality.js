@@ -409,7 +409,7 @@ function init_my_account_page() {
                                 var $cancelBtn = $('.order_cancel-button').eq(index);
                                 console.log("Found cancel button at index", index, ":", $cancelBtn);
                                 if ($cancelBtn.length) {
-                                    $cancelBtn.hide();
+                                    $('.order_cancel-button').eq(index).fadeOut();
                                 } else {
                                     console.error("No cancel button found at index", index);
                                 }
