@@ -523,6 +523,10 @@ function bindCancelOrderHandler() {
     .then(res => res.json())
     .then(cancelResponse => {
         console.log(cancelResponse);
+        console.log("Full response:", cancelResponse);
+        console.log("Body value:", cancelResponse[0]?.body);
+        console.log("Body type:", typeof cancelResponse[0]?.body);
+        
         showLoader(false);
         
         const bodyValue = String(cancelResponse[0]?.body).trim().toLowerCase();
