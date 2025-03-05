@@ -529,14 +529,11 @@ function bindCancelOrderHandler() {
         
         showLoader(false);
         
-        const bodyValue = cancelResponse;
-        if (bodyValue === 'false') {
-            alert("Cancellation failed! Order already processed/cancelled.");
+        if (cancelResponse === false || cancelResponse === 'false') {
+          alert("Cancellation failed! Order already processed/cancelled.");
         } else {
-            alert("The order has been cancelled.");
-            setTimeout(function() {
-                window.location.reload(true);
-            }, 1500);
+          alert("Order cancelled.");
+          setTimeout(() => window.location.reload(), 1500);
         }
     })
     .catch(error => {
