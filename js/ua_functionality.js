@@ -529,7 +529,7 @@ function bindCancelOrderHandler() {
         
         showLoader(false);
         
-        const bodyValue = String(cancelResponse[0]?.body).trim().toLowerCase();
+        const bodyValue = cancelResponse;
         if (bodyValue === 'false') {
             alert("Cancellation failed! Order already processed/cancelled.");
         } else {
