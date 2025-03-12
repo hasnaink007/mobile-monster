@@ -420,9 +420,6 @@ function init_my_account_page() {
 
 
 
-
-
-
             })
 
             setTimeout(function() {
@@ -526,14 +523,17 @@ function bindCancelOrderHandler() {
     .then(res => res.json())
     .then(cancelResponse => {
         console.log(cancelResponse);
+        console.log("Full response:", cancelResponse);
+        console.log("Body value:", cancelResponse[0]?.body);
+        console.log("Body type:", typeof cancelResponse[0]?.body);
+        
         showLoader(false);
-
-        if (cancelResponse && cancelResponse[0]?.body === 'false') {
-            alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.");
+        
+        if (cancelResponse === false || cancelResponse === 'false') {
+          alert("Cancellation failed! Order already processed/cancelled.");
         } else {
-            setTimeout(function() {
-                window.location.reload(true);
-            }, 1500);
+          alert("Order cancelled.");
+          setTimeout(() => window.location.reload(), 1500);
         }
     })
     .catch(error => {
