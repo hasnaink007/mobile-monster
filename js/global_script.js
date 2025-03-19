@@ -186,6 +186,7 @@ async function showConditionalNavButtons() {
             if (data.webflow_slug) {
                 let updatedUrl = `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`;
                 $('#check-page-link').attr('href', updatedUrl);
+                  console.log(updatedUrl);
             }
         } catch (error) {
             console.error('Error fetching data:', error);
