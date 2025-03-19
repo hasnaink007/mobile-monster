@@ -175,12 +175,11 @@ Webflow.push(function() {
 function showConditionalNavButtons() {
     try {
         const devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
-        
         if (!devices.length) return;
 
         const firstDevice = devices[0];
         if (!firstDevice?.tableID) {
-            console.error('First device missing tableID', firstDevice);
+            console.error('First device missing tableID');
             return;
         }
 
@@ -188,40 +187,33 @@ function showConditionalNavButtons() {
         $link.find('.item-count').remove();
         $link.append($('<span class="item-count">').text(devices.length));
 
-        console.log('Fetching details for device:', firstDevice.tableID);
-        
         $.ajax({
             url: `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${firstDevice.tableID}&origin=mobilemonster.com.au`,
             dataType: 'text',
             success: function(responseText) {
-                console.log('API raw response:', responseText);
-                
                 try {
-                    const response = JSON.parse(responseText);
-                    console.log('Parsed response:', response);
+                    // First parse the main response
+                    const mainResponse = JSON.parse(responseText);
                     
-                    if (response.webflow_slug) {
-                        const newHref = `https://mobilemonster.com.au/sell-your-phone/${response.webflow_slug}`;
-                        console.log('Updating href to:', newHref);
-                        $link.attr('href', newHref);
+                    // Then parse the data string inside the response
+                    const innerData = JSON.parse(mainResponse.response.data);
+                    
+                    if (innerData.webflow_slug) {
+                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${innerData.webflow_slug}`);
+                        console.log('Updated URL successfully:', innerData.webflow_slug);
                     } else {
-                        console.warn('webflow_slug missing in response structure. Full response:', response);
+                        console.warn('webflow_slug missing in inner data');
                     }
                 } catch (e) {
-                    console.error('JSON parse error:', e.message, 'Response text:', responseText);
+                    console.error('Parsing error:', e);
                 }
             },
-            error: function(xhr, status, error) {
-                console.error('API request failed:', {
-                    status: xhr.status,
-                    statusText: xhr.statusText,
-                    responseText: xhr.responseText,
-                    error: error
-                });
+            error: function(xhr) {
+                console.error('API Error:', xhr.status, xhr.responseText);
             }
         });
     } catch (error) {
-        console.error('General error:', error);
+        console.error('Runtime error:', error);
     }
 }
 
