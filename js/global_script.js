@@ -172,28 +172,31 @@ Webflow.push(function() {
         
 
 
-async function showConditionalNavButtons() {
-    var devices = JSON.parse(window.localStorage.getItem('hksSelectedDevices') || '[]');
-    
+function showConditionalNavButtons() {
+    var devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
+
     if (devices.length > 0) {
-        let firstDevice = devices[0];
+        let firstDevice = devices[0]; // Get the first device
         let deviceId = firstDevice.tableID; // Extract tableID as device_id
-        
-        try {
-            let response = await fetch(`https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`);
-            let data = await response.json();
-            
-            if (data.webflow_slug) {
-                let updatedUrl = `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`;
-                $('#check-page-link').attr('href', updatedUrl);
-                  console.log(updatedUrl);
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-        
+
+        let apiUrl = `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                if (data.webflow_slug) {
+                    let updatedUrl = `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`;
+                    console.log("Updated URL:", updatedUrl); // Debugging
+                    $('#check-page-link').attr('href', updatedUrl);
+                } else {
+                    console.log("webflow_slug not found in API response.");
+                }
+            })
+            .catch(error => console.error("Error fetching API:", error));
+
+        // Show the link and add item count
         $('#check-page-link').show();
-        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+        $('#check-page-link .item-count').text(devices.length);
     }
 }
 
