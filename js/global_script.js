@@ -172,7 +172,7 @@ Webflow.push(function() {
         
 
 
-function updateCheckPageLink() {
+function showConditionalNavButtons() {
     let devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
 
     if (devices.length > 0) {
