@@ -173,39 +173,55 @@ Webflow.push(function() {
 
 
 function showConditionalNavButtons() {
-    const devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
-    
-    if (devices.length > 0) {
+    try {
+        const devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
+        
+        if (!devices.length) return;
+
         const firstDevice = devices[0];
         if (!firstDevice?.tableID) {
-            console.error('First device missing tableID');
+            console.error('First device missing tableID', firstDevice);
             return;
         }
 
         const $link = $('#check-page-link').show();
-        $link.find('.item-count').remove(); 
+        $link.find('.item-count').remove();
         $link.append($('<span class="item-count">').text(devices.length));
 
+        console.log('Fetching details for device:', firstDevice.tableID);
+        
         $.ajax({
             url: `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${firstDevice.tableID}&origin=mobilemonster.com.au`,
-            dataType: 'text', 
+            dataType: 'text',
             success: function(responseText) {
+                console.log('API raw response:', responseText);
+                
                 try {
-                    
                     const response = JSON.parse(responseText);
+                    console.log('Parsed response:', response);
+                    
                     if (response.webflow_slug) {
-                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${response.webflow_slug}`);
+                        const newHref = `https://mobilemonster.com.au/sell-your-phone/${response.webflow_slug}`;
+                        console.log('Updating href to:', newHref);
+                        $link.attr('href', newHref);
                     } else {
-                        console.warn('webflow_slug missing in response');
+                        console.warn('webflow_slug missing in response structure. Full response:', response);
                     }
                 } catch (e) {
-                    console.error('Failed to parse API response:', e);
+                    console.error('JSON parse error:', e.message, 'Response text:', responseText);
                 }
             },
             error: function(xhr, status, error) {
-                console.error('API request failed:', status, error);
+                console.error('API request failed:', {
+                    status: xhr.status,
+                    statusText: xhr.statusText,
+                    responseText: xhr.responseText,
+                    error: error
+                });
             }
         });
+    } catch (error) {
+        console.error('General error:', error);
     }
 }
 
