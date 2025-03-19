@@ -199,7 +199,7 @@ function showConditionalNavButtons() {
                     const innerData = JSON.parse(mainResponse.response.data);
                     
                     if (innerData.webflow_slug) {
-                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${innerData.webflow_slug}`);
+                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${innerData.webflow_slug}?step=2`);
                         console.log('Updated URL successfully:', innerData.webflow_slug);
                     } else {
                         console.warn('webflow_slug missing in inner data');
