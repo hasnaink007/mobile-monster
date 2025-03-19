@@ -173,25 +173,39 @@ Webflow.push(function() {
 
 
 function showConditionalNavButtons() {
-    let devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
-
+    const devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
+    
     if (devices.length > 0) {
-        $('#check-page-link').show();
-        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+        const firstDevice = devices[0];
+        if (!firstDevice?.tableID) {
+            console.error('First device missing tableID');
+            return;
+        }
 
-        let deviceId = devices[0].tableID;
-        let apiUrl = `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`;
+        const $link = $('#check-page-link').show();
+        $link.find('.item-count').remove(); 
+        $link.append($('<span class="item-count">').text(devices.length));
 
-        fetch(apiUrl)
-            .then(response => response.text())
-            .then(text => {
-                let data = JSON.parse(text);
-                console.log(data.webflow_slug);
-                if (data.webflow_slug) {
-                    $('#check-page-link').attr('href', `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`);
+        $.ajax({
+            url: `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${firstDevice.tableID}&origin=mobilemonster.com.au`,
+            dataType: 'text', 
+            success: function(responseText) {
+                try {
+                    
+                    const response = JSON.parse(responseText);
+                    if (response.webflow_slug) {
+                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${response.webflow_slug}`);
+                    } else {
+                        console.warn('webflow_slug missing in response');
+                    }
+                } catch (e) {
+                    console.error('Failed to parse API response:', e);
                 }
-            })
-            .catch(error => console.error("API Error:", error));
+            },
+            error: function(xhr, status, error) {
+                console.error('API request failed:', status, error);
+            }
+        });
     }
 }
 
