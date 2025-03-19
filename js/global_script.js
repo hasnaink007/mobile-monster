@@ -172,18 +172,28 @@ Webflow.push(function() {
         
 
 
-function showConditionalNavButtons() {
-
-    var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
-
-    if(devices.length > 0) {
-
+async function showConditionalNavButtons() {
+    var devices = JSON.parse(window.localStorage.getItem('hksSelectedDevices') || '[]');
+    
+    if (devices.length > 0) {
+        let firstDevice = devices[0];
+        let deviceId = firstDevice.tableID; // Extract tableID as device_id
+        
+        try {
+            let response = await fetch(`https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`);
+            let data = await response.json();
+            
+            if (data.webflow_slug) {
+                let updatedUrl = `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`;
+                $('#check-page-link').attr('href', updatedUrl);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        
         $('#check-page-link').show();
         $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
-
-
     }
-
 }
 
 
