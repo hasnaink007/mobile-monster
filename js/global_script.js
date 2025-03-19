@@ -178,40 +178,32 @@ function showConditionalNavButtons() {
         if (!devices.length) return;
 
         const firstDevice = devices[0];
-        if (!firstDevice?.tableID) {
-            console.error('First device missing tableID');
-            return;
-        }
 
         const $link = $('#check-page-link').show();
         $link.find('.item-count').remove();
         $link.append($('<span class="item-count">').text(devices.length));
 
-        $.ajax({
-            url: `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${firstDevice.tableID}&origin=mobilemonster.com.au`,
-            dataType: 'text',
-            success: function(responseText) {
-                try {
-                    // First parse the main response
-                    const mainResponse = JSON.parse(responseText);
+        // $.ajax({
+        //     url: `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${firstDevice.tableID}&origin=mobilemonster.com.au`,
+        //     dataType: 'text',
+        //     success: function(responseText) {
+        //         try {
+        //             const mainResponse = JSON.parse(responseText);
+        //             const innerData = JSON.parse(mainResponse.response.data);
                     
-                    // Then parse the data string inside the response
-                    const innerData = JSON.parse(mainResponse.response.data);
-                    
-                    if (innerData.webflow_slug) {
-                        $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${innerData.webflow_slug}?step=2`);
-                        console.log('Updated URL successfully:', innerData.webflow_slug);
-                    } else {
-                        console.warn('webflow_slug missing in inner data');
-                    }
-                } catch (e) {
-                    console.error('Parsing error:', e);
-                }
-            },
-            error: function(xhr) {
-                console.error('API Error:', xhr.status, xhr.responseText);
-            }
-        });
+        //             if (innerData.webflow_slug) {
+        //                 $link.attr('href', `https://mobilemonster.com.au/sell-your-phone/${innerData.webflow_slug}?step=2`);
+        //             } else {
+        //                 console.warn('webflow_slug missing in inner data');
+        //             }
+        //         } catch (e) {
+        //             console.error('Parsing error:', e);
+        //         }
+        //     },
+        //     error: function(xhr) {
+        //         console.error('API Error:', xhr.status, xhr.responseText);
+        //     }
+        // });
     } catch (error) {
         console.error('Runtime error:', error);
     }
