@@ -172,31 +172,22 @@ Webflow.push(function() {
         
 
 
-function showConditionalNavButtons() {
-    var devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
+function updateCheckPageLink() {
+    let devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
 
     if (devices.length > 0) {
-        let firstDevice = devices[0]; // Get the first device
-        let deviceId = firstDevice.tableID; // Extract tableID as device_id
-
+        let deviceId = devices[0].tableID;
         let apiUrl = `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`;
 
         fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
+            .then(response => response.text())
+            .then(text => {
+                let data = JSON.parse(text);
                 if (data.webflow_slug) {
-                    let updatedUrl = `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`;
-                    console.log("Updated URL:", updatedUrl); // Debugging
-                    $('#check-page-link').attr('href', updatedUrl);
-                } else {
-                    console.log("webflow_slug not found in API response.");
+                    $('#check-page-link').attr('href', `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`);
                 }
             })
-            .catch(error => console.error("Error fetching API:", error));
-
-        // Show the link and add item count
-        $('#check-page-link').show();
-        $('#check-page-link .item-count').text(devices.length);
+            .catch(error => console.error("API Error:", error));
     }
 }
 
