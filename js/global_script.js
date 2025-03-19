@@ -176,6 +176,9 @@ function showConditionalNavButtons() {
     let devices = JSON.parse(window.localStorage.hksSelectedDevices || '[]');
 
     if (devices.length > 0) {
+        $('#check-page-link').show();
+        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+
         let deviceId = devices[0].tableID;
         let apiUrl = `https://api.mobilemonster.com.au/request/ppt_item_details?device_id=${deviceId}&origin=mobilemonster.com.au`;
 
@@ -183,6 +186,7 @@ function showConditionalNavButtons() {
             .then(response => response.text())
             .then(text => {
                 let data = JSON.parse(text);
+                console.log(data.webflow_slug);
                 if (data.webflow_slug) {
                     $('#check-page-link').attr('href', `https://mobilemonster.com.au/sell-your-phone/${data.webflow_slug}`);
                 }
