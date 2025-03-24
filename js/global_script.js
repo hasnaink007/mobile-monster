@@ -173,13 +173,18 @@ Webflow.push(function() {
 
 
 function showConditionalNavButtons() {
- 
-     var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
-     if(devices.length > 0) {
-         $('#check-page-link').show();
-         $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
-     }
- }
+
+    var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
+
+    if(devices.length > 0) {
+
+        $('#check-page-link').show();
+        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+
+
+    }
+
+}
 
 
 function handleJoinClubNewsletterForm() {
