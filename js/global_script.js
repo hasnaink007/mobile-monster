@@ -177,9 +177,24 @@ function showConditionalNavButtons() {
     var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
 
     if(devices.length > 0) {
+        let localDevices = JSON.parse(window.localStorage.hksSelectedDevices);
+        let url = null;
+        if(localDevices[localDevices.length - 1].url){
+            try{
+                url = new URL(localDevices[localDevices.length - 1].url);
+                url = url.origin + url.pathname + '?step=2';
+            }catch(e){
+                console.log(e)
+                url = null;
+            }
+        }else{
+            url = null;
+        }
 
-        $('#check-page-link').show();
-        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+        $('#check-page-link').show().append($(`<span class="item-count">${devices.length}</span>`));
+        if(url != null){
+            $('#check-page-link').attr('href', url);
+        }
 
 
     }
