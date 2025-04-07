@@ -8,10 +8,10 @@ Webflow.push(function() {
 
 
     
-    var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
-    if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
-        endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test'
-    }
+    var endpointUrl = 'https://api.mobilemonster.com.au/request/';
+    // if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
+    //     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test'
+    // }
     
     let hks_available_devices = []
 
@@ -19,7 +19,7 @@ Webflow.push(function() {
     if($('.search_box_wrap').length > 0) {
         $('.search_suggestions').html('');
 
-        fetch(`${endpointUrl}/api/1.1/wf/devices_json_endpoint`)
+        fetch(`${endpointUrl}devices_json_endpoint`)
         .then(res => res.json())
         .then(results => {
 
@@ -177,9 +177,24 @@ function showConditionalNavButtons() {
     var devices = JSON.parse( window.localStorage.hksSelectedDevices || '[]' )
 
     if(devices.length > 0) {
+        let localDevices = JSON.parse(window.localStorage.hksSelectedDevices);
+        let url = null;
+        if(localDevices[localDevices.length - 1].url){
+            try{
+                url = new URL(localDevices[localDevices.length - 1].url);
+                url = url.origin + url.pathname + '?step=2';
+            }catch(e){
+                console.log(e)
+                url = null;
+            }
+        }else{
+            url = null;
+        }
 
-        $('#check-page-link').show();
-        $('#check-page-link').append($(`<span class="item-count">${devices.length}</span>`));
+        $('#check-page-link').show().append($(`<span class="item-count">${devices.length}</span>`));
+        if(url != null){
+            $('#check-page-link').attr('href', url);
+        }
 
 
     }

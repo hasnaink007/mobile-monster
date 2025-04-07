@@ -3,11 +3,11 @@
 var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
 
 
-var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test';
+var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
-if(!isDev) {
-    endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
-}
+// if(!isDev) {
+//     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
+// }
 
 function setLocalDataValue(key, value) {
 
@@ -65,7 +65,7 @@ function verifyUserAuthToken(returnData = false) {
         formDataToVerify.append('href', window.location.href)
         formDataToVerify.append('origin', window.location.origin?.split('//')?.[1]);
 
-        fetch(`${endpointUrl}/api/1.1/wf/verify_auth_token`, {
+        fetch(`${endpointUrl}verify_auth_token`, {
             method:"POST",
             body: formDataToVerify
         })

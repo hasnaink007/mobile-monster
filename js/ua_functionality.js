@@ -1,13 +1,13 @@
 
 
-var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
+// var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true';
 
 
-var endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test';
+var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
-if(!isDev) {
+/* if(!isDev) {
     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
-}
+} */
 
 
 // var endpointUrl = 'https://portal.mobilemonster.com.au/version-test';
@@ -62,7 +62,7 @@ function authenticateAccess() {
 
     if(auth?.currentUser){
         auth.currentUser.getIdToken().then(idToken => {
-            fetch(endpointUrl+ '/api/1.1/wf/seller_signup_with_google', {
+            fetch(endpointUrl+ 'seller_signup_with_google', {
                 method:"POST",
                 headers: {'content-type':'application/json'},
                 body: JSON.stringify({ idToken, origin: window.location.host })
@@ -165,7 +165,7 @@ function init_login_page() {
         loginFormData.append('href', window.location.href);
         
 
-        fetch(`${endpointUrl}/api/1.1/wf/authenticate_login`, {
+        fetch(`${endpointUrl}authenticate_login`, {
             body: loginFormData,
             method: "POST"   
 
@@ -324,7 +324,7 @@ function init_my_account_page() {
         var ordersData = getAuthTokensData(); 
 
 
-        fetch(`${endpointUrl}/api/1.1/wf/get_orders_by_user`,
+        fetch(`${endpointUrl}get_orders_by_user`,
             {
                 method:"POST",
                 body: ordersData
@@ -420,9 +420,6 @@ function init_my_account_page() {
 
 
 
-
-
-
             })
 
             setTimeout(function() {
@@ -454,7 +451,7 @@ function get_device_information(device_id) {
         requestData.append('device_id', device_id);
         requestData.append('origin', window.location.host);
     
-        fetch(`${endpointUrl}/api/1.1/wf/get_device_by_id`,
+        fetch(`${endpointUrl}get_device_by_id`,
             {
                 method:"POST",
                 body: requestData
@@ -526,14 +523,17 @@ function bindCancelOrderHandler() {
     .then(res => res.json())
     .then(cancelResponse => {
         console.log(cancelResponse);
+        console.log("Full response:", cancelResponse);
+        console.log("Body value:", cancelResponse[0]?.body);
+        console.log("Body type:", typeof cancelResponse[0]?.body);
+        
         showLoader(false);
-
-        if (cancelResponse && cancelResponse[0]?.body === 'false') {
-            alert("The order cancellation failed! The order has already been processed, or this order has already been cancelled.");
+        
+        if (cancelResponse === false || cancelResponse === 'false') {
+          alert("Cancellation failed! Order already processed/cancelled.");
         } else {
-            setTimeout(function() {
-                window.location.reload(true);
-            }, 1500);
+          alert("Order cancelled.");
+          setTimeout(() => window.location.reload(), 1500);
         }
     })
     .catch(error => {
@@ -650,7 +650,7 @@ function loadFormListener() {
             }
 
 
-            fetch(`${endpointUrl}/api/1.1/wf/user_details_data`, {
+            fetch(`${endpointUrl}user_details_data`, {
                 method:"POST",
                 body: data
             })
