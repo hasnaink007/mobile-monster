@@ -512,6 +512,14 @@ function loginError(message) {
 
 
 $('#SignUp').click(handleRegistration);
+
+if(window.location.host.startsWith('mobilemonster.uk') || window.location.host.startsWith('mobile-monster.webflow.io')){
+    // hide/show uk related registration fields
+    $('.section-register-page #signup_house_field').show()
+    $('.section-register-page #signup_city_field').show()
+    $('.section-register-page #signup_state_field').hide()
+    $('.section-register-page #signup_suburb_field').hide()
+}
 // $('#SignIn').click(handleLogin);
 document.querySelectorAll('#SignIn').forEach(btn => {
     btn.setAttribute('type', 'button')
