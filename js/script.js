@@ -768,10 +768,21 @@ function validateRegistrationForm() {
     //     return false;
     // }
 
-    if($('.input-state').val() == '') {
-        
+    if($('.input-state').val() == '' && window.location.host != 'mobilemonster.uk') {
         $('.input-state').addClass('error-border');
         displayProcessError("Please enter your State.");
+        return false;
+    }
+    
+    if($('.house').val() == '' && window.location.host == 'mobilemonster.uk') {
+        $('.house').addClass('error-border');
+        displayProcessError("Please enter your House Name/Number.");
+        return false;
+    }
+    
+    if($('.city').val() == '' && window.location.host == 'mobilemonster.uk') {
+        $('.city').addClass('error-border');
+        displayProcessError("Please enter your Town/City.");
         return false;
     }
 
@@ -847,6 +858,11 @@ function validateRegistrationForm() {
         "#State": "Please select a state",
         "#Hear-about-us": "Please tell us how did you heard about us?",
     }
+
+    if(window.location.host == 'mobilemonster.uk'){
+        delete fieldsMsgMap['#State']
+        delete fieldsMsgMap['#Suburb']
+    }
     for(id in fieldsMsgMap){
         if($(id).val()?.trim() == '' ){
             displayProcessError(fieldsMsgMap[id])
@@ -911,6 +927,8 @@ function handleRegistration(e){
             "Password" :    $('#name-3').val(),
 
             "HearAboutUs" : $('#Hear-about-us').val(),
+            "HouseName" : $('#house.house').val(),
+            "City" : $('#city.city').val(),
         
             "origin":       window.location.host,
 
