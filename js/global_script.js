@@ -1,5 +1,5 @@
 var Webflow = Webflow || [];
-console. log("%cMobileMonster", 'background-color: #731caf; color: white; font-style: italic; border: 5px solid #61bb47; font-size: 2em;');
+console. log("%cMobileMonster", 'background-color: #731caf; color: white;padding: 10px; font-style: italic; border: 5px solid #61bb47; font-size: 2em;');
       
 Webflow.push(function() {
 
