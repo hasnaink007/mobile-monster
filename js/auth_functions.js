@@ -117,7 +117,11 @@ function showLoader(show) {
 function handleLoggedOutUser() {
 
     // alert("You are not logged in");
-    displayProcessError("You are not logged in.");
+    try{
+        displayProcessError("You are not logged in.");
+    }catch(e){
+        console.log(e)
+    }
 
     window.location.href = "/login";
 
