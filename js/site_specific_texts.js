@@ -1,5 +1,13 @@
 // UK site
-if(window.location.host == 'mobilemonster.uk'){
+if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith('mobile-monster.webflow.io')){
+    
+    // hide/show uk related registration fields
+    $('#signup_house_field').show()
+    $('#signup_city_field').show()
+    $('#signup_state_field').hide()
+    $('#signup_suburb_field').hide()
+
+
     $('.australian-british').text('British') ;
     // $('.replace-to-$15').text('£15') ;
     $('.change-business-days').text('1 business day') ;

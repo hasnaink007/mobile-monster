@@ -512,14 +512,6 @@ function loginError(message) {
 
 
 $('#SignUp').click(handleRegistration);
-
-if(window.location.host.startsWith('mobilemonster.uk') || window.location.host.startsWith('mobile-monster.webflow.io')){
-    // hide/show uk related registration fields
-    $('#signup_house_field').show()
-    $('#signup_city_field').show()
-    $('#signup_state_field').hide()
-    $('#signup_suburb_field').hide()
-}
 // $('#SignIn').click(handleLogin);
 document.querySelectorAll('#SignIn').forEach(btn => {
     btn.setAttribute('type', 'button')
