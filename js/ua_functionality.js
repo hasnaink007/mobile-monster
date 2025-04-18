@@ -627,6 +627,9 @@ function loadFormListener() {
             var suburb = $('.input-suburb').val();
             var postcode = $('.input-postcode').val();
             var state = $('.input-state').val();
+            
+            var city = $('#city[name="city"]').val();
+            var house = $('#house[data-name="house"]').val();
 
             var data = new FormData();
             
@@ -639,6 +642,9 @@ function loadFormListener() {
             data.append('suburb', suburb);
             data.append('postcode', postcode);
             data.append('state', state);
+            
+            data.append('city', city);
+            data.append('house', house);
 
 
             data.append('user_email', user_email);
@@ -713,6 +719,8 @@ function loadUserData() {
         var mobileNumber = ("mobileNumber" in userData) ? userData.mobileNumber : '';
         var user_email = ("user_email" in userData) ? userData.user_email : '';
         var address = ("address" in userData) ? userData.address : ''
+        var city = ("city" in userData) ? userData.city : ''
+        var address = ("house" in userData) ? userData.house : ''
 
         // console.log(userData);
 
@@ -754,8 +762,13 @@ function loadUserData() {
             "input-reg-password" : {
             },
             "input-reg-confirm-password": {
-
-            }
+            },
+            "input-house-name-number" : {
+                value: house,
+            },
+            "input-town-city" : {
+                value: city,
+            },
 
         }
 
