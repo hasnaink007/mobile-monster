@@ -720,7 +720,7 @@ function loadUserData() {
         var user_email = ("user_email" in userData) ? userData.user_email : '';
         var address = ("address" in userData) ? userData.address : ''
         var city = ("city" in userData) ? userData.city : ''
-        var address = ("house" in userData) ? userData.house : ''
+        var house = ("house" in userData) ? userData.house : ''
 
         // console.log(userData);
 
