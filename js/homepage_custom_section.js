@@ -4,6 +4,7 @@ const isUKDomain = window.location.hostname.includes('mobilemonster.uk');
 
 const currencySymbol = isUKDomain ? '£' : '$';
 const amount = isUKDomain ? '132 million+' : '273 million+';
+const businessDays = isUKDomain ? '1 business day' : '3-5 business days';
 
 if(hks_element){
     hks_element.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="1310" height="694" viewBox="0 0 1310 694" fill="none" style="width: 100%;height: auto;transform: translate(80px, 0px); margin-bottom: -150px">
@@ -51,7 +52,7 @@ we can send back your device free of charge" fill="black" xml:space="preserve" s
     </g>
     <g id="Fast payment">
     <text id="Get paid within 24 hours
-after device is received." fill="black" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="14" letter-spacing="0em"><tspan x="2.41699" y="55.9312">Get paid within 3-5 business days
+after device is received." fill="black" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="14" letter-spacing="0em"><tspan x="2.41699" y="55.9312">Get paid within ${businessDays}
 </tspan><tspan x="6.21777" y="78.9312">after the device is received.</tspan></text>
     <text id="Fast Payment" fill="#63388C" xml:space="preserve" style="white-space: pre" font-family="Open Sans" font-size="21" letter-spacing="0em"><tspan x="16" y="22.6467">Quick Payment</tspan></text>
     <g id="24 hour icon">
