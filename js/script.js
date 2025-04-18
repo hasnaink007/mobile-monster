@@ -927,8 +927,9 @@ function handleRegistration(e){
             "Password" :    $('#name-3').val(),
 
             "HearAboutUs" : $('#Hear-about-us').val(),
-            "HouseName" : $('#house.house').val(),
-            "City" : $('#city.city').val(),
+            
+            "HouseName" : $('#house').val(),
+            "City" : $('#city').val(),
         
             "origin":       window.location.host,
 
