@@ -21,6 +21,10 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.change-business-days': '1 business day',
         '.change-uk-address': 'MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA',
         '.uk-search-text': 'Send your device<br>to our mailing address',
+        '.uk-quick-payment': 'Quick payment',
+        '.uk-getpaid-text':'Get paid within 24 hours',
+        '.uk-risk-free-service-1':'All devices tested using Phonecheck Diagnostics. ',
+        '.uk-risk-free-service-2':'Should you not be happy with the results we will send your device back free of charge'
     }
 
     Object.keys(ukTexts).forEach(key => {
