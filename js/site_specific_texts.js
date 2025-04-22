@@ -17,6 +17,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
     );
     $('.not-to-show-for-uk').hide();
     $('.uk-hidden').hide()
+    $('.visibility-hidden').hide()
 
 }
 
