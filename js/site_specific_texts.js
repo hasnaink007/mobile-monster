@@ -37,9 +37,9 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.answer_tab.ans-val-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. It's important to submit an order and lock in your quote right away.`,
         '.answer_tab.ans-how-send': `You can post your device to our mailing address below<br>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
         '.brand-why-choose-us': `
-            <p>Mobile Monster will beat any UK advertised price for a phone or device by £10 Seen a better offer? Contact us before placing your order with details and we will beat it by £10.</p>
+            <div class="why-choose-us-text"><p>Mobile Monster will beat any UK advertised price for a phone or device by £10 Seen a better offer? Contact us before placing your order with details and we will beat it by £10.</p>
             <p>Mobile Monster has over 10 years’ experience in export, second-hand phones and recycling, The company started in Australia and expanded its operations to the United Kingdom and New Zealand. Mobile Monster is not just a buy-back company, we're technology experts and we know the market. We offer amazing prices for the latest gadgets and we're extremely transparent with all our communication from every step of the sale.</p>
-            <a href="https://mobilemonster.uk/why-use-us" target="_blank">Read More...</a>`,
+            <a href="https://mobilemonster.uk/why-use-us" target="_blank">Read More...</a></div>`,
 
 
     }
