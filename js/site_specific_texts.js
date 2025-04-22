@@ -6,9 +6,12 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
     $('#signup_city_field').show()
     $('#signup_state_field').hide()
     $('#signup_suburb_field').hide()
-    
     $('.not-to-show-for-uk').hide();
     $('.uk-hidden').hide()
+
+    if(window.location.pathname.startsWith('/drop-off-option')){
+        window.location.href = window.location.href.replace('/drop-off-option', '/shipping');
+    }
     
     $('.replace_monster_img').attr('src', 'https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/6801682bfb3c561b0445a3a6_Group%201948755069.svg').attr('srcset','') ;
     
@@ -35,4 +38,8 @@ if(window.location.host != 'mobilemonster.uk'){
     $('#signup_city_field').hide()
     $('#signup_state_field').show()
     $('#signup_suburb_field').show()
+
+    if(window.location.pathname.startsWith('/shipping')){
+        window.location.href = window.location.href.replace('/shipping', '/drop-off-option');
+    }
 }
