@@ -62,6 +62,10 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <p class="normal-text"><b>Excellent</b> - This device is used but has been very well looked after, it basically looks as if it was brand new with no signs of any marks of wear on the device. It must be fully functional and unlocked.</p>
             <p class="normal-text"><b>Very Good</b> - This is also a used device but unlike the previous grade shows signs of use in the form of minor to moderate scratches to the screen or body. It must be fully functional and unlocked</p>
             <p class="normal-text"><b>Poor</b> - This device physically shows heavy signs of use in the form deep scratches to the screen or body. It might also have small cracks to the glass and minor issues such as buttons or speakers not in functional condition. The device however must not have any missing parts, must not be bent or liquid damaged. Device must still be unlocked.</p>`,
+        '.ans-what-hppns-faulty':`<p>If you have selected the condition of the handset to be Brand New, Excellent or Very Good and the device was found to have faults with its functionality or does not match the condition we will send you a revised quote.</p>
+            <p>Devices with functional faults qualify for the Poor condition, so long as the device is not dead, missing parts / tampered with or been damaged by liquid.</p>`,
+        '.ans-value-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. Its important to submit an order and lock in your quote right away.`,
+        '.ans-how-send': `<p>You can post your device to our mailing address below</p><br>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
         
 
 
