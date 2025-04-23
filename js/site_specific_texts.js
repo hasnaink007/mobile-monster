@@ -48,8 +48,8 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.uk-shipping-link':`Shipping`,
         '.uk-step-mailbag':`Send your device/s to our mailing address using the instructions provided when you place your order.`,
         '.postmainbag-procedure': 'We send you a Post mailbag',
-        '.ans-customer-say': `We have bought phones from thousands of Australian customers, all of whom have been delighted with our service. You can view their feedback <a href="https://mobilemonster.com.au/customer-reviews" class="link-11">here</a> (spoiler alert, it’s all positive).`,
-        
+        '.ans-customer-say': `We have bought phones from thousands of customers, all of whom have been delighted with our service. You can view their feedback <a href="https://mobilemonster.com.au/customer-reviews" class="link-11">here</a> (spoiler alert, it’s all positive).`,
+
 
 
 
