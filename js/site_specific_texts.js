@@ -45,7 +45,8 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.uk-how-do-i-send-fone':`You can send your device in to our mailing address below:<br>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA<br>`,
         '.uk-money-period':`We pay within <strong>24 hours</strong> of receiving your device, given that there are no issues with your order which require us to seek approval / further information or action on your part to allow us to complete your order. Delays can occur if the device is sent to us locked to your icloud, samsung, google or other provider accounts or if there are found to be differences in the condition of your device based on what was submitted on the site.`,
         '.uk-contact-link':`Want to know more about how you can make money off your old and unwanted devices?<a href="https://help.mobilemonster.uk/hc/en-us"> Create an account</a> with us and sign up for our newsletter so you can be the first to learn about the latest offers, special trade-in deals, competitions, and more! It’s also a great way to contact us if you have any questions about selling your device or the latest price changes.`,
-        '.uk-shipping-link':`Shipping`
+        '.uk-shipping-link':`Shipping`,
+        '.uk-step-mailbag':`Send your device/s to our mailing address using the<br> instructions provided when you place your order.`
 
 
     }
