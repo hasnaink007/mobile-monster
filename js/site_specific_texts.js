@@ -66,7 +66,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <p>Devices with functional faults qualify for the Poor condition, so long as the device is not dead, missing parts / tampered with or been damaged by liquid.</p>`,
         '.ans-value-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. Its important to submit an order and lock in your quote right away.`,
         '.ans-how-send': `<p>You can post your device to our mailing address below</p>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
-        '.how-it-works-list.ans-how-works': `<ol><li>Enter your device type on the homepage</li>
+        '.how-it-works-list.ans-how-works': `<ol class="normal-text"><li>Enter your device type on the homepage</li>
             <li>Select condition: Brand New, Excellent, Very Good or Poor</li>
             <li>We offer you a price for your device</li>
             <li>Select your shipping method based on how you wish to send the device to us</li>
@@ -86,8 +86,6 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
     })
 
     let brand_description_interval = setInterval(() => {
-
-        console.log('interval')
         $('.sell-iphone-brand-description').html($('.sell-iphone-brand-description').html()?.replaceAll("\n", '')?.replace( new RegExp(`<p>When you trade in your iPhone, we’ll give you a fair and professional(.*)Post satchel for mailed submissions.</p>`,'ig'), `
             <p>When you trade in your iPhone, we’ll give you a fair and professional appraisal of its value. To do so, we ask you to rate its condition according to one of the following categories:</p>
             <ul>
@@ -101,7 +99,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         if($('.sell-iphone-brand-description')[0] || document.readyState == 'complete'){
             clearInterval(brand_description_interval);
         }
-    },300)
+    },500)
 
 
 
