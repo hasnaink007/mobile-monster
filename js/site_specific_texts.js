@@ -55,7 +55,8 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         $(key).html(ukTexts[key])
     })
 
-    document.onreadystatechange = e => {
+    let brand_description_interval = setInterval(()=>{
+
         $('.sell-iphone-brand-description').html($('.sell-iphone-brand-description').html()?.replaceAll("\n", '')?.replace( new RegExp(`<p>When you trade in your iPhone, we’ll give you a fair and professional(.*)Post satchel for mailed submissions.</p>`,'ig'), `
             <p>When you trade in your iPhone, we’ll give you a fair and professional appraisal of its value. To do so, we ask you to rate its condition according to one of the following categories:</p>
             <ul>
@@ -65,8 +66,11 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
                 <li><b>Poor</b> - This device physically shows heavy signs of use in the form deep scratches to the screen or body. It might also have small cracks to the glass and minor issues such as buttons or speakers not in functional condition. The device however must not have any missing parts, must not be bent or liquid damaged. Device must still be unlocked.</li>
             </ul>
             <p>We hear it all the time: I want to sell my iPhone, but I don’t know what it’s worth. Well, our process <a href="https://mobilemonster.com.au/how-it-works" target="_blank">works like this</a>: you make your assessment as above, then send the phone to us, free of charge. We’ll confirm its condition, make you an offer based on one of the categories above, with better prices offered for better condition. Our offers are always 5% above our competitors and, if you don’t like what you hear, we’ll send it back for free.</p>
-        `))
-    }
+        `));
+        if($('.sell-iphone-brand-description')[0]){
+            clearInterval(brand_description_interval)
+        }
+    },300)
 
 
 
