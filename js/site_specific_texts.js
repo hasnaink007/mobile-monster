@@ -66,7 +66,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <p>Devices with functional faults qualify for the Poor condition, so long as the device is not dead, missing parts / tampered with or been damaged by liquid.</p>`,
         '.ans-value-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. Its important to submit an order and lock in your quote right away.`,
         '.ans-how-send': `<p>You can post your device to our mailing address below</p>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
-        '.how-it-works-list.ans-how-works': `<ol><li>Enter your device type on the  homepage</li>
+        '.how-it-works-list.ans-how-works': `<ol><li>Enter your device type on the homepage</li>
             <li>Select condition: Brand New, Excellent, Very Good or Poor</li>
             <li>We offer you a price for your device</li>
             <li>Select your shipping method based on how you wish to send the device to us</li>
@@ -98,7 +98,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             </ul>
             <p>We hear it all the time: I want to sell my iPhone, but I don’t know what it’s worth. Well, our process <a href="https://mobilemonster.com.au/how-it-works" target="_blank">works like this</a>: you make your assessment as above, then send the phone to us, free of charge. We’ll confirm its condition, make you an offer based on one of the categories above, with better prices offered for better condition. Our offers are always 5% above our competitors and, if you don’t like what you hear, we’ll send it back for free.</p>
         `));
-        if($('.sell-iphone-brand-description')[0]){
+        if($('.sell-iphone-brand-description')[0] || document.readyState == 'complete'){
             clearInterval(brand_description_interval);
         }
     },300)
