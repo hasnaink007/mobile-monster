@@ -66,7 +66,16 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <p>Devices with functional faults qualify for the Poor condition, so long as the device is not dead, missing parts / tampered with or been damaged by liquid.</p>`,
         '.ans-value-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. Its important to submit an order and lock in your quote right away.`,
         '.ans-how-send': `<p>You can post your device to our mailing address below</p>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
-
+        '.how-it-works-list.ans-how-works': `<ol><li>Enter your device type on the  homepage</li>
+            <li>Select condition: Brand New, Excellent, Very Good or Poor</li>
+            <li>We offer you a price for your device</li>
+            <li>Select your shipping method based on how you wish to send the device to us</li>
+            <li>Ensure that you remove any accounts from your device and the device is unlocked to prevent delays</li>
+            <li>Send us your device</li>
+            <li>We review your device against the description you entered</li>
+            <li>We send you money for your device(s)</li>
+            </ol>`,
+        '.ans-diff-conditions-hiw': ``,
 
 
 
@@ -76,7 +85,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         $(key).html(ukTexts[key])
     })
 
-    let brand_description_interval = setInterval(()=>{
+    let brand_description_interval = setInterval(() => {
 
         console.log('interval')
         $('.sell-iphone-brand-description').html($('.sell-iphone-brand-description').html()?.replaceAll("\n", '')?.replace( new RegExp(`<p>When you trade in your iPhone, we’ll give you a fair and professional(.*)Post satchel for mailed submissions.</p>`,'ig'), `
