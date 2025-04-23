@@ -37,7 +37,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.answer_tab.ans-val-change': `Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. It's important to submit an order and lock in your quote right away.`,
         '.answer_tab.ans-how-send': `You can post your device to our mailing address below<br>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA`,
         '.brand-why-choose-us': `
-            <div class="why-choose-us-text"><p>Mobile Monster will beat any UK advertised price for a phone or device by £10 Seen a better offer? Contact us before placing your order with details and we will beat it by £10.</p>
+        <div class="why-choose-us-text"><p>Mobile Monster will beat any UK advertised price for a phone or device by £10 Seen a better offer? Contact us before placing your order with details and we will beat it by £10.</p>
             <p>Mobile Monster has over 10 years’ experience in export, second-hand phones and recycling, The company started in Australia and expanded its operations to the United Kingdom and New Zealand. Mobile Monster is not just a buy-back company, we're technology experts and we know the market. We offer amazing prices for the latest gadgets and we're extremely transparent with all our communication from every step of the sale.</p>
             <a href="https://mobilemonster.uk/why-use-us" target="_blank">Read More...</a></div>`,
         '.uk-conditon-list':`<li><strong style="color:#63388C; ">Brand New</strong> - A brand new, unactivated device that comes in its original sealed box including its accessories</li><li><strong style="color:#63388C; ">Excellent</strong> - This device is used but has been very well looked after, it basically looks as if it was brand new with no signs of any marks of wear on the device. It must be fully functional and unlocked.</li><li><strong style="color:#63388C; ">Very Good</strong> - This is also a used device but unlike the previous grade shows signs of use in the form of minor to moderate scratches to the screen or body. It must be fully functional and unlocked</li><li><strong style="color:#63388C; ">Poor</strong> - This device physically shows heavy signs of use in the form deep scratches to the screen or body. It might also have small cracks to the glass and minor issues such as buttons or speakers not in functional condition. The device however must not have any missing parts, must not be bent or liquid damaged. Device must still be unlocked.</li>`,
@@ -47,8 +47,17 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.uk-contact-link':`Want to know more about how you can make money off your old and unwanted devices?<a href="https://help.mobilemonster.uk/hc/en-us"> Create an account</a> with us and sign up for our newsletter so you can be the first to learn about the latest offers, special trade-in deals, competitions, and more! It’s also a great way to contact us if you have any questions about selling your device or the latest price changes.`,
         '.uk-shipping-link':`Shipping`,
         '.uk-step-mailbag':`Send your device/s to our mailing address using the instructions provided when you place your order.`,
-        '.postmainbag-procedure': 'We send you a Post mailbag',
         '.ans-customer-say': `We have bought phones from thousands of customers, all of whom have been delighted with our service. You can view their feedback <a href="https://mobilemonster.com.au/customer-reviews" class="link-11">here</a> (spoiler alert, it’s all positive).`,
+        '.answer_tab.ans-how-mm-work': `<p class="normal-text">Mobile Monster is a really easy system to use. Simply follow these steps:</p>
+            <li>Enter your device type on the  homepage</li>
+            <li>Select condition: Brand New, Excellent, Very Good or Poor</li>
+            <li>We offer you a price for your device</li>
+            <li>Select your shipping method based on how you wish to send the device to us</li>
+            <li>Ensure that you remove any accounts from your device and the device is unlocked to prevent delays</li>
+            <li>Send us your device</li>
+            <li>We review your device against the description you entered</li>
+            <li>We send you money for your device(s)</li>`,
+        
 
 
 
