@@ -1,4 +1,8 @@
-const hks_flow_element = document.getElementById('whyuseus-steps')
+const hks_flow_element = document.getElementById('whyuseus-steps') ;
+const isUKDomain = window.location.hostname.includes('mobilemonster.uk');
+const businessDays = isUKDomain ? '24 hours of' : '3-5 business days after';
+
+
 if(hks_flow_element){
     hks_flow_element.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1086" height="1119.465" viewBox="0 0 1086 1119.465">
   <defs>
@@ -257,8 +261,8 @@ guess on the status of your device." transform="translate(1256 631)" font-size="
     <text id="Our_Mobile_Monster_guarantee_that_payment_will_be_made_within_3-5_business_days_after_receiving_the_device_" data-name="Our Mobile Monster
 guarantee that payment
 will be made within
-3-5 business days
-after receiving the device!" transform="translate(1183 918)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">Our Mobile Monster</tspan><tspan x="0" y="34">guarantee that </tspan><tspan y="34" font-family="OpenSans-Bold, Open Sans" font-weight="700">payment</tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="53">will be made within</tspan><tspan x="0" y="72">3-5 business days</tspan><tspan y="72" font-family="OpenSans, Open Sans" font-weight="400"></tspan></tspan><tspan x="0" y="91">after receiving the device!</tspan></text>
+${businessDays}
+receiving the device!" transform="translate(1183 918)" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="15">Our Mobile Monster</tspan><tspan x="0" y="34">guarantee that </tspan><tspan y="34" font-family="OpenSans-Bold, Open Sans" font-weight="700">payment</tspan><tspan font-family="OpenSans-Bold, Open Sans" font-weight="700"><tspan x="0" y="53">will be made within</tspan><tspan x="0" y="72">${businessDays}</tspan><tspan y="72" font-family="OpenSans, Open Sans" font-weight="400"></tspan></tspan><tspan x="0" y="91">receiving the device!</tspan></text>
     <text id="You_never_have_to_pay_for_shipping_fees_for_the_delivery_of_your_device_to_our_office_because_we_shoulder_the_cost_" data-name="You never have to pay 
 shipping fees for the delivery
 of your device to our office 
