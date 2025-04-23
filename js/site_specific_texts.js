@@ -57,6 +57,13 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <li>Send us your device</li>
             <li>We review your device against the description you entered</li>
             <li>We send you money for your device(s)</li></ol>  `,
+        '.ans-diff-conditions': `
+            <p class="normal-text"><b>Brand New</b> - A brand new, unactivated device that comes in its original sealed box including its accessories</p>
+            <p class="normal-text"><b>Excellent</b> - This device is used but has been very well looked after, it basically looks as if it was brand new with no signs of any marks of wear on the device. It must be fully functional and unlocked.</p>
+            <p class="normal-text"><b>Very Good</b> - This is also a used device but unlike the previous grade shows signs of use in the form of minor to moderate scratches to the screen or body. It must be fully functional and unlocked</p>
+            <p class="normal-text"><b>Poor</b> - This device physically shows heavy signs of use in the form deep scratches to the screen or body. It might also have small cracks to the glass and minor issues such as buttons or speakers not in functional condition. The device however must not have any missing parts, must not be bent or liquid damaged. Device must still be unlocked.</p>`,
+        
+
 
 
     }
