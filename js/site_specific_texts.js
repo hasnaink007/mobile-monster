@@ -49,7 +49,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.uk-step-mailbag':`Send your device/s to our mailing address using the instructions provided when you place your order.`,
         '.ans-customer-say': `We have bought phones from thousands of customers, all of whom have been delighted with our service. You can view their feedback <a href="https://mobilemonster.com.au/customer-reviews" class="link-11">here</a> (spoiler alert, it’s all positive).`,
         '.ans-how-mm-work': `<p class="normal-text">Mobile Monster is a really easy system to use. Simply follow these steps:</p>
-            <ol class="privacy-list"><li>Enter your device type on the  homepage</li>
+            <ol class="privacy-list normal-text"><li>Enter your device type on the  homepage</li>
             <li>Select condition: Brand New, Excellent, Very Good or Poor</li>
             <li>We offer you a price for your device</li>
             <li>Select your shipping method based on how you wish to send the device to us</li>
