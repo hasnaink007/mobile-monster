@@ -2,7 +2,7 @@
 if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith('mobile-monster.webflow.io')){
     
     // hide/show uk related registration fields
-    $('.progress_inner_uk').show();
+    $('.progress_inner_uk').addClass('uk_show_flex');
     $('.progress_inner_au_nz').hide();
     $('#signup_house_field').show();
     $('#signup_city_field').show();
