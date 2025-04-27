@@ -2,12 +2,14 @@
 if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith('mobile-monster.webflow.io')){
     
     // hide/show uk related registration fields
-    $('#signup_house_field').show()
-    $('#signup_city_field').show()
-    $('#signup_state_field').hide()
-    $('#signup_suburb_field').hide()
+    $('.progress_inner_uk').show();
+    $('.progress_inner_au_nz').hide();
+    $('#signup_house_field').show();
+    $('#signup_city_field').show();
+    $('#signup_state_field').hide();
+    $('#signup_suburb_field').hide();
     $('.not-to-show-for-uk').hide();
-    $('.uk-hidden').hide()
+    $('.uk-hidden').hide();
     $('.visibility-hidden').css({"visibility": "hidden"})
 
     if(window.location.pathname.startsWith('/drop-off-option')){
