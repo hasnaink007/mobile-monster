@@ -583,113 +583,82 @@ function init_edit_details_page() {
 
 function loadFormListener() {
 
-        $('#email-form-5').submit(function(e) {
+    $('#email-form-5').submit(function(e) { e.preventDefault(); })
+
+    $('#email-form-5 input[type="submit"]').on('click', e => {
             
-            e.preventDefault();
-            var auth_key = getLocalDataValue('auth_key');
-            var user_email = getLocalDataValue('user_email');
+        e.preventDefault();
+        var auth_key = getLocalDataValue('auth_key');
+        var user_email = getLocalDataValue('user_email');
 
-            if(!user_email || !auth_key) {
+        if(!user_email || !auth_key) {
+            return;
+        }
+        
+        var shouldUpdatePassword = false;
+        var password = $('.input-reg-password').val();
+        var confirmPassword = $('.input-reg-confirm-password').val();
 
-                return;
+        if(password.length > 0 && confirmPassword.length) {
+            shouldUpdatePassword = true;
+        }
 
-            }
-            
-            
-            
-            var shouldUpdatePassword = false;
+        if(shouldUpdatePassword && (password !== confirmPassword)) {
+            displayProcessError("Password donot match");
+            return;
+        }
 
-            var password = $('.input-reg-password').val();
+        var firstName = $('.input-first-name').val();
+        var lastName = $('.input-last-name').val();
+        var phone = $('.input-mobile').val();
+        var address = $('.input-address-one').val();
+        var address_two = $('.input-address-two').val();
+        var suburb = $('.input-suburb').val();
+        var postcode = $('.input-postcode').val();
+        var state = $('.input-state').val();
+        
+        var city = $('#city[name="city"]').val();
+        var house = $('#house[data-name="house"]').val();
 
-            var confirmPassword = $('.input-reg-confirm-password').val();
+        var data = new FormData();
+        
+        data.append('type', 'update_data');
+        data.append('first_name', firstName);
+        data.append('last_name', lastName);
+        data.append('phone', phone);
+        data.append('address1', address);
+        data.append('address2', address_two);
+        data.append('suburb', suburb);
+        data.append('postcode', postcode);
+        data.append('state', state);
+        data.append('city', city);
+        data.append('house', house);
+        data.append('user_email', user_email);
+        data.append("auth_token", auth_key);
+        data.append("origin", window.location.host);
 
+        if(shouldUpdatePassword) {
+            data.append('password', password);
+        }
 
-            if(password.length > 0 && confirmPassword.length) {
-
-                shouldUpdatePassword = true;
-
-            }
-
-            if(shouldUpdatePassword && (password !== confirmPassword)) {
-
-                displayProcessError("Password donot match");
-
-                return;
-
-            }
-
-
-            var firstName = $('.input-first-name').val();
-            var lastName = $('.input-last-name').val();
-            var phone = $('.input-mobile').val();
-            var address = $('.input-address-one').val();
-            var address_two = $('.input-address-two').val();
-            var suburb = $('.input-suburb').val();
-            var postcode = $('.input-postcode').val();
-            var state = $('.input-state').val();
-            
-            var city = $('#city[name="city"]').val();
-            var house = $('#house[data-name="house"]').val();
-
-            var data = new FormData();
-            
-            data.append('type', 'update_data');
-            data.append('first_name', firstName);
-            data.append('last_name', lastName);
-            data.append('phone', phone);
-            data.append('address1', address);
-            data.append('address2', address_two);
-            data.append('suburb', suburb);
-            data.append('postcode', postcode);
-            data.append('state', state);
-            
-            data.append('city', city);
-            data.append('house', house);
-
-
-            data.append('user_email', user_email);
-            data.append("auth_token", auth_key);
-            data.append("origin", window.location.host);
-
-            if(shouldUpdatePassword) {
-                data.append('password', password);
-            }
-
-
-            fetch(`${endpointUrl}user_details_data`, {
-                method:"POST",
-                body: data
-            })
-            .then(res => res.json())
-            .then(function(response) {
-
-                console.log(response);
-
-
-
-            })
-
-
-
-
+        fetch(`${endpointUrl}user_details_data`, {
+            method:"POST",
+            body: data
         })
-
-
+        .then(res => res.json())
+        .then(function(response) {
+            console.log(response);
+        })
+    })
 }
 
 
 
 function loadUserData() {
 
-
-
     showLoader(true);
-
     verifyUserAuthToken(true).then(function(res) {
-
-        
         showLoader(false);
-
 
         if(!res) {
             // alert("Unauhtorized USer");
