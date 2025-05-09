@@ -1,6 +1,6 @@
 const hks_element = document.getElementById('homepage-steps');
 
-const isUKDomain = window.location.hostname.includes('mobilemonster.uk');
+const isUKDomain = ['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host);
 
 const businessDays = isUKDomain ? '1 business day' : '3-5 business days';
 

@@ -1,5 +1,5 @@
 // UK site
-if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith('mobile-monster.webflow.io')){
+if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) || window.location.host.startsWith('mobile-monster.webflow.io')){
     
     // hide/show uk related registration fields
     $('.progress_inner_uk').addClass('uk_show_flex');
@@ -41,12 +41,12 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
         '.brand-why-choose-us': `
         <div class="why-choose-us-text"><p>Mobile Monster will beat any UK advertised price for a phone or device by £10 Seen a better offer? Contact us before placing your order with details and we will beat it by £10.</p>
             <p>Mobile Monster has over 10 years’ experience in export, second-hand phones and recycling, The company started in Australia and expanded its operations to the United Kingdom and New Zealand. Mobile Monster is not just a buy-back company, we're technology experts and we know the market. We offer amazing prices for the latest gadgets and we're extremely transparent with all our communication from every step of the sale.</p>
-            <a href="https://mobilemonster.uk/why-use-us" target="_blank">Read More...</a></div>`,
+            <a href="https://mobilemonster.co.uk/why-use-us" target="_blank">Read More...</a></div>`,
         '.uk-conditon-list':`<li><strong style="color:#63388C; ">Brand New</strong> - A brand new, unactivated device that comes in its original sealed box including its accessories</li><li><strong style="color:#63388C; ">Excellent</strong> - This device is used but has been very well looked after, it basically looks as if it was brand new with no signs of any marks of wear on the device. It must be fully functional and unlocked.</li><li><strong style="color:#63388C; ">Very Good</strong> - This is also a used device but unlike the previous grade shows signs of use in the form of minor to moderate scratches to the screen or body. It must be fully functional and unlocked</li><li><strong style="color:#63388C; ">Poor</strong> - This device physically shows heavy signs of use in the form deep scratches to the screen or body. It might also have small cracks to the glass and minor issues such as buttons or speakers not in functional condition. The device however must not have any missing parts, must not be bent or liquid damaged. Device must still be unlocked.</li>`,
         '.uk-valuation-change':`Our quotes are locked in from the date you submit an order through our website for a period of 14 days. However, keep in mind that prices tend to change online regularly not just due to age but also supply and demand. Its important to submit an order and lock in your quote right away.`,
         '.uk-how-do-i-send-fone':`You can send your device in to our mailing address below:<br>MobileMonster C/O BlankIT Ltd<br>Unit 43 Parkhall Biz Village<br>Parkhall Road<br>Stoke on Trent<br>ST3 5XA<br>`,
         '.uk-money-period':`We pay within <strong>24 hours</strong> of receiving your device, given that there are no issues with your order which require us to seek approval / further information or action on your part to allow us to complete your order. Delays can occur if the device is sent to us locked to your icloud, samsung, google or other provider accounts or if there are found to be differences in the condition of your device based on what was submitted on the site.`,
-        '.uk-contact-link':`Want to know more about how you can make money off your old and unwanted devices?<a href="https://help.mobilemonster.uk/hc/en-us"> Create an account</a> with us and sign up for our newsletter so you can be the first to learn about the latest offers, special trade-in deals, competitions, and more! It’s also a great way to contact us if you have any questions about selling your device or the latest price changes.`,
+        '.uk-contact-link':`Want to know more about how you can make money off your old and unwanted devices?<a href="https://help.mobilemonster.co.uk/hc/en-us"> Create an account</a> with us and sign up for our newsletter so you can be the first to learn about the latest offers, special trade-in deals, competitions, and more! It’s also a great way to contact us if you have any questions about selling your device or the latest price changes.`,
         '.uk-shipping-link':`Shipping`,
         '.uk-step-mailbag':`Send your device/s to our mailing address using the instructions provided when you place your order.`,
         '.ans-customer-say': `We have bought phones from thousands of customers, all of whom have been delighted with our service. You can view their feedback <a href="https://mobilemonster.com.au/customer-reviews" class="link-11">here</a> (spoiler alert, it’s all positive).`,
@@ -78,7 +78,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <li>We send you money for your device(s)</li>
             </ol>`,
         '.page-terms-nd-conditions': `<h1 class="text-main-heading">Terms &amp; Conditions<br></h1><img src="https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/62cffbe53a1a6110da9d9527_why-recycle.jpg" loading="lazy" alt="" class="image-89"><p class="normal-text">Thank you for participating in the Mobile Monster Cash-Back Offer.</p><p class="normal-text">By submitting your phone or device, you agree to the following Terms & Conditions outlined below.</p>
-            <p class="normal-text">Terms & Conditions of www.mobilemonster.uk
+            <p class="normal-text">Terms & Conditions of www.mobilemonster.co.uk
             <ol class="normal-text"><li>Mobile Monster will make every effort to reset devices received to their factory default settings and erase all content. However, if the device is irreparably damaged or inaccessible, a reset may not be possible. In such cases, the customer remains solely responsible for securing and removing any personal data prior to sending the device.</li>
             <li>I confirm that I am the legal and rightful owner of the device(s) submitted for trade. I acknowledge that if any device(s) are found to be reported lost or stolen, I forfeit my right to receive payment.</li>
             <li>I affirm that the information provided regarding the condition and model of the device(s) submitted to Mobile Monster is accurate and truthful.</li>
@@ -93,7 +93,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
             <li>All device pricing provided by Mobile Monster is inclusive of VAT.</li>
             <li>I agree to ensure that all payment information submitted is accurate. Mobile Monster does not validate payment details and accepts no responsibility for errors or losses resulting from incorrect information. To the extent permitted by law, Mobile Monster disclaims liability for any loss arising from inaccurate instructions or payment details provided by me or an authorized user.</li>
             <li>I consent to receive communications and newsletters from Mobile Monster and understand that I may unsubscribe at any time.</li>
-            <li>I acknowledge that any personal information submitted to Mobile Monster in connection with the cash-back offer is governed by the Privacy Policy available at www.mobilemonster.uk, which may be amended from time to time.</li>
+            <li>I acknowledge that any personal information submitted to Mobile Monster in connection with the cash-back offer is governed by the Privacy Policy available at www.mobilemonster.co.uk, which may be amended from time to time.</li>
             <li>Any accessories or additional items sent with the device(s)—including but not limited to chargers, external covers, USB cables, microSD cards, SIM cards, and original boxes—will not be returned and may be disposed of or recycled, regardless of the final outcome of the device assessment.</li>
             <li>Mobile Monster reserves the right to decline the initial online trade-in offer if the device contains non-original or aftermarket parts or has been tampered with by unauthorized repair services. This includes devices with unofficial software modifications, such as "jailbroken" iPhones or "rooted" Android phones.</li>
             <li>If issues are identified with the device upon assessment, Mobile Monster will contact you via email and/or phone to present a revised offer. If no response is received within 14 days, payment for the revised value will be processed. The responsibility is with me (the customer) to provide accurate contact information.</li>
@@ -130,7 +130,7 @@ if(window.location.host == 'mobilemonster.uk' || window.location.host.startsWith
 
 }
 
-if(window.location.host != 'mobilemonster.uk'){
+if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
     // hide/show uk related registration fields
     $('#signup_house_field').hide()
     $('#signup_city_field').hide()

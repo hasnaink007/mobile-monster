@@ -760,19 +760,19 @@ function validateRegistrationForm() {
     //     return false;
     // }
 
-    if($('.input-state').val() == '' && window.location.host != 'mobilemonster.uk') {
+    if($('.input-state').val() == '' && !['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)) {
         $('.input-state').addClass('error-border');
         displayProcessError("Please enter your State.");
         return false;
     }
     
-    if($('.house').val() == '' && window.location.host == 'mobilemonster.uk') {
+    if($('.house').val() == '' && ['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)) {
         $('.house').addClass('error-border');
         displayProcessError("Please enter your House Name/Number.");
         return false;
     }
     
-    if($('.city').val() == '' && window.location.host == 'mobilemonster.uk') {
+    if($('.city').val() == '' && ['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)) {
         $('.city').addClass('error-border');
         displayProcessError("Please enter your Town/City.");
         return false;
@@ -851,7 +851,7 @@ function validateRegistrationForm() {
         "#Hear-about-us": "Please tell us how did you heard about us?",
     }
 
-    if(window.location.host == 'mobilemonster.uk'){
+    if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
         delete fieldsMsgMap['#State']
         delete fieldsMsgMap['#Suburb']
     }

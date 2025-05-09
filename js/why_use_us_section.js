@@ -1,5 +1,5 @@
 const hks_flow_element = document.getElementById('whyuseus-steps') ;
-const isUKDomain = window.location.hostname.includes('mobilemonster.uk');
+const isUKDomain =['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host);
 const businessDays = isUKDomain ? '24 hours of' : '3-5 business days after';
 
 
