@@ -2,6 +2,9 @@
 if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) || window.location.host.startsWith('mobile-monster.webflow.io')){
     
     // hide/show uk related registration fields
+    if ($(window).width() <= 768) {
+        $('.mobile_section_trust_uk').addClass('uk_show_flex');
+    }
     $('.progress_inner_uk').addClass('uk_show_flex');
     $('.progress_inner_au_nz').hide();
     $('#signup_house_field').show();
