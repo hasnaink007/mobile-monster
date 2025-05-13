@@ -2,6 +2,9 @@
 if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) || window.location.host.startsWith('mobile-monster.webflow.io')){
     
     // hide/show uk related registration fields
+    if ($(window).width() <= 768) {
+        $('.mobile_section_trust_uk').addClass('uk_show_flex');
+    }
     $('.progress_inner_uk').addClass('uk_show_flex');
     $('.progress_inner_au_nz').hide();
     $('#signup_house_field').show();
@@ -15,6 +18,7 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
     if(window.location.pathname.startsWith('/drop-off-option')){
         window.location.href = window.location.href.replace('/drop-off-option', '/shipping');
     }
+    $('.zendesk-uk-url').attr('href', 'https://help.mobilemonster.co.uk/hc/en-us');
     
     $('.replace_monster_img').attr('src', 'https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/6801682bfb3c561b0445a3a6_Group%201948755069.svg').attr('srcset','') ;
     
