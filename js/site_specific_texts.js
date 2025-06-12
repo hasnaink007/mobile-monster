@@ -134,6 +134,11 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
 
 }
 
+if(['mobilemonster.co.nz'].includes(window.location.host)){
+    $('.uk-shipping-address').hide()
+    $('.nz-shipping-address').show()
+}
+
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
     // hide/show uk related registration fields
     $('#signup_house_field').hide()
