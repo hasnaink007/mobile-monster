@@ -13,6 +13,7 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
     $('#signup_suburb_field').hide();
     $('.not-to-show-for-uk').hide();
     $('.uk-hidden').hide();
+    $('.uk-visible').show();
     $('.visibility-hidden').css({"visibility": "hidden"})
     $('.uk-footer-copyright').show();
 
