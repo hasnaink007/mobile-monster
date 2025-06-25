@@ -14,6 +14,7 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
     $('.not-to-show-for-uk').hide();
     $('.uk-hidden').hide();
     $('.visibility-hidden').css({"visibility": "hidden"})
+    $('.uk-footer-copyright').show();
 
     if(window.location.pathname.startsWith('/drop-off-option')){
         window.location.href = window.location.href.replace('/drop-off-option', '/shipping');
