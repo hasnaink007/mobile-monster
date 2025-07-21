@@ -140,8 +140,11 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
 }
 
 if(['mobilemonster.co.nz'].includes(window.location.host)){
-    $('.uk-shipping-address').hide()
-    $('.nz-shipping-address').show()
+    $('.uk-shipping-address').hide();
+    $('.nz-hidden').hide();
+    $('.nz-shipping-address').show();
+    $('.nz-footer-copyright').show();
+    // $('.zendesk-nz-url').arrt('href', '')
 }
 
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
