@@ -144,7 +144,7 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
     $('.nz-hidden').hide();
     $('.nz-shipping-address').show();
     $('.nz-footer-copyright').show();
-    // $('.zendesk-nz-url').arrt('href', '')
+    $('.zendesk-nz-url').arrt('href', 'https://help.mobilemonster.co.nz/hc/en-us')
 }
 
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
