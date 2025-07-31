@@ -5,23 +5,24 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
     if ($(window).width() <= 768) {
         $('.mobile_section_trust_uk').addClass('uk_show_flex');
     }
-    $('.progress_inner_uk').addClass('uk_show_flex');
+    /* $('.progress_inner_uk').addClass('uk_show_flex');
     $('.progress_inner_au_nz').hide();
-    $('#signup_house_field').show();
-    $('#signup_city_field').show();
     $('#signup_state_field').hide();
     $('#signup_suburb_field').hide();
     $('.not-to-show-for-uk').hide();
-    $('.uk-hidden').hide();
-    $('.uk-visible').show();
+    $('.uk-hidden').hide(); */
+    
     $('.visibility-hidden').css({"visibility": "hidden"})
+    $('#signup_house_field').show();
+    $('#signup_city_field').show();
     $('.uk-footer-copyright').show();
+    $('.uk-visible').show();
 
     if(window.location.pathname.startsWith('/drop-off-option')){
         window.location.href = window.location.href.replace('/drop-off-option', '/shipping');
     }
-    $('.zendesk-uk-url').attr('href', 'https://help.mobilemonster.co.uk/hc/en-us/requests/new?ticket_form_id=12493695237135');
     
+    /* $('.zendesk-uk-url').attr('href', 'https://help.mobilemonster.co.uk/hc/en-us/requests/new?ticket_form_id=12493695237135');
     $('.replace_monster_img').attr('src', 'https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/6801682bfb3c561b0445a3a6_Group%201948755069.svg').attr('srcset','') ;
     
     let ukTexts = {
@@ -133,17 +134,18 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
         if($('.sell-iphone-brand-description')[0] || document.readyState == 'complete'){
             clearInterval(brand_description_interval);
         }
-    },500)
+    },500) */
 
 
 
 }
 
 if(['mobilemonster.co.nz'].includes(window.location.host)){
-    $('.uk-shipping-address').hide();
-    $('.nz-hidden').hide();
     $('.nz-shipping-address').show();
     $('.nz-footer-copyright').show();
+    
+    /* $('.uk-shipping-address').hide();
+    $('.nz-hidden').hide();
     $('.zendesk-nz-url').attr('href', 'https://help.mobilemonster.co.nz/hc/en-us')
 
     let nzTexts = {
@@ -155,15 +157,16 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
 
     Object.keys(nzTexts).forEach(key => {
         $(key).html(nzTexts[key])
-    })
+    }) */
 }
 
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
     // hide/show uk related registration fields
-    $('#signup_house_field').hide()
-    $('#signup_city_field').hide()
     $('#signup_state_field').show()
     $('#signup_suburb_field').show()
+    
+    /* $('#signup_house_field').hide()
+    $('#signup_city_field').hide() */
 
     if(window.location.pathname.startsWith('/shipping')){
         window.location.href = window.location.href.replace('/shipping', '/drop-off-option');
