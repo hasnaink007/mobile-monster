@@ -145,6 +145,17 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
     $('.nz-shipping-address').show();
     $('.nz-footer-copyright').show();
     $('.zendesk-nz-url').attr('href', 'https://help.mobilemonster.co.nz/hc/en-us')
+
+    let nzTexts = {
+        ".nz-post": "NZ Post",
+        ".australian-newzealanders": "New Zealanders",
+        ".nz-dollar-amount": "NZ$32",
+        ".nz-fb": "Mobile Monster is expanding globally, having recently launched in New Zealand, and is proud to showcase its positive reviews from customers in Australia (<a href='https://www.facebook.com/'>www.facebook.com/</a> <a href='http://mobilemonster.com.au/reviews'>http://mobilemonster.com.au/reviews</a>)"
+    }
+
+    Object.keys(nzTexts).forEach(key => {
+        $(key).html(nzTexts[key])
+    })
 }
 
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
