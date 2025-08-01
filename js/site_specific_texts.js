@@ -160,7 +160,7 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
         ".nz-fb": "Mobile Monster is expanding globally, having recently launched in New Zealand, and is proud to showcase its positive reviews from customers in Australia (<a href='https://www.facebook.com/'>www.facebook.com/</a> <a href='http://mobilemonster.com.au/reviews'>http://mobilemonster.com.au/reviews</a>)",
         ".nz-post-office": "NZ Post office",
         ".nz-customer-say": "Mobile Monster is expanding globally, having recently launched in New Zealand, and is proud to showcase its positive reviews from customers in Australia. You can view their feedback here",
-        
+        ".state-feild": `<option value="NZ-NTL">NZ-NTL</option><option value="NZ-AUK">NZ-AUK</option><option value="NZ-WKO">NZ-WKO</option><option value="NZ-BOP">NZ-BOP/option><option value="NZ-GIS">NZ-GIS</option><option value="NZ-HKB">NZ-HKB</option><option value="NZ-TKI">NZ-TKI</option><option value="NZ-MWT">NZ-MWT</option><option value="NZ-WGN">NZ-WGN</option><option value="NZ-TAS">NZ-TAS</option><option value="NZ-NSN">NZ-NSN</option><option value="NZ-MBH">NZ-MBH</option><option value="NZ-WTC">NZ-WTC</option><option value="NZ-CAN">NZ-CAN</option><option value="NZ-OTA">NZ-OTA</option><option value="NZ-STL">NZ-STL</option>`,
     }
 
     Object.keys(nzTexts).forEach(key => {
