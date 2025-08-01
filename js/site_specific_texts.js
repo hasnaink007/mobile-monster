@@ -157,7 +157,8 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
         ".nz-license": "NZ driving license",
         ".nz-company": "New Zealand",
         ".aussie-kiwi": "Kiwi",
-        ".nz-fb": "Mobile Monster is expanding globally, having recently launched in New Zealand, and is proud to showcase its positive reviews from customers in Australia (<a href='https://www.facebook.com/'>www.facebook.com/</a> <a href='http://mobilemonster.com.au/reviews'>http://mobilemonster.com.au/reviews</a>)"
+        ".nz-fb": "Mobile Monster is expanding globally, having recently launched in New Zealand, and is proud to showcase its positive reviews from customers in Australia (<a href='https://www.facebook.com/'>www.facebook.com/</a> <a href='http://mobilemonster.com.au/reviews'>http://mobilemonster.com.au/reviews</a>)",
+        ".nz-post-office": "NZ Post office"
     }
 
     Object.keys(nzTexts).forEach(key => {
