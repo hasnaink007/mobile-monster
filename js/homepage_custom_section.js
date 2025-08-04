@@ -1,6 +1,7 @@
 const hks_element = document.getElementById('homepage-steps');
 
 const isUKDomain = ['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host);
+const isNZdomain = ['mobilemonster.co.nz'].includes(window.location.host);
 
 const businessDays = isUKDomain ? '1 business day' : '3-5 business days';
 
@@ -19,9 +20,20 @@ if(hks_element){
 </tspan></text><path fill-rule="evenodd" class="d" d="m78 214c-22.1 0-40-17.9-40-40 0-22.1 17.9-40 40-40 22.1 0 40 17.9 40 40 0 22.1-17.9 40-40 40z"/><path class="g" d="m96.5 174c0 7.5-4.5 14.2-11.4 17-6.9 2.9-14.9 1.3-20.2-4-5.3-5.2-6.8-13.2-4-20.1 2.9-6.9 9.6-11.4 17.1-11.4 2.4 0 4.8 0.5 7.1 1.4 2.2 1 4.2 2.3 5.9 4 1.8 1.7 3.1 3.8 4 6 1 2.3 1.5 4.7 1.5 7.1z"/><path class="g" d="m78 162.9v11.1l7.4 3.7"/></svg><br></br><br></br><br></br>`
 
 
-    :
+    : isNZdomain ? 
     
+    `<svg xmlns="http://www.w3.org/2000/svg" version="1.2" viewBox="0 0 998 370" width="998" height="370"><style>tspan{white-space:pre}.a{fill:none;stroke:#653388;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5;stroke-dasharray:3.9600000000000004}.b{font-size: 14px;fill: #000000;font-family: "Open  Sans"}.c{font-size: 21px;fill: #63388c;font-family: "Open  Sans"}.d{fill:#faf3ff}.e{fill:none;stroke:#63388c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.f{fill:#63388c}.g{fill:none;stroke:#63388c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5}</style><path class="a" d="m77.8 101c-35.8 0-76.8 21-76.8 75 0 50 32.5 80 81 80 29 0 79.5-13 116.5-99 25.5-59.3 67-121.5 184.5-115.7 47.1 2.4 104.2 29.8 122.7 99.2 9.7 36.3 38.6 114.7 50.6 132.6 36.2 54 127.8 101.2 187.2 95.7 53.1-4.9 133.2-14.9 126.5-115.5-2.1-30.7-22.6-49.2-24-87.5-2.3-66.8 54.5-97.4 112.8-86.1 49.2 9.6 54.7 72.5-8.2 98.4"/><text style="transform:matrix(1,0,0,1,589.89,48.931)"><tspan x="0" y="0" class="b">If you're not happy with your final offer, 
+</tspan></text><text style="transform:matrix(1,0,0,1,575.062,71.931)"><tspan x="0" y="0" class="b">we can send back your device free of charge
+</tspan></text><text style="transform:matrix(1,0,0,1,638,15.647)"><tspan x="0" y="0" class="c">Risk Free Service
+</tspan></text><path fill-rule="evenodd" class="d" d="m719 213c-22.1 0-40-17.9-40-40 0-22.1 17.9-40 40-40 22.1 0 40 17.9 40 40 0 22.1-17.9 40-40 40z"/><path fill-rule="evenodd" class="e" d="m732.8 160.6q0-0.3-0.3-0.6-0.2-0.2-0.6-0.2c-2.5 0-5.1-0.5-7.4-1.5-1.9-0.8-3.7-1.8-5.3-3.1q-0.3-0.2-0.6-0.2-0.3 0-0.6 0.2c-1.6 1.3-3.4 2.4-5.3 3.1-2.4 1-4.9 1.5-7.5 1.5q-0.3 0-0.5 0.2-0.3 0.3-0.3 0.6c-0.6 3.9-1.6 15.8 6.3 25.3 2 2.4 4.4 4.5 7.1 6.1q0.4 0.2 0.8 0.2 0.4 0 0.8-0.2c2.7-1.6 5.2-3.7 7.2-6.1 7.9-9.5 6.8-21.4 6.2-25.3z"/><path class="e" d="m725 168l-8.2 10.4-3.8-3.8"/><text style="transform:matrix(1,0,0,1,270.143,301.931)"><tspan x="0" y="0" class="b">If a higher price is offered by 
+</tspan></text><text style="transform:matrix(1,0,0,1,252.581,324.931)"><tspan x="0" y="0" class="b">another store, we'll beat it by 5%
+</tspan></text><text style="transform:matrix(1,0,0,1,248,271.647)"><tspan x="0" y="0" class="c">Best Prices Guaranteed
+</tspan></text><path fill-rule="evenodd" class="d" d="m361 214c-22.1 0-40-17.9-40-40 0-22.1 17.9-40 40-40 22.1 0 40 17.9 40 40 0 22.1-17.9 40-40 40z"/><path class="e" d="m370.8 190.2c-0.3 0.5-0.8 0.8-1.3 0.7l-4-0.2q-0.4 0-0.7 0.2l-3.5 1.7c-0.5 0.3-1.1 0.2-1.6-0.1l-3.3-2.1q-0.3-0.2-0.7-0.2l-3.9-0.2c-0.6 0-1.1-0.4-1.4-0.8l-1.7-3.4q-0.2-0.4-0.6-0.6l-3.2-2.1c-0.5-0.3-0.8-0.8-0.8-1.4l0.2-3.7q0.1-0.5-0.1-0.8l-1.8-3.4c-0.2-0.5-0.2-1.1 0.1-1.6l2.1-3.1q0.3-0.4 0.3-0.8l0.2-3.8c0-0.5 0.3-1 0.8-1.3l3.5-1.7q0.4-0.2 0.6-0.5l2.2-3.2c0.3-0.5 0.8-0.7 1.3-0.7l4 0.2q0.4 0 0.7-0.2l3.5-1.7c0.5-0.3 1.1-0.2 1.6 0.1l3.3 2.1q0.3 0.2 0.7 0.2l3.9 0.2c0.6 0 1.1 0.4 1.4 0.8l1.7 3.4q0.2 0.4 0.6 0.6l3.2 2.1c0.5 0.3 0.8 0.8 0.8 1.4l-0.2 3.7q-0.1 0.5 0.1 0.8l1.8 3.4c0.2 0.5 0.2 1.1-0.1 1.6l-2.1 3.1q-0.3 0.4-0.3 0.8l-0.2 3.8c0 0.5-0.3 1-0.9 1.3l-3.4 1.7q-0.4 0.2-0.6 0.5z"/><path class="f" d="m361.5 165q-0.3 0-0.6 0.3-0.2 0.2-0.2 0.6v1.2c0 0-0.3 0-0.7 0.1-0.5 0-1.4 0.5-2 1.2-0.7 0.7-1.1 1.2-1.1 2.5 0 1.4 0.5 1.8 1.1 2.5 0.6 0.7 1.5 1.1 2.4 1.2 1.1 0.3 1.8 0.2 2.6 0.5 0.8 0.3 1.6 1.4 1.3 2.3-0.2 0.5-0.6 0.9-1.1 1.2-0.5 0.2-1.1 0.4-1.7 0.3q-0.7 0.1-1.3-0.2-0.7-0.3-1.2-0.9-0.2-0.3-0.6-0.3-0.3-0.1-0.6 0.1-0.3 0.2-0.4 0.6 0 0.4 0.2 0.7c0.7 0.9 1.8 1.5 2.9 1.7v1.2q0 0.4 0.3 0.7 0.2 0.2 0.6 0.2 0.2 0 0.3 0 0.2-0.1 0.3-0.2 0.2-0.1 0.2-0.3 0.1-0.2 0.1-0.3v-1.2c0.8-0.1 1.5-0.4 2.2-0.9 0.6-0.5 1.1-1.1 1.4-1.9 0.2-0.8 0.1-1.8-0.3-2.6-0.4-0.8-1.1-1.5-1.9-1.8q-1.5-0.4-3-0.5c-0.5-0.1-1-0.3-1.4-0.7-0.3-0.3-0.6-0.7-0.7-1.3 0-0.7 0.3-1 0.7-1.4 0.4-0.4 0.9-0.6 1.4-0.6 0.6-0.2 1.2-0.2 1.8 0 0.6 0.2 1.1 0.5 1.5 1q0.2 0.3 0.6 0.3 0.4 0.1 0.7-0.1 0.3-0.2 0.3-0.6 0.1-0.3-0.1-0.6c-0.8-1-1.8-1.6-3-1.8v-1.2c0-0.2 0-0.6-0.2-0.7-0.3-0.3-0.6-0.3-0.6-0.3z"/><text style="transform:matrix(1,0,0,1,2.417,48.931)"><tspan x="0" y="0" class="b">Get paid within 1 business day 
+</tspan></text><text style="transform:matrix(1,0,0,1,6.218,71.931)"><tspan x="0" y="0" class="b">after the device is received.
+</tspan></text><text style="transform:matrix(1,0,0,1,16,15.647)"><tspan x="0" y="0" class="c">Quick Payment
+</tspan></text><path fill-rule="evenodd" class="d" d="m78 214c-22.1 0-40-17.9-40-40 0-22.1 17.9-40 40-40 22.1 0 40 17.9 40 40 0 22.1-17.9 40-40 40z"/><path class="g" d="m96.5 174c0 7.5-4.5 14.2-11.4 17-6.9 2.9-14.9 1.3-20.2-4-5.3-5.2-6.8-13.2-4-20.1 2.9-6.9 9.6-11.4 17.1-11.4 2.4 0 4.8 0.5 7.1 1.4 2.2 1 4.2 2.3 5.9 4 1.8 1.7 3.1 3.8 4 6 1 2.3 1.5 4.7 1.5 7.1z"/><path class="g" d="m78 162.9v11.1l7.4 3.7"/></svg><br></br><br></br><br></br>`
 
+    :
 
     `<svg xmlns="http://www.w3.org/2000/svg" width="1310" height="694" viewBox="0 0 1310 694" fill="none" style="width: 100%;height: auto;transform: translate(80px, 0px); margin-bottom: -150px">
     <g id="module 3">
