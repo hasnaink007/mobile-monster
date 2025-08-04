@@ -6,8 +6,8 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
         $('.mobile_section_trust_uk').addClass('uk_show_flex');
     }
     $('.progress_inner_uk').addClass('uk_show_flex');
-    $('.progress_inner_au_nz').hide();
     $('#signup_house_field').show();
+    $('.progress_inner_au_nz').hide();
     $('#signup_city_field').show();
     $('#signup_state_field').hide();
     $('#signup_suburb_field').hide();
