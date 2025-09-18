@@ -20,11 +20,10 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
     if(window.location.pathname.startsWith('/drop-off-option')){
         window.location.href = window.location.href.replace('/drop-off-option', '/shipping');
     }
-    $('.zendesk-uk-url').attr('href', 'https://help.mobilemonster.co.uk/hc/en-us/requests/new?ticket_form_id=12493695237135');
+    /* $('.zendesk-uk-url').attr('href', 'https://help.mobilemonster.co.uk/hc/en-us/requests/new?ticket_form_id=12493695237135');
+    $('.replace_monster_img').attr('src', 'https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/6801682bfb3c561b0445a3a6_Group%201948755069.svg').attr('srcset','') ; */
     
-    $('.replace_monster_img').attr('src', 'https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/6801682bfb3c561b0445a3a6_Group%201948755069.svg').attr('srcset','') ;
-    
-    let ukTexts = {
+    /* let ukTexts = {
         '.australian-british': 'British',
         '.replace_max_amount': '£15',
         '.change-business-days': '1 business day',
@@ -117,9 +116,9 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
 
     Object.keys(ukTexts).forEach(key => {
         $(key).html(ukTexts[key])
-    })
+    }) */
 
-    let brand_description_interval = setInterval(() => {
+    /* let brand_description_interval = setInterval(() => {
         $('.sell-iphone-brand-description').html($('.sell-iphone-brand-description').html()?.replaceAll("\n", '')?.replace( new RegExp(`<p>When you trade in your iPhone, we’ll give you a fair and professional(.*)Post satchel for mailed submissions.</p>`,'ig'), `
             <p>When you trade in your iPhone, we’ll give you a fair and professional appraisal of its value. To do so, we ask you to rate its condition according to one of the following categories:</p>
             <ul>
@@ -133,7 +132,7 @@ if(['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host) ||
         if($('.sell-iphone-brand-description')[0] || document.readyState == 'complete'){
             clearInterval(brand_description_interval);
         }
-    },500)
+    },500) */
 
 
 
@@ -149,7 +148,7 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
     $('.progress_inner_nz').css({display: 'flex'});
     $('.zendesk-nz-url').attr('href', 'https://help.mobilemonster.co.nz/hc/en-us')
 
-    let nzTexts = {
+    /* let nzTexts = {
         ".nz-post": "NZ Post",
         ".australian-newzealanders": "New Zealanders",
         ".nz-dollar-amount": "NZ$32",
@@ -165,7 +164,7 @@ if(['mobilemonster.co.nz'].includes(window.location.host)){
 
     Object.keys(nzTexts).forEach(key => {
         $(key).html(nzTexts[key])
-    })
+    }) */
 }
 
 if(!['mobilemonster.uk', 'mobilemonster.co.uk'].includes(window.location.host)){
