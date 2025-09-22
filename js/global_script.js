@@ -20,7 +20,7 @@ Webflow.push(function() {
     if($('.search_box_wrap').length > 0) {
         $('.search_suggestions').html('');
 
-        fetch(`${endpointUrl}devices_json_endpoint`)
+        fetch(`${endpointUrl}devices_json_endpoint?origin=`+window.host)
         .then(res => res.json())
         .then(results => {
 
