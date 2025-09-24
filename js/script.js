@@ -1667,9 +1667,9 @@ function stepMoveToLoginPage() {
 
     showLoader(true);
 
-    if(auth?.currentUser){
+    if(window.auth?.currentUser){
         console.log('checking firebase auth')
-        auth.currentUser.getIdToken().then(idToken => {
+        window.auth.currentUser.getIdToken().then(idToken => {
             fetch(endpointUrl+ 'seller_signup_with_google', {
                 method:"POST",
                 headers: {'content-type':'application/json'},
