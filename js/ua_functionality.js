@@ -60,7 +60,7 @@ function authenticateAccess() {
 
     console.log('checking authenticity')
 
-    if(auth?.currentUser){
+    if(window.auth?.currentUser){
         auth.currentUser.getIdToken().then(idToken => {
             fetch(endpointUrl+ 'seller_signup_with_google', {
                 method:"POST",
@@ -104,7 +104,7 @@ authenticateAccess()
 
 // $('.loader').fadeIn()
 //  Track user login status , Update UI element upon changes on login state
-auth.onAuthStateChanged(async (user) => {
+window.auth?.onAuthStateChanged(async (user) => {
     if(auth?.currentUser){
         if(!$('#checkout-page-tabs')[0]){
             authenticateAccess()
