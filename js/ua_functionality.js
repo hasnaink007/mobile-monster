@@ -210,7 +210,7 @@ function bindLogoutButton() {
 
 
     $('.logout.w-button').click(function() {
-        auth?.signOut()
+        window.auth?.signOut()
         clearAuthData();
         window.location.href = "/";
     
