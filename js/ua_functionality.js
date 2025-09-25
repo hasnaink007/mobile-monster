@@ -657,7 +657,11 @@ function loadFormListener() {
             console.log(response);
             $('.success_popup .success_msg').text('Profile updated.')
             $('.success_popup').fadeIn(10);
-            setTimeout(()=>{
+            
+            $('.input-reg-password').val("");
+            $('.input-reg-confirm-password').val("");
+
+            setTimeout(()=>{  
                 $('.success_popup').fadeOut(10);
             }, 3000)
         })
