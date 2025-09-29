@@ -60,7 +60,7 @@ function authenticateAccess() {
 
     console.log('checking authenticity')
 
-    if(window.auth?.currentUser){
+    /* if(window.auth?.currentUser){
         auth.currentUser.getIdToken().then(idToken => {
             fetch(endpointUrl+ 'seller_signup_with_google', {
                 method:"POST",
@@ -91,7 +91,19 @@ function authenticateAccess() {
             redirect( false )
             console.log(e)
         })
-    }
+    } */
+
+    verifyUserAuthToken(true)
+    .then(res => {
+        if(res?.response?.success?.toLowerCase() == 'true'){
+            setLoginUserInfo(res.response.user_email, res.response.auth_key);
+        }
+        redirect( (res && res?.response?.success?.toLowerCase() == 'true') )
+    })
+    .catch(e => {
+        redirect( false )
+        console.log(e)
+    })
 }
 authenticateAccess()
 
@@ -104,16 +116,16 @@ authenticateAccess()
 
 // $('.loader').fadeIn()
 //  Track user login status , Update UI element upon changes on login state
-window.auth?.onAuthStateChanged(async (user) => {
+/* window.auth?.onAuthStateChanged(async (user) => {
     if(auth?.currentUser){
         if(!$('#checkout-page-tabs')[0]){
             authenticateAccess()
         }
     }
-})
+}) */
 
 
-$('#signin_with_google').on('click', () => {
+/* $('#signin_with_google').on('click', () => {
     
     let provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
@@ -124,7 +136,7 @@ $('#signin_with_google').on('click', () => {
     }).catch((error) => {
         console.log(error)
     });
-})
+}) */
 
 
 
@@ -210,7 +222,7 @@ function bindLogoutButton() {
 
 
     $('.logout.w-button').click(function() {
-        window.auth?.signOut()
+        // window.auth?.signOut()
         clearAuthData();
         window.location.href = "/";
     

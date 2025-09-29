@@ -1667,7 +1667,7 @@ function stepMoveToLoginPage() {
 
     showLoader(true);
 
-    if(window.auth?.currentUser){
+    /* if(window.auth?.currentUser){
         console.log('checking firebase auth')
         window.auth.currentUser.getIdToken().then(idToken => {
             fetch(endpointUrl+ 'seller_signup_with_google', {
@@ -1684,7 +1684,12 @@ function stepMoveToLoginPage() {
         .then(res => {
             validateUserDetails(res)
         })
-    }
+    } */
+
+    verifyUserAuthToken(true)
+    .then(res => {
+        validateUserDetails(res)
+    })
 
 
     scrollUIToTop();
