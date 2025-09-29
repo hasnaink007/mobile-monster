@@ -611,12 +611,19 @@ function loadFormListener() {
         var password = $('.input-reg-password').val();
         var confirmPassword = $('.input-reg-confirm-password').val();
 
+
+        if(password.length > 0 && password.length < 6) {
+            displayProcessError("Validation error: Password should be atleast 6 characters.");
+            return;
+        }
+
+
         if(password.length > 0 && confirmPassword.length) {
             shouldUpdatePassword = true;
         }
 
         if(shouldUpdatePassword && (password !== confirmPassword)) {
-            displayProcessError("Password donot match");
+            displayProcessError("Error: Password donot match");
             return;
         }
 
@@ -662,7 +669,11 @@ function loadFormListener() {
             console.log(response);
             $('.success_popup .success_msg').text('Profile updated.')
             $('.success_popup').fadeIn(10);
-            setTimeout(()=>{
+            
+            $('.input-reg-password').val("");
+            $('.input-reg-confirm-password').val("");
+
+            setTimeout(()=>{  
                 $('.success_popup').fadeOut(10);
             }, 3000)
         })
