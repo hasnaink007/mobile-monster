@@ -845,9 +845,9 @@ function loadUserData() {
                 submitBtn
             });
 
-            if(isAddressValid && !addressValid){
-                 messageEl.css('color', '#FFA500').text('Please confirm your address by clicking "Update details".').fadeIn(150);
-            }
+            // if(isAddressValid && !addressValid){
+            //      messageEl.css('color', '#FFA500').text('Please confirm your address by clicking "Update details".').fadeIn(150);
+            // }
         }
     });
 
