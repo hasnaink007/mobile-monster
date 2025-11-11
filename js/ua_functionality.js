@@ -711,7 +711,10 @@ function loadFormListener() {
             const res = await fetch(`${endpointUrl}user_details_data`, { method: "POST", body: data });
             const response = await res.json();
             console.log(response);
-
+            if(response?.response?.updated !== true || response?.response?.updated !== 'true' ){
+                messageEl.css('color', '#d00').text(response?.response?.message || 'Something went wrong. Please try again.').fadeIn(150);
+                return;
+            }
             $('.success_popup .success_msg').text('Profile updated.');
             $('.success_popup').fadeIn(10);
             $('.input-reg-password, .input-reg-confirm-password').val("");
