@@ -1,6 +1,37 @@
 var Webflow = Webflow || [];
 console. log("%cMobileMonster", 'background-color: #731caf; color: white;padding: 10px; font-style: italic; border: 5px solid #61bb47; font-size: 2em;');
-      
+
+async function logErrorToAPI(errorCode, error, userData = {}) {
+  try {
+    const errorPayload = {
+      name: error?.name || "UnknownError",
+      message: error?.message || "No message provided",
+      stack: error?.stack || "No stack trace",
+    };
+
+    const payload = {
+      time: Math.floor(Date.now() / 1000),
+      errors_details: errorCode,
+      url: typeof window !== "undefined" ? window.location.href : "server",
+      origin: typeof window !== "undefined" ? window.location.hostname : "server",
+      json_data: JSON.stringify({
+        error_details: errorPayload,
+        user_data: userData,
+      }),
+    };
+
+    const endpoint = "https://hook.eu1.make.com/x753bbnigyjzzskeiygycyhnb7zr05sn";
+
+    await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    console.warn("Error while sending error log:", err);
+  }
+}
+
 Webflow.push(function() {
 
 
@@ -15,36 +46,31 @@ Webflow.push(function() {
     // }
     
     let hks_available_devices = []
+    let errorInLoadingDevices = false;
+    let loadingDevices = false;
 
     // Get search box OPtions data from bubble
-    if($('.search_box_wrap').length > 0) {
-        $('.search_suggestions').html('');
-
-        fetch(`${endpointUrl}devices_json_endpoint?origin=`+window.host)
-        .then(res => res.json())
-        .then(results => {
-
-            // console.log(results)
-            /* let devices = Array.isArray(results) ? results : []
-            let titles = []
-
-            devices.forEach(device => {
-                if(!titles.includes(device.display_name)){
-                    titles.push(device.display_name)
-                    hks_available_devices.push(device)
-                }
-            }) */
-            hks_available_devices = Array.isArray(results) ? results : []
-
-
-            $('.search_box_wrap .search_suggestions').html(makeOptionsListHTML(hks_available_devices))
-            return
-
-        })
-        .catch(e => {
-            console.log(e)
-        })
+    if ($(".search_box_wrap").length > 0) {
+        $(".search_suggestions").html("");
+        
+        (async () => {
+            try {
+                loadingDevices = true
+                const response = await fetch(`${endpointUrl}devices_json_endpoint?origin=` + window.host);
+                const results = await response.json();
+                hks_available_devices = Array.isArray(results) ? results : [];
+                $(".search_box_wrap .search_suggestions").html(makeOptionsListHTML(hks_available_devices));
+            } catch (e) {
+                console.error("Device fetch error:", e);
+                errorInLoadingDevices=true
+                $(".search_box_wrap .search_suggestions").html("There was an error. Please reload the page.")
+                await logErrorToAPI("search_devices_fetch_error", e, { endpointUrl, host: window.host });
+            } finally{
+                loadingDevices = false
+            }
+        })();
     }
+
 
     let makeOptionsListHTML = (list = []) => {
         // console.log(list)
@@ -109,7 +135,16 @@ Webflow.push(function() {
     })
     .on('focus', e => {
         if(!e.target.value?.trim()){
-            container.html( makeOptionsListHTML(hks_available_devices || []) ).show()
+            if(loadingDevices){
+                container.html("Devices are being loaded...").show()
+            }else{
+                if(errorInLoadingDevices){
+                    const message = "There was an error. Please reload the page."
+                    container.html(message).show()
+                }else{
+                    container.html(makeOptionsListHTML(hks_available_devices || [])).show()
+                }
+            }
         }else{
             container.show()
         }
