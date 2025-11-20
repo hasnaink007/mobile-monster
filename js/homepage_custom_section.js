@@ -146,7 +146,7 @@ document.querySelector('script#homepage_custom_section_script')?.remove()
 const paid_amount = document.getElementById('over-120m-paid')
 if(paid_amount){
     const currencySymbol = isUKDomain ? '£' : '$';
-    const amount = isUKDomain ? '132 million+' : '422 million+';
+    const amount = isUKDomain ? '209 million+' : '422 million+';
     
     paid_amount.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="280" height="292" viewBox="0 0 280 292" fill="none">
     <mask id="path-1-inside-1_2762_856" fill="white">
