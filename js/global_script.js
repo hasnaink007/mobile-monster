@@ -61,11 +61,19 @@ Webflow.push(function() {
                 hks_available_devices = Array.isArray(results) ? results : [];
                 $(".search_box_wrap .search_suggestions").html(makeOptionsListHTML(hks_available_devices));
             } catch (e) {
-                if (!(e instanceof TypeError && e.message === "Failed to fetch")) {
+                if (window.host !== 'mobile-monster.win') {
                     console.error("Device fetch error:", e);
-                    await logErrorToAPI("search_devices_fetch_error", e, { endpointUrl, host: window.host });
+                    await logErrorToAPI("search_devices_fetch_error", e, {
+                        endpointUrl,
+                        host: window.host,
+                        userAgent: navigator.userAgent || '',
+                        referrer: document.referrer || '',
+                        browserLanguage: navigator.language || '',
+                        ip: window.IP || '',
+                        country: window.country || '',
+                    });
                 }
-                
+
                 errorInLoadingDevices = true;
                 $(".search_box_wrap .search_suggestions").html("There was an error. Please reload the page.");
             } finally {
