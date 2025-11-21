@@ -55,18 +55,21 @@ Webflow.push(function() {
         
         (async () => {
             try {
-                loadingDevices = true
+                loadingDevices = true;
                 const response = await fetch(`${endpointUrl}devices_json_endpoint?origin=` + window.host);
                 const results = await response.json();
                 hks_available_devices = Array.isArray(results) ? results : [];
                 $(".search_box_wrap .search_suggestions").html(makeOptionsListHTML(hks_available_devices));
             } catch (e) {
-                console.error("Device fetch error:", e);
-                errorInLoadingDevices=true
-                $(".search_box_wrap .search_suggestions").html("There was an error. Please reload the page.")
-                await logErrorToAPI("search_devices_fetch_error", e, { endpointUrl, host: window.host });
-            } finally{
-                loadingDevices = false
+                if (!(e instanceof TypeError && e.message === "Failed to fetch")) {
+                    console.error("Device fetch error:", e);
+                    await logErrorToAPI("search_devices_fetch_error", e, { endpointUrl, host: window.host });
+                }
+                
+                errorInLoadingDevices = true;
+                $(".search_box_wrap .search_suggestions").html("There was an error. Please reload the page.");
+            } finally {
+                loadingDevices = false;
             }
         })();
     }
