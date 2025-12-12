@@ -160,7 +160,7 @@ if(paid_amount){
     <g filter="url(#filter0_f_2762_856)">
     <ellipse cx="148.815" cy="257.412" rx="116.395" ry="19.6387" fill="#E3D1EE"></ellipse>
     </g>
-    <rect x="38.168" y="153.47" width="231.832" height="109.21" fill="url(#pattern0)"></rect>
+    <rect x="4" y="153.47" width="150" height="120" fill="url(#pattern0)"></rect>
     <defs>
     <filter id="filter0_f_2762_856" x="18.0501" y="223.403" width="261.53" height="68.0169" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
     <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
@@ -179,3 +179,4 @@ if(paid_amount){
     </defs>
     </svg>`
 }
+
