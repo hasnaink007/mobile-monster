@@ -14,8 +14,8 @@ input[type=checkbox], input[type=radio] {
 
 }
 #mm_input_search{
-    background-image: url('https://uploads-ssl.webflow.com/6295ec8d6adf7dabeda41909/62974528bb1d147cfd9814af_phone.png');
-    background-size: 26px;
+    background-image: url('https://cdn.prod.website-files.com/6295ec8d6adf7dabeda41909/69bbaa1c114a027cdaf740b1_Phone-Icon%20(1).svg');
+    background-size: 17px;
     background-position: left;
     background-repeat: no-repeat;
     text-indent: 30px;
@@ -274,6 +274,11 @@ input[type=checkbox], input[type=radio] {
 #message-popup.success {
     color: #21d91d;
     border-color: #148800;
+}
+
+#email-form-5 input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.7; 
 }
 
 
