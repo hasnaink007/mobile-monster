@@ -118,17 +118,21 @@ Webflow.push(function() {
         // console.log(e)
         container.show()
 
-        let search = e.target.value.replaceAll(' ', '')?.toLowerCase()
-        let regex = new RegExp(search, 'gi')
-        let matches = (hks_available_devices || [])?.filter(item => {
-            let name = item?.display_name?.replaceAll(' ', '')?.toLowerCase()
-            let matched =  regex.test(name)
-            if(matched || name?.includes(search)){
-                return true
-            }
+        let search = e.target.value?.toLowerCase().trim()
+        let compactSearch = search.replaceAll(' ', '')
+        let searchWords = search.split(/\s+/).filter(w => w)
+        let devices = (hks_available_devices || []).filter(item => item?.display_name)
+        // exact matches first: full input found in name (spaces ignored)
+        let exactMatches = devices.filter(item =>
+            item.display_name.replaceAll(' ', '').toLowerCase().includes(compactSearch)
+        )
+        // then devices whose name contains every input word, in any order
+        let wordMatches = devices.filter(item => {
+            if(exactMatches.includes(item)) return false
+            let name = item.display_name.toLowerCase()
+            return searchWords.every(word => name.includes(word))
         })
-        matches = matches.filter(item => item?.display_name)
-        container.html( makeOptionsListHTML(matches) )
+        container.html( makeOptionsListHTML(exactMatches.concat(wordMatches)) )
     })
     .on('blur', e => {
         setTimeout(() => {
