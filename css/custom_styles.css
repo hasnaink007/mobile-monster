@@ -294,3 +294,19 @@ input[type=checkbox], input[type=radio] {
 }
 /* } */
 
+/* Keep the Why Use Us flowchart at its designed 1086px width and
+   scroll horizontally on narrow screens instead of shrinking. */
+#whyuseus-steps {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+body div#whyuseus-steps svg {
+    width: 1086px !important;
+    max-width: none !important;
+    height: auto;
+    display: block;
+}
+
