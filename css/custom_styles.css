@@ -294,19 +294,41 @@ input[type=checkbox], input[type=radio] {
 }
 /* } */
 
-/* Keep the Why Use Us flowchart at its designed 1086px width and
-   scroll horizontally on narrow screens instead of shrinking. */
-#whyuseus-steps {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-}
+/* Why Use Us flowchart:
+   Desktop keeps Webflow's calc(80% - 70px) sizing and translateY pull-up.
+   On narrow screens, lock SVG to designed 1086px, constrain the container
+   so it scrolls horizontally, and cancel the pull-up that causes collisions. */
+@media screen and (max-width: 767px) {
+    .why-use-us-container {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
 
-body div#whyuseus-steps svg {
-    width: 1086px !important;
-    max-width: none !important;
-    height: auto;
-    display: block;
-}
+    .why-use-us-container .html-embed-9 {
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
 
+    #whyuseus-steps {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+
+    body div#whyuseus-steps svg {
+        width: 1086px !important;
+        max-width: none !important;
+        height: auto;
+        display: block;
+    }
+}
