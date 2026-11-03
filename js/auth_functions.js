@@ -6,7 +6,7 @@ var isDev = new URLSearchParams(window.location.search).get('hks_dev') == 'true'
 var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
 // if(!isDev) {
-//     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
+//     endpointUrl = 'https://APP_HOST';
 // }
 
 function setLocalDataValue(key, value) {

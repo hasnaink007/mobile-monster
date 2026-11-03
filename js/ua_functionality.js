@@ -6,11 +6,11 @@
 var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
 /* if(!isDev) {
-    endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
+    endpointUrl = 'https://APP_HOST';
 } */
 
 
-// var endpointUrl = 'https://portal.mobilemonster.com.au/version-test';
+// var endpointUrl = 'https://APP_HOST';
 
 
 var Webflow = Webflow || [];

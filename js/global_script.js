@@ -42,7 +42,7 @@ Webflow.push(function() {
     
     var endpointUrl = 'https://api.mobilemonster.com.au/request/';
     // if(new URLSearchParams(window.location.search).get('hks_dev') == 'true'){
-    //     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-test'
+    //     endpointUrl = 'https://APP_HOST'
     // }
     
     let hks_available_devices = []

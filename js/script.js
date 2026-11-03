@@ -12,7 +12,7 @@
 var endpointUrl = 'https://api.mobilemonster.com.au/request/';
 
 // if(!isDev) {
-//     endpointUrl = 'https://mobile-monster.bubbleapps.io/version-live';
+//     endpointUrl = 'https://APP_HOST';
 // }
 
 // On Page Load Get Working Faults 
